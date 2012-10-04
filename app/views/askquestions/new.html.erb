@@ -1,0 +1,131 @@
+<!--<link media="all" rel="stylesheet" type="text/css" href="css/style.css">-->
+<!--<link rel="stylesheet" href="../demos.css"></link>-->
+<%#= stylesheet_link_tag "prettify.css" %>
+<%#= javascript_include_tag "prettify.js" %>
+<%#= stylesheet_link_tag "demo.css" %>
+<%#= stylesheet_link_tag "token-input-facebook.css" %>
+<%#= stylesheet_link_tag "token-input-mac.css" %>
+<%#= stylesheet_link_tag "token-input.css" %>
+<%#= javascript_include_tag "Markdown.Converter.js" %>
+<%#= javascript_include_tag "Markdown.Sanitizer.js" %>
+<%#= javascript_include_tag "Markdown.Editor.js" %>
+<%= javascript_include_tag "jquery.tokeninput.js" %>
+
+<script type="text/javascript">
+    isLoggedIn = false;
+    $(document).ready(function () {
+        $("button.create-btn").live('click', function (e) {
+            e.preventDefault();
+//            alert(isLoggedIn);
+            data = $("div#wmd-preview").html();
+            $("input#wmd-preview-input").val(data);
+            if (isLoggedIn || <%= current_user.present? %>){
+                alert(<%= current_user.present? %>);
+                $('FORM').submit();
+            }else{
+                $("#fancybox").click();
+            }
+        });
+        $('input').change(function () {
+        });
+    });
+</script>
+
+<script>
+//    $(function(){
+//        $('textarea').autosize();
+//    });
+
+    $(document).ready(function(){
+        $('textarea').autosize();
+    });
+</script>
+
+<div id="wrapper">
+  <section id="main">
+    <article id="content">
+      <div class="ask-question">
+        <h2 class="a-y-question">Ask a question</h2>
+        <%= form_for @askquestion, :url => askquestions_path do |f| %>
+            <% if @askquestion.errors.any? %>
+                <div class="error_messages">
+                  <h2>Form is invalid, prohibited this record from being saved</h2>
+                  <ul>
+                    <% for message in @askquestion.errors.full_messages %>
+                        <li><%= message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+            <% end %>
+            <label class="title-txt">Title</label>
+            <%= f.text_field :title %>
+            <label class="title-txt">Tags</label>
+            <%= f.text_field :tag_names %>
+            <!--, data: {load: @askquestion.tags.map(&:name).map{|lan| [lan, Tag.find_by_name(lan).askquestion_tags.count]} } %>-->
+            <!--# #data: {load: @askquestion.tags}, data: {load: @tags.where(@askquestion.tags).askquestion_tags.join(",").count} %>-->
+            <label class="title-txt">Body</label>
+
+            <div class="field">
+              <%= f.hidden_field :description, id: "wmd-preview-input" %>
+              <div class="wmd-panel">
+                <div id="wmd-button-bar"></div>
+                <textarea class="wmd-input" id="wmd-input"></textarea>
+              </div>
+              <div id="wmd-preview" class="wmd-panel wmd-preview">
+              </div>
+            </div>
+            <div class="create-holder"> <span class="btn-holder">
+                   <button class="create-btn" name="Create Askquestion" value="Create Askquestion"></button>
+            <small>or</small>
+            <button class="create-btn cancel-btn" name="#" value=""></button>
+            </span>
+              <!--<span class="click-to-add">-->
+						<!--<label for="wiki">wikki</label>-->
+						<!--<input type="checkbox" name="#" id="wiki" value="">-->
+						<!--</span>-->
+            </div>
+        <% end %>
+      </div>
+      <td> <%#= link_to 'Back',:back %> </td>
+      <td> <%#= link_to 'All questions', user_askquestions_path(current_user) %> </td>
+    </article>
+    <script type="text/javascript">
+        (function () {
+            var converter1 = Markdown.getSanitizingConverter();
+            var editor1 = new Markdown.Editor(converter1);
+            editor1.run();
+            var converter2 = new Markdown.Converter();
+            converter2.hooks.chain("preConversion", function (text) {
+                return text.replace(/\b(a\w*)/gi, "*$1*");
+            });
+            converter2.hooks.chain("plainLinkText", function (url) {
+                return "This is a link to " + url.replace(/^https?:\/\//, "");
+            });
+            var help = function () {
+                alert("Do you need help?");
+            }
+            var editor2 = new Markdown.Editor(converter2, "-second", { handler:help });
+            editor2.run();
+        })();
+    </script>
+    <aside id="sidebar">
+      <div class="about-c-s">
+        <div class="bg-top">&nbsp;</div>
+        <div class="bg-center"><strong class="how-to-ask">how to ask</strong>
+
+          <p>Provide as much details as possible so that it will have more chance to be answered instead of
+            being
+            endlessly discussed. Try to be clear and simple. It’s a good approach to add code snippet with your
+            question.</p>
+        </div>
+        <div class="bg-btm">&nbsp;</div>
+      </div>
+      <div class="stay-us"><span class="stay-heading">Stay in touch</span>
+
+        <div class="facebook-plugin">
+          <img src="/assets/coding-stack-img.png" width="271" height="60" alt="facebook">
+        </div>
+      </div>
+    </aside>
+  </section>
+</div>

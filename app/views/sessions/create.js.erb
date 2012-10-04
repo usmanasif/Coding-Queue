@@ -1,0 +1,21 @@
+//
+//$.fancybox.close()
+//
+//
+
+
+
+
+//$(document).ready(function () {
+////    $('.fancybox').fancybox({
+////        'hideOnContentClick':false
+////    });
+//});
+//
+
+$.fancybox.close();
+
+
+$('nav.login-menu').html("<%= escape_javascript(login_nav(current_user)) %>");
+//cookies.signed[:user_id] = current_user.id
+isLoggedIn = true;
