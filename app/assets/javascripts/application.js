@@ -26,4 +26,5 @@
 //= require sessions.js.coffee
 //= require tags.js.coffee
 //= require users.js.coffee
+//= require jquery.horizontal.scroll.js
 //= require_tree .

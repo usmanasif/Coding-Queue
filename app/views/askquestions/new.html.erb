@@ -10,6 +10,9 @@
 <%#= javascript_include_tag "Markdown.Sanitizer.js" %>
 <%#= javascript_include_tag "Markdown.Editor.js" %>
 <%= javascript_include_tag "jquery.tokeninput.js" %>
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" %>
+<%= javascript_include_tag "jquery.horizontal.scroll.js" %>
+<%#= stylesheet_link_tag "" %>
 
 <script type="text/javascript">
     isLoggedIn = false;
@@ -28,16 +31,24 @@
         });
         $('input').change(function () {
         });
+
+
     });
+
 </script>
 
 <script>
-//    $(function(){
-//        $('textarea').autosize();
-//    });
+
 
     $(document).ready(function(){
+        $('textarea').horizontalScroll();
         $('textarea').autosize();
+
+
+    });
+    $(document).ready(function(){
+
+
     });
 </script>
 
@@ -65,7 +76,7 @@
             <!--# #data: {load: @askquestion.tags}, data: {load: @tags.where(@askquestion.tags).askquestion_tags.join(",").count} %>-->
             <label class="title-txt">Body</label>
 
-            <div class="field">
+            <div class="field" id="">
               <%= f.hidden_field :description, id: "wmd-preview-input" %>
               <div class="wmd-panel">
                 <div id="wmd-button-bar"></div>

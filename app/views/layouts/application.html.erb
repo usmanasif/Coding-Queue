@@ -21,11 +21,14 @@
               $.ajax({
                   type:"POST",
                   url:$("form.login-form-base").attr("action"),
+                // beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
                   data:$('form.login-form-base').serialize(),
                   success:function (data) {
+                      //alert(data);
+                      $.fancybox.close();
 //                        console.log(data.success);
 //                        console.log(data.user_id);
-                      $('#new_askquestion').submit();
+//                      $('#new_askquestion').submit();
 //                     alert('saved question.');
                   }
 
@@ -36,19 +39,61 @@
 
 
 
+//          $('#signup-box').submit(function() {
+//              var valuesToSubmit = $(this).serialize();
+/////            var question_id = $('#question_id_of_edit_form').val();
+//              $.ajax({
+//                  type:'POST',
+//                  url: '/sessions',
+////                  data: valuesToSubmit,
+//                  data: {'email' : $('#email').val(), 'password' :$('#password').val()},
+//                  dataType: "json" ,
+//                  success : function(json){
+//                      $.fancybox.close();
+////
+//
+////                      $('nav.login-menu').html("<%#= login_nav( @abc )%>");
+////                      debugger
+//                       $('nav.login-menu').html('Logged in as ' + json.email);
+////                     alert("<%= current_user.present? %>");
+//
+//                     // current_user ||= session[:current_user_id];
+//
+//                      <!--<%#= session[:current_user_id] = json.id %>-->
+//
+////                      session[:user_id] = @current_user.id
+//                      <!--<%= logger.info '=AJAZ=' * 20  %>-->
+//                      <!--<%= logger.info current_user %>-->
+//                      <!--<%= logger.info '-=AJAZ-END=-' * 20 %>-->
+//
+//
+////                      alert(test);
+//                      //$('#loged-user').html("<%#= current_user %>");
+////                      $('#fancybox').html('Logged in as ' +$('#email').val());
+////                      alert(json);
+//
+//                  }
+//              });
+//              return false; // prevents normal behaviour
+//          });//ending update attributes
+
+
+
 
       });
 
   </script>
+
 </head>
 <body class="<%= params[:controller] %>" onload="prettyPrint()">
 <div id="wrapper">
   <header id="header">
     <div class="holder">
       <h1 class="logo"><a href="<%= root_path %>">coding stack</a></h1>
-      <nav class="login-menu">
+      <nav class="login-menu" id="loginmenu">
         <%= login_nav(current_user) %>
-          </nav>
+
+       </nav>
     </div>
     <nav id="nav">
       <ul>
@@ -67,17 +112,17 @@
   <div id="container">
     <div class="user_nav">
       <!--
-      <% if current_user %>-->
-          <!--Logged in as <%= current_user.email %>.-->
-          <!--<%= link_to "Log out", logout_path %>-->
+      <%# if current_user %>-->
+          <!--Logged in as <%#= current_user.email %>.-->
+          <!--<%#= link_to "Log out", logout_path %>-->
           <!--
-      <% else %>-->
+      <%# else %>-->
           <!--<ul>-->
 
           <!--&lt;!&ndash;<li><a class="fancybox" href="#inline2" title="login">login</a></li>&ndash;&gt;-->
           <!--</ul>-->
           <!--
-      <% end %>-->
+      <%# end %>-->
     </div>
     <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
@@ -92,7 +137,7 @@
       <div class="b-center">
         <div class="box-signup">
           <% user = User.new %>
-          <%= form_for users_path, :html => {:class => "login-form-base"}, remote: true, :method => :post do |f| %>
+          <%= form_for user , :html => {:class => "login-form-base"}  do |f| %>
               <% if user.errors.any? %>
                   <div class="error_messages">
                     <!--<h2>Form is invalid</h2>-->
@@ -145,9 +190,9 @@
   <div id="inline2" style="width:500;display: none;" class="light-box">
     <div class="b-top">&nbsp;</div>
     <div class="b-center">
-      <div class="box-signup">
+      <div class="box-signup" id="signup-box">
         <%#= form_tag sessions_path, :html => {:class => "login-form-base1"}, remote: true, :url => sessions_path, :update => { :success => "usersssssss", :failure => "errorrrrrr" },  :method => :post do %>
-        <%= form_tag sessions_path, :html => {:class => "login-form-base1"}, :remote => true, :method => :post  do %>
+        <%= form_tag sessions_path, :method => :post  do %>
             <%#= form_tag sessions_path, :html => {:class => "login-form-base1"} do %>
             <div class="user-holder">
               <label class="user-text">Email</label>

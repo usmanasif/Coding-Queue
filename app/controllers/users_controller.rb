@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    #return render :json=> params
+
     @user = User.new(params[:user])
     if @user.save
       login(params[:user][:email], params[:user][:password], params[:remeber_me])
