@@ -2,6 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/development.sphinx.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_core.spa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_core.spd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_core.sph" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_core.spi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_core.spk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_core.spl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_core.spm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_core.spp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_core.sps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.sph" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.sps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/searchd.development.pid" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121018134308_add_delta_column_in_askquestion.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codingstack.iml" afterPath="$PROJECT_DIR$/.idea/codingstack.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
@@ -52,7 +73,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/askquestions/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="88" selection-start="889" selection-end="889" vertical-scroll-proportion="0.16300367">
+            <state line="23" column="88" selection-start="889" selection-end="889" vertical-scroll-proportion="-0.74358976">
               <folding />
             </state>
           </provider>
@@ -71,7 +92,9 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/askquestions.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state line="9" column="0" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <marker date="1351162173000" expanded="true" signature="241:372" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -838,13 +861,15 @@
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/askquestions.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1351162173000" expanded="true" signature="241:372" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/askquestions/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="88" selection-start="889" selection-end="889" vertical-scroll-proportion="0.16300367">
+        <state line="23" column="88" selection-start="889" selection-end="889" vertical-scroll-proportion="-0.74358976">
           <folding />
         </state>
       </provider>
