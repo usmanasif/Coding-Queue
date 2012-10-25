@@ -52,8 +52,26 @@ class AskquestionsController < ApplicationController
 
   def index
     #return render :json => params
-    @askquestions = Askquestion.page(params[:page]).per_page(6)
-    #@askquestions = Askquestion.paginate(:page => params[:page], :per_page => 3)
+    if(params[:search]).present?
+    @askquestions = Askquestion.search(params[:search], order: :title,:page => params[:page], :per_page => 3, field_weights: {title: 20, description: 10, tag: 5})
+
+    else
+
+      @askquestions = Askquestion.page(params[:page]).per_page(6)
+
+      #@askquestions = Askquestion.paginate(:page => params[:page], :per_page => 5)
+
+    end
+
+
+    #@askquestions = Askquestion.search(params)
+
+
+    #@askquestions = Askquestion.page(params[:page]).per_page(6)
+
+
+
+    #@askquestions = Askquestion.paginate(:page => params[:page], :per_page => 5)
 
     #@askquestion = Askquestion.find(params[:id])----------------------  gillani before pagination
     @count=Askquestion.count

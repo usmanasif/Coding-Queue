@@ -22,6 +22,43 @@ class Askquestion < ActiveRecord::Base
 
 
 
+  define_index do
+    indexes title, sortable: true
+    indexes description
+    indexes answers.answer, as: :answer
+    indexes tags.name, as: :tag
+    set_property :delta => true
+
+  end
+
+
+
+
+
+
+
+
+
+
+
+  #def to_indexed_json
+  #  a = to_json(methods: [:answer])
+  #  puts "#{'$' * 100}"
+  #  puts a
+  #  puts "#{'$' * 100}"
+  #end
+  #
+  #def answer
+  #  #answers.collect{ |ans| ans.answer }
+  #  #tags.collect{|t| t.name}
+  #  #user.email
+  #
+  #  #Askquestion.first.tags.map(&:name).join(", ")
+  #  user.email
+  #end
+
+
+
 
 
   def tag_names=(tokens)
