@@ -1,9 +1,11 @@
 class AnswersController < ApplicationController
+
   def new
-    #return render :json => params
+
     @question = Askquestion.find(params[:askquestion_id])
     @answer = Answer.new
     @answer_of_the_question = Answer.find_all_by_askquestion_id(params[:askquestion_id])
+    @votes_on_answer = Answer.find_all_by_askquestion_id(params[:askquestion_id])
   end
 
   def create
@@ -34,45 +36,53 @@ class AnswersController < ApplicationController
 
   end
 
-  def vote_up
-    #return render :json => params
-    @vote_up =  Askquestion.find(params[:askquestion_id])
-      @vote_up.votes = @vote_up.votes + 1
-    if @vote_up.update_attributes(params[:vote_up])
-      #redirect_to :action => 'new', :id => @vote_up
-      redirect_to new_askquestion_answer_path
-    else
-      #@subjects = Subject.find(:all)
-      render :action => 'new'
-    end
-
-  end
-
-  def vote_down
-    @vote_down =  Askquestion.find(params[:askquestion_id])
-    @vote_down.votes = @vote_down.votes - 1
-        if @vote_down.update_attributes(params[:vote_down])
-          redirect_to new_askquestion_answer_path
-        else
-          #@subjects = Subject.find(:all)
-          render :action => 'new'
-        end
-
-  end
-
   def views
-    #return render :json => params
+
     @views =  Askquestion.find(params[:askquestion_id])
     @views.view_counter = @views.view_counter + 1
     if @views.update_attributes(params[:views])
       #redirect_to :action => 'new', :id => @vote_up
-      redirect_to new_askquestion_answer_path
+      #redirect_to new_askquestion_answer_path
+      return render :json=> @views.view_counter
     else
       #@subjects = Subject.find(:all)
       render :action => 'new'
     end
 
   end
+
+  def vote_up
+
+
+    @vote_up =  Askquestion.find(params[:askquestion_id])
+    @vote_up.votes = @vote_up.votes + 1
+    if @vote_up.update_attributes(params[:vote_up])
+      #redirect_to :action => 'new', :id => @vote_up
+      return render :json => @vote_up.votes
+      #redirect_to new_askquestion_answer_path
+    else
+      #@subjects = Subject.find(:all)
+      return render :json => "ELSE"
+
+      #render :action => 'new'
+    end
+
+  end
+
+
+  def vote_down
+    @vote_down =  Askquestion.find(params[:askquestion_id])
+    @vote_down.votes = @vote_down.votes - 1
+    if @vote_down.update_attributes(params[:vote_down])
+      #redirect_to new_askquestion_answer_path
+      return render :json => @vote_down.votes
+    else
+      #@subjects = Subject.find(:all)
+      render :action => 'new'
+    end
+
+  end
+
 
 
 end

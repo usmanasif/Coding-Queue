@@ -20,13 +20,14 @@ Codingstack::Application.routes.draw do
   #get 'answers/vote_up'
   resources :askquestions do
     resources :answers do
-    #get 'answers/vote_up'
       collection do
-        get 'vote_up'
-        get 'vote_down'
-        get 'views'
+        post 'vote_up'
+        post 'vote_down'
+        post 'views'
+
       end
     end
+
 
 end
   resources :tags

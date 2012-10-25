@@ -6,6 +6,10 @@ class Askquestion < ActiveRecord::Base
   validates :tag_names, :presence => true
 
   validates :title, :length => { :minimum => 5 }
+  #validates :tag_names, :length => { :minimum => 2  }
+
+  #validates :description, :length => { :minimum => 5  }
+
 
 
 

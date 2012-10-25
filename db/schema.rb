@@ -11,7 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+
 ActiveRecord::Schema.define(:version => 20121018134308) do
+
 
   create_table "answers", :force => true do |t|
     t.integer  "askquestion_id"
@@ -20,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20121018134308) do
     t.boolean  "active"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.integer  "votes"
   end
 
   create_table "askquestion_tag_questions", :force => true do |t|
