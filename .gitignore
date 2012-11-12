@@ -12,6 +12,13 @@
 
 # Ignore the .idea file.
  .idea/codingstack.iml
+ .idea/.generators
+ .idea/.rakeTasks
+ .idea/encodings.xml
+ .idea/misc.xml
+ .idea/modules.xml
+ .idea/vcs.xml
+
 
 
 # Ignore all logfiles and tempfiles.

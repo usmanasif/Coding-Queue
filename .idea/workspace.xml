@@ -2,35 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.horizontal.scroll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jquery.horizontal.scroll.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121016133542_add_column_vote_to_answers.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.horizontal.scroll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/jquery.horizontal.scroll.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/umar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codingstack.iml" afterPath="$PROJECT_DIR$/.idea/codingstack.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/searchd.development.pid" afterPath="$PROJECT_DIR$/log/searchd.development.pid" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/answers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/answers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/askquestions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/askquestions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/askquestion.rb" afterPath="$PROJECT_DIR$/app/models/askquestion.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/answers/new.html.erb" afterPath="$PROJECT_DIR$/app/views/answers/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/askquestions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/askquestions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="codingstack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,17 +33,103 @@
       <file leaf-file-name="askquestions_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/askquestions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="0" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.0">
+            <state line="29" column="49" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/askquestions/index.html.erb">
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/answers/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="88" selection-start="889" selection-end="889" vertical-scroll-proportion="7.3818183">
-              <folding />
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding>
+                <marker date="1351165641000" expanded="true" signature="610:2594" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="646:2583" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="706:1037" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="886:1024" placeholder="if ... end" />
+                <marker date="1351165641000" expanded="true" signature="1078:1089" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="1134:1583" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="1299:1569" placeholder="{&quot;type&quot;: 'POST'...}" />
+                <marker date="1351165641000" expanded="true" signature="1475:1554" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="1633:2085" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="1798:2071" placeholder="{&quot;type&quot;: 'POST'...}" />
+                <marker date="1351165641000" expanded="true" signature="1976:2056" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="2127:2574" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="2292:2560" placeholder="{&quot;type&quot;: 'POST'...}" />
+                <marker date="1351165641000" expanded="true" signature="2465:2545" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="2604:2769" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="2610:2683" placeholder="//..." />
+                <marker date="1351165641000" expanded="true" signature="2717:2758" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="2995:14485" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3015:13967" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3038:11457" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3068:11446" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3093:6735" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3119:6686" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3156:3711" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3191:3469" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3504:3696" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3747:6673" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3790:4864" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3824:4115" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="3900:4097" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="4270:4673" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="4902:5097" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="5130:6658" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="5295:5801" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="5842:6641" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="5883:6333" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="5921:6312" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="5928:6095" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="6141:6306" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="6219:6261" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="6376:6622" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="6424:6601" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="6936:7260" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="6982:7083" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="7118:7249" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="7298:9773" placeholder="do ... end" />
+                <marker date="1351165641000" expanded="true" signature="7337:9761" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="7367:9704" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="7408:7795" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="7447:7543" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="7582:7776" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="7835:9470" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="7882:8210" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="7920:8069" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="8252:9451" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="8563:9430" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="8608:9094" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="8650:9069" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="8656:8823" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="8873:9042" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="8951:8997" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="9141:9407" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="9193:9382" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="9816:11437" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="9940:11426" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="10062:11411" placeholder="do ... end" />
+                <marker date="1351165641000" expanded="true" signature="10087:10478" placeholder="if ... end" />
+                <marker date="1351165641000" expanded="true" signature="10156:10458" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="10263:10435" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="10288:10409" placeholder="for ... end" />
+                <marker date="1351165641000" expanded="true" signature="10515:10869" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="10622:10762" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="10829:10850" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="10909:11395" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="10935:11172" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="11489:12192" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="11508:12179" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="11763:11829" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="11895:11981" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="12015:12066" placeholder="{...}" />
+                <marker date="1351165641000" expanded="true" signature="12213:13956" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="12237:12675" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="12313:12494" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="12702:13947" placeholder="..." />
+                <marker date="1351165641000" expanded="true" signature="12728:13938" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,30 +143,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="askquestions.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/askquestions.css.scss">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+            <state line="25" column="30" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="askquestions.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/askquestions.js.coffee">
+      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1351162173000" expanded="true" signature="241:372" placeholder="{...}" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <file leaf-file-name="application.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="27" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.65960914">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="65" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile.lock" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="137" column="16" selection-start="3045" selection-end="3050" vertical-scroll-proportion="0.7794118">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="development.sphinx.conf" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/development.sphinx.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,36 +200,7 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/askquestions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="35" selection-start="2362" selection-end="2362" vertical-scroll-proportion="24.083334">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="25" selection-start="271" selection-end="271" vertical-scroll-proportion="-3.125">
-              <folding>
-                <marker date="1351165641000" expanded="true" signature="614:3088" placeholder="{...}" />
-                <marker date="1351165641000" expanded="true" signature="533:589" placeholder="{...}" />
-                <marker date="1351165641000" expanded="true" signature="2394:3078" placeholder="{...}" />
-                <marker date="1351165641000" expanded="true" signature="2503:2980" placeholder="{&quot;type&quot;: &quot;POST&quot;...}" />
-                <marker date="1351165641000" expanded="true" signature="2725:2942" placeholder="{...}" />
-                <marker date="1351165641000" expanded="true" signature="4335:4424" placeholder="do ... end" />
-                <marker date="1351165641000" expanded="true" signature="4781:5150" placeholder="if ... end" />
-                <marker date="1351165641000" expanded="true" signature="4953:5075" placeholder="for ... end" />
-                <marker date="1351165641000" expanded="true" signature="7057:8632" placeholder="..." />
-                <marker date="1351165641000" expanded="true" signature="7057:8586" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="answer.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/answer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+            <state line="71" column="35" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -166,7 +222,6 @@
         <option value="$PROJECT_DIR$/app/controllers/answers_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/answers/new.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/migrate/20121018134308_add_delta_column_in_askquestion.rb" />
         <option value="$PROJECT_DIR$/app/models/askquestion.rb" />
@@ -177,16 +232,17 @@
         <option value="$PROJECT_DIR$/app/views/askquestions/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/askquestions.js.coffee" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/askquestions_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/controllers/askquestions_controller.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="77" />
-    <option name="y" value="24" />
-    <option name="width" value="1363" />
-    <option name="height" value="876" />
+    <option name="x" value="76" />
+    <option name="y" value="-4" />
+    <option name="width" value="1365" />
+    <option name="height" value="905" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -220,114 +276,80 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="false" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource />
+      <autoscrollToSource ProjectPane="false" />
       <autoscrollFromSource />
-      <sortByType />
+      <sortByType ProjectPane="false" />
     </navigator>
     <panes>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Models" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ModelsFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ControllersFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
+              <option name="myItemId" value="Coding-Queue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
+              <option name="myItemId" value="Coding-Queue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Coding-Queue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coding-Queue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coding-Queue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
-        <subPane subId="Project Files">
+        <subPane subId="Default" />
+        <subPane subId="Project Files" />
+        <subPane subId="Changed Files" />
+        <subPane subId="All">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Coding-Queue">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Coding-Queue">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Coding-Queue">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -339,8 +361,9 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settings.ide.settings.uml" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -362,7 +385,7 @@
       <recent name="$PROJECT_DIR$/app/views/askquestions" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: codingstack">
+  <component name="RunManager" selected="Rails.Development: Coding-Queue">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -526,52 +549,6 @@
       </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="false" name="test" type="RakeRunConfigurationType" factoryName="Rake">
-      <module name="codingstack" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="spec" type="RakeRunConfigurationType" factoryName="Rake">
-      <module name="codingstack" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Production: codingstack" type="RailsRunConfigurationType" factoryName="Rails">
       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="codingstack" />
@@ -620,14 +597,113 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: codingstack" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: codingstack" />
+    <configuration default="false" name="test" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="Coding-Queue" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="spec" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="Coding-Queue" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Production: Coding-Queue" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="Coding-Queue" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Development: Coding-Queue" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="Coding-Queue" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Rails.Production: codingstack" />
+      <item index="1" class="java.lang.String" itemvalue="Rails.Development: codingstack" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="4" class="java.lang.String" itemvalue="Rails.Production: Coding-Queue" />
+      <item index="5" class="java.lang.String" itemvalue="Rails.Development: Coding-Queue" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -656,24 +732,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="77" y="24" width="1363" height="876" extended-state="6" />
+    <frame x="76" y="-4" width="1365" height="905" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1474359" sideWeight="0.30159938" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1474359" sideWeight="0.29931456" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09478673" sideWeight="0.482801" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26428026" sideWeight="0.8525641" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2612338" sideWeight="0.132626" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2612338" sideWeight="0.77851456" order="0" side_tool="false" content_ui="combo" x="716" y="248" width="216" height="429" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1474359" sideWeight="0.6930693" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16450876" sideWeight="0.33421752" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0795756" sideWeight="0.69535416" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09478673" sideWeight="0.482801" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09501558" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -733,57 +809,14 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/tag.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tags.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/answer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="64" selection-start="450" selection-end="450" vertical-scroll-proportion="-11.096774" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/answers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="13" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.757329" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tags.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/answers.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/askquestions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="35" selection-start="2362" selection-end="2362" vertical-scroll-proportion="24.083334">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/askquestions.css.scss">
@@ -795,19 +828,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="25" selection-start="271" selection-end="271" vertical-scroll-proportion="-3.125">
-          <folding>
-            <marker date="1351165641000" expanded="true" signature="614:3088" placeholder="{...}" />
-            <marker date="1351165641000" expanded="true" signature="533:589" placeholder="{...}" />
-            <marker date="1351165641000" expanded="true" signature="2394:3078" placeholder="{...}" />
-            <marker date="1351165641000" expanded="true" signature="2503:2980" placeholder="{&quot;type&quot;: &quot;POST&quot;...}" />
-            <marker date="1351165641000" expanded="true" signature="2725:2942" placeholder="{...}" />
-            <marker date="1351165641000" expanded="true" signature="4335:4424" placeholder="do ... end" />
-            <marker date="1351165641000" expanded="true" signature="4781:5150" placeholder="if ... end" />
-            <marker date="1351165641000" expanded="true" signature="4953:5075" placeholder="for ... end" />
-            <marker date="1351165641000" expanded="true" signature="7057:8632" placeholder="..." />
-            <marker date="1351165641000" expanded="true" signature="7057:8586" placeholder="..." />
-          </folding>
+        <state line="8" column="25" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -815,14 +837,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1351162173000" expanded="true" signature="241:372" placeholder="{...}" />
+            <marker date="1351162173000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/askquestions/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="88" selection-start="889" selection-end="889" vertical-scroll-proportion="7.3818183">
+        <state line="23" column="88" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -834,16 +856,151 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/askquestions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="35" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/askquestions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.0">
+        <state line="29" column="49" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/answers/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1351165641000" expanded="true" signature="610:2594" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="646:2583" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="706:1037" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="886:1024" placeholder="if ... end" />
+            <marker date="1351165641000" expanded="true" signature="1078:1089" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="1134:1583" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="1299:1569" placeholder="{&quot;type&quot;: 'POST'...}" />
+            <marker date="1351165641000" expanded="true" signature="1475:1554" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="1633:2085" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="1798:2071" placeholder="{&quot;type&quot;: 'POST'...}" />
+            <marker date="1351165641000" expanded="true" signature="1976:2056" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="2127:2574" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="2292:2560" placeholder="{&quot;type&quot;: 'POST'...}" />
+            <marker date="1351165641000" expanded="true" signature="2465:2545" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="2604:2769" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="2610:2683" placeholder="//..." />
+            <marker date="1351165641000" expanded="true" signature="2717:2758" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="2995:14485" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3015:13967" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3038:11457" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3068:11446" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3093:6735" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3119:6686" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3156:3711" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3191:3469" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3504:3696" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3747:6673" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3790:4864" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3824:4115" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="3900:4097" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="4270:4673" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="4902:5097" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="5130:6658" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="5295:5801" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="5842:6641" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="5883:6333" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="5921:6312" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="5928:6095" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="6141:6306" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="6219:6261" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="6376:6622" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="6424:6601" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="6936:7260" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="6982:7083" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="7118:7249" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="7298:9773" placeholder="do ... end" />
+            <marker date="1351165641000" expanded="true" signature="7337:9761" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="7367:9704" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="7408:7795" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="7447:7543" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="7582:7776" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="7835:9470" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="7882:8210" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="7920:8069" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="8252:9451" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="8563:9430" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="8608:9094" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="8650:9069" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="8656:8823" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="8873:9042" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="8951:8997" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="9141:9407" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="9193:9382" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="9816:11437" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="9940:11426" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="10062:11411" placeholder="do ... end" />
+            <marker date="1351165641000" expanded="true" signature="10087:10478" placeholder="if ... end" />
+            <marker date="1351165641000" expanded="true" signature="10156:10458" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="10263:10435" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="10288:10409" placeholder="for ... end" />
+            <marker date="1351165641000" expanded="true" signature="10515:10869" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="10622:10762" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="10829:10850" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="10909:11395" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="10935:11172" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="11489:12192" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="11508:12179" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="11763:11829" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="11895:11981" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="12015:12066" placeholder="{...}" />
+            <marker date="1351165641000" expanded="true" signature="12213:13956" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="12237:12675" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="12313:12494" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="12702:13947" placeholder="..." />
+            <marker date="1351165641000" expanded="true" signature="12728:13938" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="27" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.65960914">
+        <state line="25" column="30" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/development.sphinx.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="65" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="16" selection-start="3045" selection-end="3050" vertical-scroll-proportion="0.7794118">
           <folding />
         </state>
       </provider>
