@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
 
   has_many:askquestions,:dependent => :destroy
   has_many :answers
+  has_many :votes
+  has_many :comments
 
 end
 

@@ -1,6 +1,8 @@
 class AskquestionsController < ApplicationController
 
-  before_filter :require_login, only: [:create]
+  before_filter :require_login, :except => [:index,:new]
+
+  skip_before_filter :verify_authenticity_token
 
   def new
 
@@ -59,53 +61,67 @@ class AskquestionsController < ApplicationController
 
   def index
 
-    @askquestions = Askquestion.page(params[:page]).per_page(6)
+    @askquestions = Askquestion.page(params[:page]).per_page(4)
     #@askquestions = Askquestion.paginate(:page => params[:page], :per_page => 3)
 
     #@askquestion = Askquestion.find(params[:id])----------------------  gillani before pagination
-    @count=Askquestion.count
+    #@count=Askquestion.count
   end
 
-end
+
 
    def vote_up
-      #return render :json => params
-      @vote_up =  Askquestion.find(params[:askquestion_id])
-      @vote_up.votes = @vote_up.votes + 1
-      if @vote_up.update_attributes(params[:vote_up])
-        #redirect_to :action => 'new', :id => @vote_up
-        return render :json => params
-        #redirect_to new_askquestion_answer_path
+
+     #logger.info "=" * 20
+     #logger.info params.inspect
+     #logger.info "end" * 20
+
+
+      @vote_up =  Askquestion.find(params[:id])
+      @vote = @vote_up.votes.build
+      @vote.user = current_user
+      @vote.status = 1
+      if @vote.save
+        return render :json => @vote_up.votes.sum(:status)
       else
         #@subjects = Subject.find(:all)
         render :action => 'new'
+
       end
 
   end
 
 
-#def vote_down
-#  @vote_down =  Askquestion.find(params[:askquestion_id])
-#  @vote_down.votes = @vote_down.votes - 1
-#  if @vote_down.update_attributes(params[:vote_down])
-#    redirect_to new_askquestion_answer_path
-#  else
-#    #@subjects = Subject.find(:all)
-#    render :action => 'new'
-#  end
-#
-#end
-#
-#def views
-#
-#  @views =  Askquestion.find(params[:askquestion_id])
-#  @views.view_counter = @views.view_counter + 1
-#  if @views.update_attributes(params[:views])
-#    #redirect_to :action => 'new', :id => @vote_up
-#    redirect_to new_askquestion_answer_path
-#  else
-#    #@subjects = Subject.find(:all)
-#    render :action => 'new'
-#  end
-#
-#end
+    def vote_down
+
+      @vote_down =  Askquestion.find(params[:id])
+      @vote = @vote_down.votes.build
+      @vote.user = current_user
+      @vote.status = -1
+
+      if @vote.save
+
+        return render :json => @vote_down.votes.sum(:status)
+
+      else
+        #@subjects = Subject.find(:all)
+        render :action => 'new'
+      end
+
+    end
+
+  def views
+
+    @views =  Askquestion.find(params[:id])
+    @views.view_counter = @views.view_counter + 1
+    if @views.update_attributes(params[:views])
+
+      return render :json=> @views.view_counter
+    else
+
+      render :action => 'new'
+    end
+
+  end
+
+end

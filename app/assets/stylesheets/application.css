@@ -11,6 +11,5 @@
  *= require_self
  *= require token-input-facebook
  *= require jquery.fancybox.css
- *= require jquery.horizontal.scroll.css
  *= require_tree .
 */
