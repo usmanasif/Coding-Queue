@@ -9,6 +9,15 @@ class Answer < ActiveRecord::Base
   has_many :votes, :as => :votable
   has_many :comments, :as => :commentable
 
+  after_save :set_askquestion_delta_flag
+  after_destroy :set_askquestion_delta_flag
+
+  private
+
+  def set_askquestion_delta_flag
+    askquestion.delta = true
+    askquestion.save
+  end
 
 
   def vote_calculate(question)

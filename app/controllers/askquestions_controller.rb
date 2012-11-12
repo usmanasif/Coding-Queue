@@ -61,8 +61,31 @@ class AskquestionsController < ApplicationController
 
   def index
 
-    @askquestions = Askquestion.page(params[:page]).per_page(4)
-    #@askquestions = Askquestion.paginate(:page => params[:page], :per_page => 3)
+
+
+    #return render :json => params
+    if(params[:search]).present?
+    @askquestions = Askquestion.search(params[:search], order: :title,:page => params[:page], :per_page => 3, field_weights: {title: 20, description: 10, tag: 5})
+
+    else
+
+      @askquestions = Askquestion.page(params[:page]).per_page(6)
+
+      #@askquestions = Askquestion.paginate(:page => params[:page], :per_page => 5)
+
+    end
+
+
+    #@askquestions = Askquestion.search(params)
+
+
+    #@askquestions = Askquestion.page(params[:page]).per_page(6)
+
+
+
+    #@askquestions = Askquestion.paginate(:page => params[:page], :per_page => 5)
+
+
 
     #@askquestion = Askquestion.find(params[:id])----------------------  gillani before pagination
     #@count=Askquestion.count
@@ -92,6 +115,7 @@ class AskquestionsController < ApplicationController
   end
 
 
+<<<<<<< HEAD
     def vote_down
 
       @vote_down =  Askquestion.find(params[:id])
@@ -125,3 +149,30 @@ class AskquestionsController < ApplicationController
   end
 
 end
+=======
+#def vote_down
+#  @vote_down =  Askquestion.find(params[:askquestion_id])
+#  @vote_down.votes = @vote_down.votes - 1
+#  if @vote_down.update_attributes(params[:vote_down])
+#    redirect_to new_askquestion_answer_path
+#  else
+#    #@subjects = Subject.find(:all)
+#    render :action => 'new'
+#  end
+#
+#end
+#
+#def views
+#
+#  @views =  Askquestion.find(params[:askquestion_id])
+#  @views.view_counter = @views.view_counter + 1
+#  if @views.update_attributes(params[:views])
+#    #redirect_to :action => 'new', :id => @vote_up
+#    redirect_to new_askquestion_answer_path
+#  else
+#    #@subjects = Subject.find(:all)
+#    render :action => 'new'
+#  end
+#
+#end
+>>>>>>> b6906e2955dd27412e35646981c57e3986a272d1

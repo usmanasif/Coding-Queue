@@ -10,12 +10,6 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
-# Ignore the .idea file.
- .idea/codingstack.iml
- .idea/workspace.xml
-
-
-
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp

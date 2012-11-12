@@ -5,3 +5,6 @@ jQuery ->
   $('#askquestion_tag_names').tokenInput '/tags.json'
     theme: 'facebook'
     prePopulate: $('#askquestion_tag_names').data('load')
+
+#  $('#askquestion_search').autocomplete
+#    source: $('#askquestion_search').data('autocomplete-source')
