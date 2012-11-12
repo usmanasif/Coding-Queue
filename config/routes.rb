@@ -13,18 +13,36 @@ Codingstack::Application.routes.draw do
   get "signup" => "users#new", :as => "signup"
 
 
+
+  #resources :askquestions do
+  #
+  #end
+
   resources :users
 
   #get 'answers/vote_down'
 
   #get 'answers/vote_up'
   resources :askquestions do
+
+    member do
+      post 'vote_up'
+      post 'vote_down'
+      post 'views'
+    end
+    resources :comments do
+      member do
+        put 'update_test'
+      end
+    end
     resources :answers do
-      collection do
+      member do
         post 'vote_up'
         post 'vote_down'
-        post 'views'
 
+      end
+      member do
+        get 'tick_status'
       end
     end
 

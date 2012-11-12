@@ -12,7 +12,11 @@
 # It's strongly recommended to check this file into your version control system.
 
 
-ActiveRecord::Schema.define(:version => 20121018134308) do
+ActiveRecord::Schema.define(:version => 20121101093643) do
+
+
+
+
 
 
   create_table "answers", :force => true do |t|
@@ -22,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20121018134308) do
     t.boolean  "active"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-    t.integer  "votes"
+    t.integer  "tick_status"
   end
 
   create_table "askquestion_tag_questions", :force => true do |t|
@@ -60,6 +64,15 @@ ActiveRecord::Schema.define(:version => 20121018134308) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "comments", :force => true do |t|
+    t.string   "description"
+    t.integer  "user_id"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
   create_table "tags", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -78,5 +91,14 @@ ActiveRecord::Schema.define(:version => 20121018134308) do
   end
 
   add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
+
+  create_table "votes", :force => true do |t|
+    t.integer  "votable_id"
+    t.string   "votable_type"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "status"
+    t.integer  "user_id"
+  end
 
 end

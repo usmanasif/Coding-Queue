@@ -4898,7 +4898,24 @@ to { background-position: 0 0; }
     text-indent: -9999px;
     overflow: hidden;
 }
-
+.tick-colour {
+    float: left;
+    background: url(sign-1.png) no-repeat;
+    border:none;
+    width: 21px;
+    height: 22px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.tick-simple {
+    background: url(sign-2.png) no-repeat;
+    float: left;
+    border:none;
+    width: 21px;
+    height: 22px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
 .unlike-down {
     float: right;
     background: url(unlike-icon.png) no-repeat;
@@ -5509,16 +5526,19 @@ to { background-position: 0 0; }
 }
 
 .txt-field4 {
-    background: #fff;
-    padding: 0 5px;
     margin: 0 15px 0 0;
     width: 495px;
     height: 32px;
-    border: #cfcfcf solid 1px;
     float: left;
-    border-radius: 0;
-    color: #000;
     font-size: 14px;
+}
+.txt-field4 input {
+    border-radius: 3px 3px 3px 3px;
+    -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    width: 485px;
+    padding: 0 5px;
+    height: 30px;
 }
 
 .comment-btn {
@@ -5605,8 +5625,10 @@ to { background-position: 0 0; }
 }
 
 .inner-c {
-    float: left;
+    background: none repeat scroll 0 0 #EDEDED;
+    margin-top: 3px;
     overflow: hidden;
+    padding: 2px 0;
 }
 
 .by-post-user {

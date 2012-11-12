@@ -43,6 +43,7 @@ gem 'will_paginate', '> 3.0'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'sorcery', '0.7.7'
+gem 'best_in_place'
 
 group :development, :test do
   gem 'railroady'

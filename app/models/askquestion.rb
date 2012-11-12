@@ -13,7 +13,8 @@ class Askquestion < ActiveRecord::Base
 
 
 
-
+  has_many :votes, :as => :votable
+  has_many :comments, :as => :commentable
   belongs_to :user
   has_many :askquestion_tags,:dependent =>:destroy
   has_many :tags, :through => :askquestion_tags

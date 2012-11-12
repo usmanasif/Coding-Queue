@@ -1,0 +1,23 @@
+
+<%#= form_for(@menu_items, :url => restaurant_menu_items_path(@menu_items.restaurant)) do |f| %>
+<%= form_for @comment, :url =>  askquestion_comment_path(@ques,@comment )  do |f| %>
+    <% if @comment.errors.any? %>
+        <div id="errorExplanation">
+          <h2><%= pluralize(@comment.errors.count, "error") %> prohibited
+            this post from being saved:</h2>
+          <ul>
+            <% @comment.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :description %><br />
+      <%= f.text_field :description %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
