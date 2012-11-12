@@ -23,7 +23,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+                                                                d
 gem 'thinking-sphinx'
 
 gem 'will_paginate', '> 3.0'
