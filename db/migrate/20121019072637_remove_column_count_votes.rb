@@ -1,6 +1,6 @@
 class RemoveColumnCountVotes < ActiveRecord::Migration
   def self.up
-    remove_column :votes ,:count
+    remove_column :votes, :count
   end
 
   def self.down
