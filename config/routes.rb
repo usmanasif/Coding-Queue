@@ -23,6 +23,11 @@ Codingstack::Application.routes.draw do
   #get 'answers/vote_down'
 
   #get 'answers/vote_up'
+  resources :comments do
+    member do
+      put 'update_test'
+    end
+  end
   resources :askquestions do
 
     member do
@@ -30,11 +35,7 @@ Codingstack::Application.routes.draw do
       post 'vote_down'
       post 'views'
     end
-    resources :comments do
-      member do
-        put 'update_test'
-      end
-    end
+
     resources :answers do
       member do
         post 'vote_up'
@@ -44,6 +45,7 @@ Codingstack::Application.routes.draw do
       member do
         get 'tick_status'
       end
+
     end
 
 

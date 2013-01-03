@@ -11,13 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
 ActiveRecord::Schema.define(:version => 20121101093643) do
-
-
-
-
-
 
   create_table "answers", :force => true do |t|
     t.integer  "askquestion_id"

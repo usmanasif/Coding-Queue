@@ -13,7 +13,7 @@
 # Ignore the .idea file.
  .idea/codingstack.iml
  .idea/workspace.xml
-
+ config/database.yml
 
 
 # Ignore all logfiles and tempfiles.

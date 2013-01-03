@@ -14,12 +14,34 @@
     }
     h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
   </style>
+    <script src="/assets/html5.js?body=1" type="text/javascript"></script>
+    <script src="/assets/jquery-1.7.2.min.js?body=1" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+            $('#one_1').live('click',function () {
+
+                $('.two').append('<a href="#" class="one" id="one_1">Link One</a><br/>');
+
+            });
+
+
+
+
+        });
+
+
+    </script>
 </head>
 
 <body>
   <!-- This file lives in public/500.html -->
   <div class="dialog">
-    <h1>We're sorry, but something went wrong.</h1>
+    <h1>We're NOT sorry, AND NOTHING went wrong.</h1>
+
+      <a href="#" class="one" id="one_1">Link One</a>
+      <div class="two"></div>
   </div>
 </body>
 </html>

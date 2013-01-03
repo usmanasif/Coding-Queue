@@ -1,0 +1,132 @@
+<!--##################### First loop ###########################################-->
+
+<% @answer_of_question.each do |ans| %>
+    <% if ans.tick_status == 1%>
+        <div class="q-post">
+          <div class="q-top">
+            <div class="counter-holder">
+              <ul class="counter-nav">
+                <li><span class="answer_votes_<%= ans.id%>">Votes:<%= ans.votes.sum(:status) %> </span></li>
+              </ul>
+              <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+                <span>Asked<span class="ago-days"> <%= time_ago_in_words(ans.created_at) %> ago</span></span>
+              </strong>
+            </div>
+            <div class="middle-holder">
+              <div class="rating-icon-holder">
+                <ul class="a-q-flag">
+                  <li><a href="#" class="flag">flag</a></li>
+                  <li><a href="#" class="link-icon">link</a></li>
+                </ul>
+
+
+
+                <% if current_user && current_user.id == @question.user_id  %>
+                    <% if ans.tick_status == 1 %>
+                        <%= link_to  "Tick", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-colour" %>
+                    <% else %>
+                        <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-simple" %>
+                    <% end %>
+
+                <% elsif ans.tick_status == 1 %>
+                    <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-colour" %>
+                <% end %>
+
+                <% logger.debug "Answer-"*20 %>
+
+                <div class="about-question">
+                  <span class="ans_<%= ans.id%>">
+
+                  <% if current_user && current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").present? && ans.votes.present?  %>
+
+                      <% if current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").last.status == 1 %>
+                          <input type="hidden" name="question_id" id="question_id" value='<%= @question.id %>' />
+                            <%= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id, ans.id), :class => "unlike-down-answer" , :data => ans.id%>
+
+                      <% elsif current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").last.status == -1   %>
+
+                          <%= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, ans.id), :class => "like-up-answer", :data => ans.id  %>
+                            <input type="hidden" name="answer_id" id="answer_id" value='<%= ans.id %>' />
+
+                      <% end %>
+                  <% else %>
+                      <%= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, ans.id), :class => "like-up-answer", :data => ans.id  %>
+                        <input type="hidden" name="answer_id" id="answer_id" value='<%= ans.id %>' />
+                        <%= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id,ans.id), :class => "unlike-down-answer" , :data => ans.id%>
+                  <% end %>
+                   </span>
+                </div>
+              </div>
+              <div class="user-question">
+                <span class="user-img"> <img src="/assets/img-1.jpg" width="42" height="42" alt="image"></span>
+                <span class="post-heading"><%= raw(ans.answer) %></span>
+                <!--Start --Comment-List -- Start-->
+                <div class="comment-holder">
+                  <div class="comment-copy-Answer<%= ans.id%>">
+
+                    <input type="hidden" name="comment-question-id" id="comment-question-id" value='<%= ans.id %>' />
+
+                    <% @comments.each do |comment| %>
+                        <tr>
+                          <% logger.debug "Q-Comment_Q" * 8 %>
+                          <% logger.debug comment.inspect %>
+                          <% logger.debug  %>
+                          <% logger.debug %>
+                          <% logger.debug " End Q End "*15 %>
+
+                          <% if comment.commentable_id == ans.id && comment.commentable_type == "Answer"%>
+                            <div class="inner-c">
+
+                              <% if current_user.present? && current_user.id == comment.user_id %>
+                                  <%= best_in_place comment, :description, :path => comment_path(answer_id: comment.commentable_id, id: comment) %>
+
+                              <% else %>
+                                  <span><%=  comment.description %> </span>
+                              <% end %>
+                              <span class="by-post-user">
+                            <a href="#" class="us-name"> <%= comment.user.email %></a>
+                            <a href="#" class="by-date-user">Jan3 '10 at 23:56 <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
+                             </span>
+                            </div>
+
+                        <% end %>
+
+                    <% end %>
+
+                  </div>
+
+                  <div class="create-comment">
+                    <%= form_for  @comment, :url =>  comments_path(answer_id: ans.id) do |f| %>
+                        <% if @comment.errors.any? %>
+                            <div id="errorExplanation">
+                              <h2><%= pluralize(@comment.errors.count, "error") %> prohibited
+                                this post from being saved:</h2>
+                              <ul>
+                                <% @comment.errors.full_messages.each do |msg| %>
+                                    <li><%= msg %></li>
+                                <% end %>
+                              </ul>
+                            </div>
+                        <% end %>
+
+                        <div class="txt-field4">
+
+                          <%= f.text_field :description, :class=> "answer_comment" %>
+                        </div>
+
+                        <%= f.submit :class => "comment-btn" %>
+
+                    <% end %>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="q-btm">&nbsp;</div>
+        </div>
+    <% end %>
+<% end %>
+
+<!--##################### END First Loop ###########################################-->

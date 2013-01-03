@@ -1,0 +1,53 @@
+$(document).ready(function () {
+
+    $(".like-up").live('click',function (e) {
+        e.preventDefault();
+        //console.log('HERE');
+        var question_id =  $(this).attr('data');
+        // return false;
+        //$(this).toggle();
+        $(this).hide();
+        //alert("start");
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('href'),
+            success:function (data) {
+                //alert("success");
+                $('.vote_question_'+question_id).html("Votes: "+ data);
+               // alert("up ");
+                $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="unlike-down" data='+question_id+' >VOTE DOWN</a>');
+
+            }
+
+        });
+
+
+
+    });
+
+
+    $(".unlike-down").live('click', function (e) {
+        e.preventDefault();
+        var question_id =  $(this).attr('data');
+//        $(this).toggle();
+        $(this).hide();
+
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('href'),
+            success:function (data) {
+                //alert("success");
+                $('.vote_question_'+question_id).html("Votes: "+ data);
+                //alert("down ");
+                $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="like-up" data='+question_id+'  >VOTE UP</a>');
+
+
+            }
+        });
+
+    });
+
+
+
+
+});

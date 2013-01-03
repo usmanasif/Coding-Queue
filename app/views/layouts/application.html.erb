@@ -4,7 +4,7 @@
   <title>Coding Stack</title>
   <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "jquery.tokeninput.js" %>
+  <%#= javascript_include_tag "jquery.tokeninput.js" %>
   <%#= stylesheet_link_tag "style.css" %>
   <%#= stylesheet_link_tag "jquery.fancybox" %>
   <%= csrf_meta_tag %>
@@ -55,16 +55,16 @@
 ////                      $('nav.login-menu').html("<%#= login_nav( @abc )%>");
 ////                      debugger
 //                       $('nav.login-menu').html('Logged in as ' + json.email);
-////                     alert("<%= current_user.present? %>");
+////                     alert("<%#= current_user.present? %>");
 //
 //                     // current_user ||= session[:current_user_id];
 //
 //                      <!--<%#= session[:current_user_id] = json.id %>-->
 //
 ////                      session[:user_id] = @current_user.id
-//                      <!--<%= logger.info '=AJAZ=' * 20  %>-->
-//                      <!--<%= logger.info current_user %>-->
-//                      <!--<%= logger.info '-=AJAZ-END=-' * 20 %>-->
+//                      <!--<%#= logger.info '=AJAZ=' * 20  %>-->
+//                      <!--<%#= logger.info current_user %>-->
+//                      <!--<%#= logger.info '-=AJAZ-END=-' * 20 %>-->
 //
 //
 ////                      alert(test);

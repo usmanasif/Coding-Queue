@@ -10,22 +10,31 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require html5.js
 //= require jquery-1.7.2.min.js
 //= require jquery
 //= require jquery_ujs
 //= require jquery.purr
-//= require best_in_place
-//= require jquery.tokeninput
+//= require jquery.autosize-min.js
+//= require jquery.autosize.js
 //= require jquery.fancybox.js
+//= require jquery.horizontal.scroll.js
 //= require jquery.mousewheel-3.0.6.pack.js
+//= require jquery.tokeninput
 //= require Markdown.Converter.js
 //= require Markdown.Editor.js
 //= require Markdown.Sanitizer.js
-//= require oauths.js.coffee
 //= require prettify.js
+//= require answers
 //= require sessions.js.coffee
 //= require tags.js.coffee
 //= require users.js.coffee
-//= require answers
+//= require oauths.js.coffee
+//= require best_in_place
+//= require html5.js
+//= require askquestion_new
+//= require askquestion_index
 //= require_tree .
+
+
+
+

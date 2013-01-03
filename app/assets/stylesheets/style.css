@@ -4898,6 +4898,15 @@ to { background-position: 0 0; }
     text-indent: -9999px;
     overflow: hidden;
 }
+.like-up-answer {
+    float: left;
+    background: url(like-icon.png) no-repeat;
+    border:none;
+    width: 21px;
+    height: 22px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
 .tick-colour {
     float: left;
     background: url(sign-1.png) no-repeat;
@@ -4917,6 +4926,15 @@ to { background-position: 0 0; }
     overflow: hidden;
 }
 .unlike-down {
+    float: right;
+    background: url(unlike-icon.png) no-repeat;
+    width: 21px;
+    height: 22px;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin: 5px 0 0;
+}
+.unlike-down-answer {
     float: right;
     background: url(unlike-icon.png) no-repeat;
     width: 21px;
@@ -5552,6 +5570,7 @@ to { background-position: 0 0; }
     padding: 0;
     text-indent: -9999px;
     width: 122px !important;
+    cursor: pointer;
 }
 
 .ready-post {

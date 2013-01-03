@@ -1,0 +1,185 @@
+
+
+$(document).ready(function () {
+
+
+
+    var current_user = $('#current_user').val();
+    //alert(current_user);
+
+    $("button.create-btn").live('click', function (e) {
+        e.preventDefault();
+        //            alert("submit");
+        data = $("div#wmd-preview").html();
+        $("input#wmd-preview-input").val(data);
+         if (current_user){
+            $('form.new_answer').submit();
+         }
+         else{
+            $("#fancybox").click();
+         }
+    });
+
+    $(".eye").click(function (e) {
+        e.preventDefault();
+        var question_id = $("#question_id").val();
+        //console.log($(".like-up").attr("action"));
+        $.ajax({
+            type:'POST',
+            url:$(this).attr('href'),
+            success:function (data) {
+                $("#views_count").html("Views:" + data);
+            }
+        });
+    });
+
+    $(".like-up").live('click', function (e) {
+        e.preventDefault();
+
+        var question_id = $(this).attr('data');
+        $(this).toggle();
+
+        $.ajax({
+            type:'POST',
+            url:$(this).attr('href'),
+            success:function (data) {
+
+                $('.votes_count_' + question_id).html("Votes: " + data);
+                $('.ques_' + question_id).html('<a href=/askquestions/' + question_id + '/vote_up class="unlike-down" data=' + question_id + '>VOTE DOWN</a>');
+            }
+        });
+    });
+
+
+    $(".unlike-down").live('click', function (e) {
+        e.preventDefault();
+        var question_id = $(this).attr('data');
+        $(this).toggle();
+
+        $.ajax({
+            type:'POST',
+            url:$(this).attr('href'),
+            success:function (data) {
+
+                $('.votes_count_' + question_id).html("Votes: " + data);
+                $('.ques_' + question_id).html('<a href=/askquestions/' + question_id + '/vote_up class="like-up" data=' + question_id + '>VOTE UP</a>');
+
+            }
+        });
+    });
+
+
+    $(".like-up-answer").live('click', function (e) {
+        e.preventDefault();
+        var answer_id = $(this).attr('data');
+        var question_id = $('#question_id').val();
+        $(this).toggle();
+        $.ajax({
+            type:'POST',
+            url:$(this).attr('href'),
+            dataType: 'html',
+            success:function (data) {
+                alert(data);
+                $('.answer_votes_' + answer_id).html("Votes: " + data[0]);
+                $('.ans_' + answer_id).html('<a href=/askquestions/' + question_id + '/answers/' + answer_id + '/vote_down class="unlike-down-answer" data=' + answer_id + '>VOTE DOWN</a>');
+                $(".voting_thought_ajax").hide();
+
+                    $('.testing').html(data);
+
+
+
+            }
+        });
+    });
+
+
+
+    $(".unlike-down-answer").live('click', function (e) {
+        e.preventDefault();
+        var answer_id = $(this).attr('data');
+        var question_id = $('#question_id').val();
+        $(this).toggle();
+        $.ajax({
+            type:'POST',
+            url:$(this).attr('href'),
+            success:function (data) {
+                $('.answer_votes_' + answer_id).html("Votes: " + data[0]);
+                $('.ans_' + answer_id).html('<a href=/askquestions/' + question_id + '/answers/' + answer_id + '/vote_up class="like-up-answer" data=' + answer_id + '>VOTE UP</a>');
+
+                $(".voting_thought_ajax").hide();
+                $('.testing').html(data);
+            }
+        });
+    });
+
+    $(".tick-simple").live('click', function (e) {
+        e.preventDefault();
+
+       // $(this).toggle();
+        $.ajax({
+            type:'GET',
+            url:$(this).attr('href'),
+            success:function (data) {
+
+//                $('.answer_votes_' + answer_id).html("Votes: " + data[0]);
+//                $('.ans_' + answer_id).html('<a href=/askquestions/' + question_id + '/answers/' + answer_id + '/vote_up class="like-up-answer" data=' + answer_id + '>VOTE UP</a>');
+               $(".voting_thought_ajax").hide();
+               $('.testing').html(data);
+                //$('.class_with_status_tick').html(data);
+
+            }
+        });
+    });
+
+    $("button.new_comment").click(function (e) {
+        e.preventDefault();
+        click("comment button pressed");
+        ////            var answer_id =  $(this).attr('data');
+        ////            var question_id = $('#question_id').val();
+        ////            $(this).toggle();
+        //            $.ajax({
+        //                type: 'POST',
+        //                url: $(this).attr('href'),
+        //                success:function (data) {
+        //
+        ////                    $('.answer_votes_'+answer_id).html("Votes: "+ data);
+        ////                    $('.ans_'+answer_id).html('<a href=/askquestions/'+question_id+'/answers/'+answer_id+'/vote_up class="like-up-answer" data='+answer_id+'>VOTE UP</a>');
+        //                }
+        //            });
+    });
+
+
+    $('.new_comment').submit(function (e) {
+        e.preventDefault();
+
+        var url = $(this).attr('action');
+        var valuesToSubmit = $(this).serialize();
+        $('#comment_description').val("");
+        $('.answer_comment').val("");
+        var question_id = $('#comment-question-id').val();
+
+        $.ajax({
+            type:'POST',
+            url:url,
+            data:valuesToSubmit,
+            dataType:"json"
+        }).success(function (json) {
+
+                    var comment = json;
+                    var comment_id = comment[0]["id"];
+                    var comment_type_id = comment[0]["commentable_id"];
+                    var comment_type = comment[0]["commentable_type"];
+
+                    var desc1 = comment[0]["description"];
+                    var email = comment[1]["email"];
+                    var created_at = comment[0]["created_at"];
+
+                    //$('.comment-copy').append('<div class="inner-c"><span id=best_in_place_comment_'+comment_id+'_description class="best_in_place" data-type="input" data-attribute="description" data-object="comment" data-url=/comments/'+comment_id+' >'+desc1+'</span><span class="by-post-user"  <a href="#" class="us-name"> ' + email + '</a> <a href="#" class="by-date-user">Jan3 10 at 23:56 '+ created_at +'</a> <img src="/assets/comment-edit.png" /> </span></div>');
+                    $('.comment-copy-' + comment_type + comment_type_id).append('<div class="inner-c"><span id=best_in_place_comment_' + comment_id + '_description class="best_in_place" data-type="input" data-attribute="description" data-object="comment" data-url=/comments/' + comment_id + ' >' + desc1 + '</span><span class="by-post-user"  <a href="#" class="us-name"> ' + email + '</a> <a href="#" class="by-date-user">Jan3 10 at 23:56 ' + created_at + '</a> <img src="/assets/comment-edit.png" /> </span></div>');
+                });
+
+    });
+
+
+});
+

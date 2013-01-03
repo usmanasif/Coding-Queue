@@ -11,5 +11,6 @@
  *= require_self
  *= require token-input-facebook
  *= require jquery.fancybox.css
+ *= require prettify.css
  *= require_tree .
 */

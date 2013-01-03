@@ -1,0 +1,29 @@
+
+$(document).ready(function () {
+    isLoggedIn = false;
+
+    var current_user = $('#current_user').val();
+    $("button.create-btn").live('click', function (e) {
+        e.preventDefault();
+//            alert(isLoggedIn);
+        data = $("div#wmd-preview").html();
+        $("input#wmd-preview-input").val(data);
+        if (current_user != ''){
+            alert("current_user");
+            $('FORM').submit();
+        }else{
+            $("#fancybox").click();
+        }
+    });
+    $('input').change(function () {
+    });
+
+
+});
+
+$(document).ready(function(){
+
+    $('textarea').autosize();
+
+
+});
