@@ -1,29 +1,20 @@
-
 $(document).ready(function () {
-    isLoggedIn = false;
-
-    var current_user = $('#current_user').val();
-    $("button.create-btn").live('click', function (e) {
-        e.preventDefault();
-//            alert(isLoggedIn);
-        data = $("div#wmd-preview").html();
-        $("input#wmd-preview-input").val(data);
-        if (current_user != ''){
-            alert("current_user");
-            $('FORM').submit();
-        }else{
-            $("#fancybox").click();
-        }
-    });
-    $('input').change(function () {
-    });
-
-
-});
-
-$(document).ready(function(){
-
     $('textarea').autosize();
 
+    $("button.create-new-question").live('click', function (e) {
+        var current_user = $('#login_user_id').val();
+        data = $("div#wmd-preview").html();
+        $("input#wmd-preview-input").val(data);
+        if (!current_user){
+           if(!login_fancy_box())
+           {
+               return false;
+           }
 
+                    }
+
+
+    });
 });
+
+

@@ -1,6 +1,6 @@
 class AskquestionsController < ApplicationController
 
-  before_filter :require_login, :except => [:index,:new]
+  # before_filter :require_login, :except => [:index,:new]
 
   skip_before_filter :verify_authenticity_token
 
@@ -8,7 +8,7 @@ class AskquestionsController < ApplicationController
 
     ['{ %%%% -- '*33, Rails.configuration.session_options[:key], Rails.configuration.secret_token, request.host, session, request.cookie_jar['_codingstack_session'], '% -- '*33].each{|x| logger.debug x.inspect}
     request.cookie_jar.each{|x, y| logger.debug x + ' ... ' + y.inspect}
-
+    #return render :json => params
     @askquestion = Askquestion.new
 
   end
@@ -27,8 +27,11 @@ class AskquestionsController < ApplicationController
     #return render :json => params
     #return render :json => params
     #return render :json => session
-
+     logger.info "="*80
+     logger.info current_user
+     logger.info "="*80
     @askquestion = current_user.askquestions.build(params[:askquestion])
+    # return render :json => params
 
     # will be use in future
     #    @tag=Tag.all
@@ -46,49 +49,31 @@ class AskquestionsController < ApplicationController
     #      end
     #    end
 
-
-
-    if @askquestion.save
-      #return render :json=> params
-      flash[:notice] = "Successfully created question."
-      redirect_to askquestions_path, :notice => "new question has been created"
+    if(current_user.present?)
+      if @askquestion.save
+        #return render :json=> params
+        flash[:notice] = "Successfully created question."
+        redirect_to askquestions_path, :notice => "new question has been created"
+      else
+        #return render :json=> params
+        render :new
+      end
     else
-      #return render :json=> params
-      render :new
+      render :partial => 'sessions/new'
     end
+
 
   end
 
   def index
 
-
-
-    #return render :json => params
     if(params[:search]).present?
-    @askquestions = Askquestion.search(params[:search], order: :title,:page => params[:page], :per_page => 3, field_weights: {title: 20, description: 10, tag: 5})
-
+      @askquestions = Askquestion.search(params[:search], order: :title, :page => params[:page], :per_page => 6, :star => true,:ignore_errors => true, field_weights: {title: 20, description: 10, tag: 5})
     else
-
       @askquestions = Askquestion.page(params[:page]).per_page(6)
-
-      #@askquestions = Askquestion.paginate(:page => params[:page], :per_page => 5)
-
     end
 
 
-    #@askquestions = Askquestion.search(params)
-
-
-    #@askquestions = Askquestion.page(params[:page]).per_page(6)
-
-
-
-    #@askquestions = Askquestion.paginate(:page => params[:page], :per_page => 5)
-
-
-
-    #@askquestion = Askquestion.find(params[:id])----------------------  gillani before pagination
-    #@count=Askquestion.count
   end
 
 
@@ -101,7 +86,10 @@ class AskquestionsController < ApplicationController
 
 
       @vote_up =  Askquestion.find(params[:id])
-      @vote = @vote_up.votes.build
+
+      @vote = Vote.where("user_id = ? AND votable_id = ? AND votable_type = ?", current_user,  @vote_up, 'Askquestion').first
+      @vote = @vote_up.votes.build if @vote.blank?
+
       @vote.user = current_user
       @vote.status = 1
       if @vote.save
@@ -110,17 +98,17 @@ class AskquestionsController < ApplicationController
       else
         #@subjects = Subject.find(:all)
         render :action => 'new'
-
       end
-
-  end
+   end
 
 
 
     def vote_down
 
       @vote_down =  Askquestion.find(params[:id])
-      @vote = @vote_down.votes.build
+      @vote = Vote.where("user_id = ? AND votable_id = ? AND votable_type = ?", current_user,  @vote_down, 'Askquestion').first
+      @vote = @vote_down.votes.build if @vote.blank?
+      #@vote = @vote_down.votes.build
       @vote.user = current_user
       @vote.status = -1
 
@@ -135,18 +123,37 @@ class AskquestionsController < ApplicationController
 
     end
 
-  def views
+  #def views
+  #
+  #  @views =  Askquestion.find(params[:id])
+  #  @views.view_counter = @views.view_counter + 1
+  #  if @views.update_attributes(params[:views])
+  #
+  #    return render :json=> @views.view_counter
+  #  else
+  #
+  #    render :action => 'new'
+  #  end
+  #
+  #end
 
-    @views =  Askquestion.find(params[:id])
-    @views.view_counter = @views.view_counter + 1
-    if @views.update_attributes(params[:views])
-
-      return render :json=> @views.view_counter
-    else
-
-      render :action => 'new'
-    end
-
+  def  unanswered_questions
+    @unanswered_question = Askquestion.all
+    #@test = unanswered_questions
   end
 
+  def favourite
+    Favourite.create!(:user_id => current_user.id, :askquestion_id => params[:id])
+    return render :text => 'success'
+  end
+
+  def inappropriate
+    Inappropriate.create!(:user_id => current_user.id, :askquestion_id => params[:id])
+    return render :text => 'success'
+  end
+
+  def watch
+    Watch.create!(:user_id => current_user.id, :askquestion_id => params[:id])
+    return render :text => 'success'
+  end
 end

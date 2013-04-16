@@ -9,16 +9,17 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       login(params[:user][:email], params[:user][:password], params[:remeber_me])
-      respond_to do |format|
-        format.html { redirect_to askquestions_new_path, :notice => "Signed up!" }
-        format.json { render json: {success: true, user_id: current_user.id } }
-      end
+      #respond_to do |format|
+      #  format.html { redirect_to askquestions_new_path, :notice => "Signed up!" }
+      #  format.json { render json: {success: true, user_id: current_user.id } }
+      #end
+      return render :partial => 'sessions/change_user_status', :locals => { :user => @user }
     else
-      return render :json => params
-      respond_to do |format|
-        format.html { render :new }
-        format.json { render json: {success: false} }
-      end
+      return render :text => "false"
+      #respond_to do |format|
+      #  format.html { render :new }
+      #  format.json { render json: {success: false} }
+      #end
     end
   end
 

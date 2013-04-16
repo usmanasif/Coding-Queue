@@ -1,0 +1,39 @@
+<div class="tags-title">
+  <ul class="tags-nav">
+    <% Tag.all.each do |a| %>
+        <li><a href="<%= root_path%>askquestions?utf8=✓&search=<%= a.name%>"><%= a.name %> (<%= AskquestionTag.find_all_by_tag_id(a.id).count %>) </a></li>
+    <% end %>
+    <!--<li><a href="#">php</a></li>
+   <li><a href="#">google</a></li>
+   <li><a href="#">javascript</a></li>
+   <li><a href="#">css</a></li>
+   <li><a href="#">php</a></li>
+   <li><a href="#">google</a></li>
+   <li><a href="#">javascript</a></li>
+   <li><a href="#">css</a></li>
+   <li><a href="#">php</a></li>
+   <li><a href="#">google</a></li>
+   <li><a href="#">javascript</a></li>
+   <li><a href="#">css</a></li>
+   <li><a href="#">google</a></li>
+   <li><a href="#">javascript</a></li>
+   <li><a href="#">css</a></li>
+   <li><a href="#">php</a></li>
+   <li><a href="#">google</a></li>
+   <li><a href="#">javascript</a></li>
+   <li><a href="#">css</a></li>
+   <li><a href="#">php</a></li>
+   <li><a href="#">javascript</a></li>
+   <li><a href="#">css</a></li>
+   <li><a href="#">php</a></li>
+   <li><a href="#">google</a></li>
+   <li><a href="#">javascript</a></li>
+   <li><a href="#">css</a></li>
+   <li><a href="#">php</a></li>
+   <li><a href="#">google</a></li>
+   <li><a href="#">javascript</a></li>
+   <li><a href="#">css</a></li>
+   <li><a href="#">php</a></li>
+   <li><a href="#">google</a></li>-->
+  </ul>
+</div>

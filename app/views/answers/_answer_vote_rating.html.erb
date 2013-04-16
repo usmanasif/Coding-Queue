@@ -1,0 +1,48 @@
+<div class="rating-icon-holder">
+  <ul class="a-q-flag">
+    <li><a href="#" class="flag">flag</a></li>
+    <li><a href="#" class="link-icon">link</a></li>
+  </ul>
+
+
+  <% if current_user && current_user.id == @question.user_id  %>
+      <% if ans.tick_status == 1 %>
+          <%= link_to  "Tick", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-colour" %>
+      <% else %>
+          <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-simple" %>
+      <% end %>
+
+  <% elsif ans.tick_status == 1 %>
+      <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-colour" %>
+  <% end %>
+
+  <% logger.debug "Answer-"*20 %>
+
+  <div class="about-question">
+
+    <span class="ans_<%= ans.id%>">
+
+      <% if current_user && current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").present? && ans.votes.present?  %>
+
+          <% if current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").last.status == 1 %>
+              <input type="hidden" name="question_id" id="question_id" value='<%= @question.id %>' />
+                <%#= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id, ans.id), :id => "ans_vote_down_#{ans.id}", :class => "unlike-down-answer" , :data => ans.id%>
+                <%= link_to  "VOTE DOWN", 'javascript:void(0);', :id => "ans_vote_down_#{ans.id}", :class => "unlike-down-answer" , :data => ans.id%>
+
+          <% elsif current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").last.status == -1   %>
+
+              <%#= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, ans.id), :id => "ans_vote_up_#{ans.id}", :class => "like-up-answer", :data => ans.id  %>
+              <%= link_to 'VOTE UP', 'javascript:void(0);', :id => "ans_vote_up_#{ans.id}", :class => "like-up-answer", :data => ans.id  %>
+                <input type="hidden" name="answer_id" id="answer_id" value='<%= ans.id %>' />
+          <% end %>
+      <% else %>
+            <%#= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, ans.id), :id => "ans_vote_up_#{ans.id}", :class => "like-up-answer", :data => ans.id  %>
+                <!--<input type="hidden" name="answer_id" id="answer_id" value='<%#= ans.id %>' />-->
+            <%#= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id,ans.id), :id => "ans_vote_down_#{ans.id}", :class => "unlike-down-answer" , :data => ans.id%>
+          <%= link_to 'VOTE UP', 'javascript:void(0);', :id => "ans_vote_up_#{ans.id}", :class => "like-up-answer", :data => ans.id  %>
+          <input type="hidden" name="answer_id" id="answer_id" value='<%= ans.id %>' />
+          <%= link_to  "VOTE DOWN", 'javascript:void(0);', :id => "ans_vote_down_#{ans.id}", :class => "unlike-down-answer" , :data => ans.id%>
+      <% end %>
+    </span>
+  </div>
+</div>

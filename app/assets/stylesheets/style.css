@@ -5096,7 +5096,7 @@ to { background-position: 0 0; }
     height: 28px !important;
     border: none;
     position: absolute;
-    left: 14px;
+    right: 14px;
     top: 4px;
     cursor: pointer;
     padding: 0;
@@ -5403,6 +5403,7 @@ to { background-position: 0 0; }
 .rating-icon-holder {
     overflow: hidden;
     margin: 0 0 20px;
+    height: 28px;
 }
 
 .a-q-flag {

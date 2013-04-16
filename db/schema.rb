@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121101093643) do
+ActiveRecord::Schema.define(:version => 20130415074500) do
 
   create_table "answers", :force => true do |t|
     t.integer  "askquestion_id"
@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(:version => 20121101093643) do
     t.string   "description"
     t.string   "tag"
     t.integer  "view_counter"
-    t.integer  "votes"
     t.integer  "answer_counter"
     t.integer  "user_id"
     t.boolean  "delta",          :default => true, :null => false
@@ -67,6 +66,20 @@ ActiveRecord::Schema.define(:version => 20121101093643) do
     t.datetime "updated_at",       :null => false
   end
 
+  create_table "favourites", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "askquestion_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "inappropriates", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "askquestion_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
   create_table "tags", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -82,17 +95,26 @@ ActiveRecord::Schema.define(:version => 20121101093643) do
     t.datetime "updated_at",                   :null => false
     t.string   "remember_me_token"
     t.datetime "remember_me_token_expires_at"
+    t.integer  "rating"
   end
 
   add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
 
   create_table "votes", :force => true do |t|
+    t.integer  "count"
     t.integer  "votable_id"
     t.string   "votable_type"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.integer  "status"
     t.integer  "user_id"
+  end
+
+  create_table "watches", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "askquestion_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end

@@ -1,0 +1,60 @@
+
+<div class="comment-copy-Askquestion<%=@question.id%>">
+  <!--Start --Comment-List -- Start-->
+  <input type="hidden" name="comment-question-id" id="comment-question-id" value='<%= @question.id %>' />
+
+  <% @comments.each do |comment| %>
+      <tr>
+        <% logger.debug "Q-Comment_Q" * 8 %>
+        <% logger.debug comment.inspect %>
+        <% logger.debug  %>
+        <% logger.debug %>
+        <% logger.debug " End Q End "*15 %>
+
+        <% if comment.commentable_id == @question.id && comment.commentable_type == "Askquestion"%>
+          <div class="inner-c">
+
+            <% if current_user.present? && current_user.id == comment.user_id %>
+                <%= best_in_place  comment, :description, :path => comment_path(askquestion_id: comment.commentable_id, id: comment) %>
+
+            <% else %>
+                <span><%= comment.description %> </span>
+            <% end %>
+            <span class="by-post-user">
+                            <a href="#" class="us-name"> <%= comment.user.email %></a>
+                            <a href="#" class="by-date-user">Jan3 '10 at 23:56 <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
+                      </span>
+          </div>
+
+      <% end %>
+
+  <% end %>
+
+</div>
+
+<div class="create-comment">
+
+  <%= form_for  @comment, :url =>  comments_path(askquestion_id: @question.id) do |f| %>
+      <% if @comment.errors.any? %>
+          <div id="errorExplanation">
+            <h2><%= pluralize(@comment.errors.count, "error") %> prohibited
+              this post from being saved:</h2>
+            <ul>
+              <% @comment.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div class="txt-field4">
+
+        <%= f.text_field :description %>
+      </div>
+
+      <%= f.submit :class=>"comment-btn"%>
+
+  <% end %>
+
+</div>
+            

@@ -1,10 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
-  def new
-
-  end
-
   def create
 
     ['{ %%%% -- '*33, session, request.cookie_jar['_codingstack_session'], '% -- '*33].each{|x| logger.debug x.inspect}
@@ -17,21 +13,40 @@ class SessionsController < ApplicationController
       logger.info '='*80
       logger.info current_user.inspect
       logger.info '='*80
-      #return render :json => current_user.inspect
+      #return render :json => @askquestion
 
 
       #respond_to do |format|
-      #  #create.js
+      #create.js
       #  #format.html {redirect_to root_path, :notice => "Logged in!"}
       #  #format.html {render text: 'redirect_to root_path, :notice => "Logged in!"'}
       #  format.html {redirect_to root_path, :notice => "Logged in!"}
       #  #format.js
       #end
-      redirect_to root_path, :notice => "Logged in!"
+
+      #render :action => "askquestions_new_path", :notice => "Logged in!"
+      #render "askquestions/new"
+      # render askquestions_new_path,  :notice => "Logged in!"
+
+      #render :action => , :notice => "Logged in!"
+      # render :layout => false
+      # render :action => "new"
+      # render :partial => "shared/_show_login.js"
+
+      return render :partial => 'change_user_status', :locals => { :user => user }
+
+      #redirect_to :back, :notice => "Logged in!"
+      # redirect_to root_path#, :notice => "Logged in!"
+
+      # redirect_to(askquestions_new_path(@askquestion), :notice => "Logged in!" )
+
+
+    #  redirect_to root_path, :notice => "Logged in!"
     #  format.js
     else
-      #return render :json => 'ab'
-      redirect_to :back, :notice => "Email or password was invalid Please enter again."
+      #return render :json => user
+      return render :text => "false"
+      #redirect_to :back, :notice => "Email or password was invalid Please enter again."
     end
   end
 
@@ -39,6 +54,11 @@ class SessionsController < ApplicationController
     logout
     redirect_to root_url, :notice => "Logged out!"
   end
+
+  def login_fancy
+    render :layout => 'login_fancy'
+  end
+
 end
 
 

@@ -1,0 +1,33 @@
+<div class="rating-icon-holder">
+  <ul class="a-q-flag">
+    <li><a href="javascript:void(0);" data="Askquestion" class="flag">flag</a></li>
+    <li><%#= link_to 'VIEWS',   views_askquestion_path(@question.id), :class => "eye"  %>
+      <a href="javascript:void(0);" data-question-id="<%= @question.id %>" class="eye">eye</a>
+      <input type="hidden" name="question_id" id="question_id" value='<%= @question.id %>' /></li>
+  </ul>
+
+  <a href="javascript:void(0);" class="rating favourite"  data-question-id="<%= @question.id %>"><img src="/assets/star-icon.png" width="20" height="20" alt="image"></a>
+
+  <div class="about-question">
+
+       <span class="ques_<%= @question.id %>">
+
+          <% if current_user && current_user.votes.where(votable_id: @question.id, Votable_type: "Askquestion").present? %>
+                <input type="hidden" name="last_voted_<%= @question.id %>" id="last_voted_<%= @question.id %>" value='<%= current_user.votes.where(votable_id: @question.id, Votable_type: "Askquestion").last.status %>' />
+             <% if current_user.votes.where(votable_id: @question.id, Votable_type: "Askquestion").last.status == 1 %>
+                  <input type="hidden" class="rating" name="question_id" id="question_id" value='<%= @question.id %>'/>
+                    <%= link_to "VOTE DOWN", 'javascript:void(0);', :class => "unlike-down", :data => @question.id %>
+
+              <% elsif current_user.votes.where(votable_id: @question.id, Votable_type: "Askquestion").last.status == -1 %>
+
+                  <%= link_to 'VOTE UP', 'javascript:void(0);', :class => "like-up", :data => @question.id %>
+                    <input type="hidden" class="rating" name="question_id" id="question_id" value='<%= @question.id %>'/>
+              <% end %>
+          <% else %>
+              <%= link_to 'VOTE UP', 'javascript:void(0);', :class => "like-up", :data => @question.id %>
+                <input type="hidden"  name="question_id" id="question_id" value='<%= @question.id %>'/>
+                <%= link_to "VOTE DOWN", 'javascript:void(0);', :class => "unlike-down", :data => @question.id %>
+          <% end %>
+       </span>
+  </div>
+</div>

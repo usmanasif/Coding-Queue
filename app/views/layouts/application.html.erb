@@ -2,98 +2,62 @@
 <html>
 <head>
   <title>Coding Stack</title>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
-  <%#= javascript_include_tag "jquery.tokeninput.js" %>
-  <%#= stylesheet_link_tag "style.css" %>
-  <%#= stylesheet_link_tag "jquery.fancybox" %>
   <%= csrf_meta_tag %>
-  <!--<link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.0.6" media="screen"/>-->
+
+
   <script type="text/javascript">
       $(document).ready(function () {
-          $('.fancybox').fancybox({
-//              'hideOnContentClick':false
+          $('.fancybox').click(function () {
+              login_fancy_box();
           });
 
-          $("form.login-form-base").submit(function (e) {
-              e.preventDefault();
-              console.log($("form.login-form-base").attr("action"));
-              $.ajax({
-                  type:"POST",
-                  url:$("form.login-form-base").attr("action"),
-                // beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
-                  data:$('form.login-form-base').serialize(),
-                  success:function (data) {
-                      //alert(data);
-                      $.fancybox.close();
-//                        console.log(data.success);
-//                        console.log(data.user_id);
-//                      $('#new_askquestion').submit();
-//                     alert('saved question.');
-                  }
+          $('.create-btn').click(function(){
+              var form_id =   (this.form.id);
+
+              parent.$("#form_recorder").val(form_id);
 
               });
-
-
-          });
-
-
-
-//          $('#signup-box').submit(function() {
-//              var valuesToSubmit = $(this).serialize();
-/////            var question_id = $('#question_id_of_edit_form').val();
-//              $.ajax({
-//                  type:'POST',
-//                  url: '/sessions',
-////                  data: valuesToSubmit,
-//                  data: {'email' : $('#email').val(), 'password' :$('#password').val()},
-//                  dataType: "json" ,
-//                  success : function(json){
-//                      $.fancybox.close();
-////
-//
-////                      $('nav.login-menu').html("<%#= login_nav( @abc )%>");
-////                      debugger
-//                       $('nav.login-menu').html('Logged in as ' + json.email);
-////                     alert("<%#= current_user.present? %>");
-//
-//                     // current_user ||= session[:current_user_id];
-//
-//                      <!--<%#= session[:current_user_id] = json.id %>-->
-//
-////                      session[:user_id] = @current_user.id
-//                      <!--<%#= logger.info '=AJAZ=' * 20  %>-->
-//                      <!--<%#= logger.info current_user %>-->
-//                      <!--<%#= logger.info '-=AJAZ-END=-' * 20 %>-->
-//
-//
-////                      alert(test);
-//                      //$('#loged-user').html("<%#= current_user %>");
-////                      $('#fancybox').html('Logged in as ' +$('#email').val());
-////                      alert(json);
-//
-//                  }
-//              });
-//              return false; // prevents normal behaviour
-//          });//ending update attributes
-
 
 
 
       });
 
+          //function of calling fancy box of login
+          function login_fancy_box() {
+              $.fancybox({
+                  //'hideOnContentClick':false
+                  'width':500,
+                  'height':500,
+                  'enableEscapeButton':false,
+                  'overlayShow':true,
+                  'overlayOpacity':0,
+                  'hideOnOverlayClick':false,
+                  'type':'iframe',
+                  'href':'/sessions/login_fancy'
+              });
+
+          }
+
   </script>
 
 </head>
 <body class="<%= params[:controller] %>" onload="prettyPrint()">
+
 <div id="wrapper">
   <header id="header">
     <div class="holder">
       <h1 class="logo"><a href="<%= root_path %>">coding stack</a></h1>
+      <!--records the field to submit after login popup-->
+      <input type="hidden" id="form_recorder" name="form_recorder" value="" >
+      <!--records the action after login popup-->
+
       <nav class="login-menu" id="loginmenu">
         <%= login_nav(current_user) %>
 
-       </nav>
+      </nav>
     </div>
     <nav id="nav">
       <ul>
@@ -101,7 +65,7 @@
         <li><a href="#">Tags</a></li>
         <li><a href="#">Users</a></li>
         <li><a href="#">Badges</a></li>
-        <li><a href="#">Unanswered</a></li>
+        <li><a href="<%= askquestions_unanswered_questions_path %>">Unanswered</a></li>
         <li><a href="#">Pages</a></li>
       </ul>
       <ul class="ask-q">
@@ -111,18 +75,7 @@
   </header>
   <div id="container">
     <div class="user_nav">
-      <!--
-      <%# if current_user %>-->
-          <!--Logged in as <%#= current_user.email %>.-->
-          <!--<%#= link_to "Log out", logout_path %>-->
-          <!--
-      <%# else %>-->
-          <!--<ul>-->
 
-          <!--&lt;!&ndash;<li><a class="fancybox" href="#inline2" title="login">login</a></li>&ndash;&gt;-->
-          <!--</ul>-->
-          <!--
-      <%# end %>-->
     </div>
     <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
@@ -130,107 +83,8 @@
     <%= yield %>
   </div>
 
-
-  <section id="main">
-    <div id="inline1" style="width:500;display: none;" class="light-box">
-      <div class="b-top">&nbsp;</div>
-      <div class="b-center">
-        <div class="box-signup">
-          <% user = User.new %>
-          <%= form_for user , :html => {:class => "login-form-base"}  do |f| %>
-              <% if user.errors.any? %>
-                  <div class="error_messages">
-                    <!--<h2>Form is invalid</h2>-->
-                    <ul>
-                      <% for message in user.errors.full_messages %>
-                          <li><%= message %></li>
-                      <% end %>
-                    </ul>
-                  </div>
-              <% end %>
-              <div class="user-holder">
-                <label class="user-text">Email</label>
-                <%= f.text_field :email, :class => "txt-field5" %>
-              </div>
-              <div class="user-holder">
-                <label class="user-text">password</label>
-                <%= f.password_field :password, :class => "txt-field5" %>
-              </div>
-              <div class="user-holder">
-                <label class="user-text">confirm password</label>
-                <%= f.password_field :password_confirmation, :class => "txt-field5" %>
-              </div>
-              <div class="submit-holder">
-                <div class="actions sign-btn"><%= f.submit %> </div>
-                <!--<a class="fancybox sign-in-btn" href="#inline2" title="login">login</a>-->
-
-              </div>
-          <% end %>
-              </div>
-
-              <ul class="feature-holder">
-
-                <li><a href="<%= auth_at_provider_path(:provider => :google) %>" class="google-icon"></a></li>
-
-                <li><a href=" <%= auth_at_provider_path(:provider => :facebook) %>" class="facebook-icon"></a></li>
-
-
-                <li><a href="<%= auth_at_provider_path(:provider => :twitter) %>" class="twitter-icon"></a></li>
-
-
-                <li><a href=" <%= auth_at_provider_path(:provider => :github) %>" class="github-icon"></a></li>
-              </ul>
-              </div>
-              <div class="b-btm">&nbsp;</div>
-
-          </div>
-  </section>
-
-
-  <div id="inline2" style="width:500;display: none;" class="light-box">
-    <div class="b-top">&nbsp;</div>
-    <div class="b-center">
-      <div class="box-signup" id="signup-box">
-        <%#= form_tag sessions_path, :html => {:class => "login-form-base1"}, remote: true, :url => sessions_path, :update => { :success => "usersssssss", :failure => "errorrrrrr" },  :method => :post do %>
-        <%= form_tag sessions_path, :method => :post  do %>
-            <%#= form_tag sessions_path, :html => {:class => "login-form-base1"} do %>
-            <div class="user-holder">
-              <label class="user-text">Email</label>
-              <%= text_field_tag :email, params[:email], :class => "txt-field5",:placeholder => 'Email' %>
-            </div>
-            <div class="user-holder">
-              <label class="user-text">Password</label>
-              <%= password_field_tag :password,'', :class => "txt-field5",:placeholder => 'Password' %>
-
-            </div>
-            <div class="user-holder">
-              <label class="user-text">remember me</label>
-              <%= check_box_tag :remember_me, 1, params[:remember_me],:class =>"check-Box" %>
-            </div>
-            <div class="actions submit-holder"><%= submit_tag "Log in",:class =>"sign-btn sign-in-btn"  %>
-              <span class="text-or">or</span>
-              <a class="fancybox sign-btn" href="#inline1" title="Sign Up">signUp</a>
-            </div>
-
-        <% end %>
-
-      </div>
-      <ul class="feature-holder">
-        <li><a href="<%= auth_at_provider_path(:provider => :google) %>" class="google-icon"></a></li>
-
-        <li><a href=" <%= auth_at_provider_path(:provider => :facebook) %>" class="facebook-icon"></a></li>
-
-
-        <li><a href="<%= auth_at_provider_path(:provider => :twitter) %>" class="twitter-icon"></a></li>
-
-
-        <li><a href=" <%= auth_at_provider_path(:provider => :github) %>" class="github-icon"></a></li>
-      </ul>
-    </div>
-    <div class="b-btm">&nbsp;</div>
-
-  </div>
-
+  <input type="hidden" id="like_recorder" name="like_recorder" value="" >
+  <input type="hidden" id="unlike_recorder" name="unlike_recorder" value="">
   <footer id="footer">
     <span>All <a href="#">codingstack.com</a> content and data are available under the Creative Commons Attribution 3.0 license</span>
 <span><a href="#">blog</a> | <a href="#">twitter</a> | <a href="#">buzz</a> | <a href="#">identi.ca</a> | <a href="#">code</a> | <a href="#">irc

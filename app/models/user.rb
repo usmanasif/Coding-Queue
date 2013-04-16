@@ -12,10 +12,14 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
   validates_format_of :email, :with => /[a-zA-Z0-9_-]+\@[a-zA-Z0-9_-]+\.\w+/
 
-  has_many:askquestions,:dependent => :destroy
+  has_many :askquestions,:dependent => :destroy
   has_many :answers
   has_many :votes
   has_many :comments
+
+  has_many :favourites, :dependent => :destroy
+  has_many :watches, :dependent => :destroy
+  #has_many :flags, :dependent => :destroy
 
 end
 

@@ -1,0 +1,63 @@
+<div class="answer-the-question">
+  <p class="recent-question"><span class="answer-note">Answer the question</span></p>
+
+  <div class="ask-question">
+    <h2 class="a-y-question"></h2>
+
+    <%= form_for @answer, :url => askquestion_answers_path(@askquestion_id) do |f| %>
+        <% if @answer.errors.any? %>
+            <div class="error_messages">
+              <h2>Form is invalid, prohibited this record from being saved</h2>
+              <ul>
+                <% for message in @answer.errors.full_messages %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+
+
+        <div class="field">
+          <%= f.hidden_field :answer, id: "wmd-preview-input" %>
+          <div class="wmd-panel">
+            <div id="wmd-button-bar"></div>
+            <textarea class="wmd-input" id="wmd-input"></textarea>
+          </div>
+          <div id="wmd-preview" class="wmd-panel wmd-preview">
+          </div>
+        </div>
+        <div class="create-holder"> <span class="btn-holder">
+                   <button class="create-btn create-new-answer" name="Create Askquestion" value="Create Askquestion"></button>
+            <small>or</small>
+            <button type="cancel" class="create-btn cancel-btn" name="#" value=""></button>
+            </span>
+          <!--<span class="click-to-add">-->
+          <!--<label for="wiki">wikki</label>-->
+          <!--<input type="checkbox" name="#" id="wiki" value="">-->
+          <!--</span>-->
+        </div>
+    <% end %>
+  </div>
+</div>
+<script type="text/javascript">
+    (function () {
+
+        var converter1 = Markdown.getSanitizingConverter();
+        var editor1 = new Markdown.Editor(converter1);
+        editor1.run();
+        var converter2 = new Markdown.Converter();
+        converter2.hooks.chain("preConversion", function (text) {
+            return text.replace(/\b(a\w*)/gi, "*$1*");
+        });
+        converter2.hooks.chain("plainLinkText", function (url) {
+            return "This is a link to " + url.replace(/^https?:\/\//, "");
+        });
+        var help = function () {
+            alert("Do you need help?");
+        }
+        var editor2 = new Markdown.Editor(converter2, "-second", { handler:help });
+        editor2.run();
+    })();
+
+</script>

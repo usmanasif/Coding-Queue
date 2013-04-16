@@ -1,7 +1,6 @@
 Codingstack::Application.routes.draw do
 
 
-
   get "askquestions/new"
 
   get "oauths/oauth"
@@ -13,12 +12,12 @@ Codingstack::Application.routes.draw do
   get "signup" => "users#new", :as => "signup"
 
 
-
   #resources :askquestions do
   #
   #end
 
   resources :users
+
 
   #get 'answers/vote_down'
 
@@ -28,43 +27,42 @@ Codingstack::Application.routes.draw do
       put 'update_test'
     end
   end
+  get 'askquestions/unanswered_questions'
   resources :askquestions do
-
     member do
       post 'vote_up'
       post 'vote_down'
       post 'views'
+      post 'favourite'
+      post 'inappropriate'
+      post 'watch'
     end
 
     resources :answers do
       member do
         post 'vote_up'
         post 'vote_down'
-
-      end
-      member do
         get 'tick_status'
       end
-
     end
 
-
-end
+  end
   resources :tags
-  resources :sessions
+  resources :sessions do
+    collection do
+      get "login_fancy"
+    end
+  end
 
 
   root :to => "askquestions#index"
 
 
-
-
   get "sessions/new"
-
   get "users/new"
 
-match "oauth/callback" => "oauths#callback"
-match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+  match "oauth/callback" => "oauths#callback"
+  match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

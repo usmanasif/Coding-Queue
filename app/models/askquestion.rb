@@ -2,15 +2,8 @@ class Askquestion < ActiveRecord::Base
   attr_accessible :title,:description,:tag,:view_counter,:votes,:answer_counter,:user_id,:tag_names
 
   validates :title, :presence => true
-  #validates :description, :presence => true
   validates :tag_names, :presence => true
-
   validates :title, :length => { :minimum => 5 }
-  #validates :tag_names, :length => { :minimum => 2  }
-
-  #validates :description, :length => { :minimum => 5  }
-
-
 
 
   has_many :votes, :as => :votable
@@ -27,16 +20,27 @@ class Askquestion < ActiveRecord::Base
 
 
 
+=begin
+    define_index do
+      indexes title, sortable: true
+      indexes description
+      indexes answers.answer, as: :answer
+      indexes tags.name, as: :tag
+      set_property :delta => true
+
+    end
+=end
+
   define_index do
     indexes title, sortable: true
     indexes description
     indexes answers.answer, as: :answer
     indexes tags.name, as: :tag
     set_property :delta => true
-
+    set_property :enable_star => true
+    #set_property :ignore_errors => true
+    set_property :min_infix_len => 1
   end
-
-
 
 
 

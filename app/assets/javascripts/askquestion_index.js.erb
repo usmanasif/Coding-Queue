@@ -1,53 +1,160 @@
 $(document).ready(function () {
 
     $(".like-up").live('click',function (e) {
+        var current_user = $('#login_user_id').val();
+
         e.preventDefault();
-        //console.log('HERE');
-        var question_id =  $(this).attr('data');
-        // return false;
-        //$(this).toggle();
-        $(this).hide();
-        //alert("start");
-        $.ajax({
-            type: 'POST',
-            url: $(this).attr('href'),
-            success:function (data) {
-                //alert("success");
-                $('.vote_question_'+question_id).html("Votes: "+ data);
-               // alert("up ");
-                $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="unlike-down" data='+question_id+' >VOTE DOWN</a>');
+        if (!current_user){
+            var Q_number    =   $(this).attr("data");
+            //alert(Q_number);
+            $("#like_recorder").val(Q_number);
+            $("#unlike_recorder").val("");
+            login_fancy_box();
+        }
 
-            }
+        else{
+            var question_id =  $(this).attr('data');
+            $(this).hide();
+           //alert(current_user);
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('href'),
+                success:function (data) {
+                    $('.vote_question_'+question_id).html("Votes:"+ data);
+                    $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="unlike-down" data='+question_id+' >VOTE DOWN</a>');
 
-        });
+                }
+
+            });
 
 
+
+        }
 
     });
+
 
 
     $(".unlike-down").live('click', function (e) {
+        var current_user = $('#login_user_id').val();
+        var Q_number    =   $("#unlike_recorder").val();
         e.preventDefault();
-        var question_id =  $(this).attr('data');
-//        $(this).toggle();
-        $(this).hide();
+        if (!current_user){
+            var Q_number    =   $(this).attr("data");
+            $("#unlike_recorder").val(Q_number);
+            $("#like_recorder").val("");
+            //show login fancybox form
+            login_fancy_box();
+        }
+        else{
+            var question_id =  $(this).attr('data');
+    //        $(this).toggle();
+            $(this).hide();
 
-        $.ajax({
-            type: 'POST',
-            url: $(this).attr('href'),
-            success:function (data) {
-                //alert("success");
-                $('.vote_question_'+question_id).html("Votes: "+ data);
-                //alert("down ");
-                $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="like-up" data='+question_id+'  >VOTE UP</a>');
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('href'),
+                success:function (data) {
+                    //alert("success");
+                    $('.vote_question_'+question_id).html("Votes:"+ data);
+                    //alert("down ");
+                    $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="like-up" data='+question_id+'  >VOTE UP</a>');
 
 
-            }
-        });
+                }
+            });
+
+
+        }
 
     });
 
 
-
-
 });
+
+// Like if it was clicked before login
+    function like_up_onlogin(Q_number) {
+        var current_user = $('#login_user_id').val();
+
+
+        var current_user = parent.$('#login_user_id').val();
+        var voteUpLinkObj =  parent.$('#vote_up_'+Q_number );
+        var question_id =  voteUpLinkObj.attr('data');
+        //        $(this).toggle();
+
+        voteUpLinkObj.hide();
+        $.ajax({
+            type: 'POST',
+            url: '/askquestions/'+Q_number+'/vote_up',
+            dataType: "json",
+            success:function (data) {
+                //alert("Like");
+                $('.vote_question_'+question_id).html("Votes:"+ data);
+                $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="unlike-down" data='+question_id+' >VOTE DOWN</a>');
+                parent.window.location.reload();
+            }
+
+        });
+
+
+        //parent.location.reload();
+        // alert("LIKE");
+
+    }
+// Like if it was clicked before login
+    function unlike_down_onlogin(Q_number) {
+        var current_user = parent.$('#login_user_id').val();
+        var voteDownLinkObj =  parent.$('#vote_down_'+Q_number );
+        var question_id =  voteDownLinkObj.attr('data');
+        //        $(this).toggle();
+
+        voteDownLinkObj.hide();
+       //alert(voteDownLinkObj.attr('href'));
+
+        $.ajax({
+            type: 'POST',
+            url: '/askquestions/'+Q_number+'/vote_down',
+            dataType: "json",
+            success:function (data) {
+                //("DisLike");
+                $('.vote_question_'+question_id).html("Votes:"+ data);
+                $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="like-up" id="vote_up'+Q_number+'" data='+question_id+'  >VOTE UP</a>');
+                parent.window.location.reload();
+            }
+
+        });
+        //alert("UNLIKE");
+
+
+    }
+
+    function like_unlike()
+    {
+        if( parent.$("#like_recorder").val() != '') {
+            like_up_onlogin(parent.$("#like_recorder").val());
+        }
+
+        else if(parent.$("#unlike_recorder").val() != '') {
+            unlike_down_onlogin(parent.$("#unlike_recorder").val());
+
+        }
+        else if(parent.$("#ans_like_recorder").val() != '') {
+            //alert("I like your answer!!!");
+            //alert(parent.$("#ans_like_recorder").val());
+            like_ans_on_login(parent.$("#ans_like_recorder").val());
+
+        }
+        else if(parent.$("#ans_unlike_recorder").val() != '') {
+            //alert("I dont like your answer!!!");
+            //alert(parent.$("#ans_unlike_recorder").val());
+            unlike_ans_on_login(parent.$("#ans_unlike_recorder").val());
+
+        }
+        //parent.window.location.reload();
+//        if(Q_number != '')
+//        {
+//            alert("LIKE" + Q_number);
+//            //like_up_onlogin();
+//        }
+
+    }

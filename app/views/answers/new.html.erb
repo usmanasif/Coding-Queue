@@ -1,542 +1,81 @@
-<!--<link media="all" rel="stylesheet" type="text/css" href="css/style.css">-->
-<!--<link rel="stylesheet" href="../demos.css"></link>-->
-<%#= stylesheet_link_tag "prettify.css" %>
-<%#= stylesheet_link_tag "demo.css" %>
-<%#= stylesheet_link_tag "token-input-facebook.css" %>
-<%#= stylesheet_link_tag "token-input-mac.css" %>
-<%#= stylesheet_link_tag "token-input.css" %>
-<%#= javascript_include_tag "Markdown.Converter.js" %>
-<%#= javascript_include_tag "Markdown.Sanitizer.js" %>
-<%#= javascript_include_tag "Markdown.Editor.js" %>
-<%#= javascript_include_tag "answers" %>
-
-
-<input type="hidden" name="user" id="current_user" value='<%= current_user %>' />
 <!--/////////////////////////////////////////////--Question --///////Code for the answer page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <div id="wrapper">
-<section id="main">
-<article id="content">
-  <div class="q-post-holder">
-    <div class="q-post">
-      <div class="q-top">
-        <div class="counter-holder">
-          <ul class="counter-nav">
-            <li><span class="votes_count_<%= @question.id%>">votes:<%= @question.votes.sum(:status) %></span></li>
-            <li class="green-bg"><span >answers:  <%= @question.answers.count %> </span></li>
-            <li><span id="views_count">views: <%= @question.view_counter %></span></li>
+  <section id="main">
+    <article id="content">
+      <div class="q-post-holder">
+        <%= render :partial => 'question' %>
+
+        <!--////////////////////////////// -----Answer to the question -----------------////////////////////////////////////////////////////////////////////////////////////-->
+        <div class="nav-holder">
+          <ul class="active-question align-left">
+            <li><a href="#" class="active"> <%= @question.answers.count %>  answers</a></li>
           </ul>
-          <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
-            <span>Asked<span class="ago-days"> <%= time_ago_in_words(@question.created_at) %> ago</span></span>
-          </strong>
+          <ul class="active-question">
+            <li><a href="#">newest</a></li>
+            <li><a href="#">votes</a></li>
+            <li><a href="#">oldest</a></li>
+          </ul>
         </div>
-        <div class="middle-holder">
-          <div class="rating-icon-holder">
-            <ul class="a-q-flag">
-              <li><a href="#" class="flag">flag</a></li>
-              <li><%= link_to 'VIEWS',   views_askquestion_path(@question.id), :class => "eye"  %>
-                <input type="hidden" name="question_id" id="question_id" value='<%= @question.id %>' /></li>
-            </ul>
-
-            <a href="#" class="rating"><img src="/assets/star-icon.png" width="20" height="20" alt="image"></a>
-
-            <div class="about-question">
-              <span class ="ques_<%= @question.id%>" >
-
-              <% if current_user && current_user.votes.where(votable_id: @question.id , Votable_type: "Askquestion").present?   %>
-
-                  <% if current_user.votes.where(votable_id: @question.id , Votable_type: "Askquestion").last.status == 1 %>
-                      <input type="hidden" name="question_id" id="question_id" value='<%= @question.id %>' />
-                      <%= link_to  "VOTE DOWN",  vote_down_askquestion_path(@question.id), :class => "unlike-down" , :data => @question.id%>
-
-                  <% elsif current_user.votes.where(votable_id: @question.id , Votable_type: "Askquestion").last.status == -1   %>
-
-                      <%= link_to 'VOTE UP',   vote_up_askquestion_path(@question.id), :class => "like-up", :data => @question.id  %>
-                      <input type="hidden" name="question_id" id="question_id" value='<%= @question.id %>' />
-                  <% end %>
-              <% else %>
-                  <%= link_to 'VOTE UP',   vote_up_askquestion_path(@question.id), :class => "like-up" , :data => @question.id %>
-                  <input type="hidden" name="question_id" id="question_id" value='<%= @question.id %>' />
-                  <%= link_to  "VOTE DOWN",  vote_down_askquestion_path(@question.id), :class => "unlike-down", :data => @question.id %>
-              <% end %>
-              </span>
-            </div>
-
-          </div>
-          <div class="user-question">
-            <span class="user-img"><img src="/assets/img-1.jpg" width="42" height="42" alt="image"></span>
-
-            <p class="question-txt"> <%= raw(@question.title) %> </p>
-          </div>
-          <div class="post-txt">
-            <span class="post-heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
-
-            <div class="post-discription">
-              <textarea class="post-info" cols="8" rows="8"></textarea>
-              <span class="post-heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
-            </div>
-            <div class="comment-holder">
-              <div class="comment-copy-Askquestion<%=@question.id%>">
-            <!--Start --Comment-List -- Start-->
-                <input type="hidden" name="comment-question-id" id="comment-question-id" value='<%= @question.id %>' />
-
-                <% @comments.each do |comment| %>
-                      <tr>
-                        <% logger.debug "Q-Comment_Q" * 8 %>
-                        <% logger.debug comment.inspect %>
-                        <% logger.debug  %>
-                        <% logger.debug %>
-                        <% logger.debug " End Q End "*15 %>
-
-                  <% if comment.commentable_id == @question.id && comment.commentable_type == "Askquestion"%>
-                    <div class="inner-c">
-
-                      <% if current_user.present? && current_user.id == comment.user_id %>
-                       <%= best_in_place comment, :description, :path => comment_path(askquestion_id: comment.commentable_id, id: comment) %>
-
-                      <% else %>
-                        <span><%=  comment.description %> </span>
-                      <% end %>
-                      <span class="by-post-user">
-                            <a href="#" class="us-name"> <%= comment.user.email %></a>
-                            <a href="#" class="by-date-user">Jan3 '10 at 23:56 <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
-                      </span>
-                    </div>
-
-                  <% end %>
-
-             <% end %>
-
-              </div>
-
-              <div class="create-comment">
-
-                  <%= form_for  @comment, :url =>  comments_path(askquestion_id: @question.id) do |f| %>
-                      <% if @comment.errors.any? %>
-                          <div id="errorExplanation">
-                            <h2><%= pluralize(@comment.errors.count, "error") %> prohibited
-                              this post from being saved:</h2>
-                            <ul>
-                              <% @comment.errors.full_messages.each do |msg| %>
-                                  <li><%= msg %></li>
-                              <% end %>
+        <%= render :partial => 'answers_of_question' %>
+        <div class="testing">
+          <div class="voting_thought_ajax ">
+            <div class="class_with_status_tick">
+              <% @answer_of_question.each do |ans| %>
+                  <% if ans.tick_status == 1 %>
+                      <div class="q-post">
+                        <div class="q-top">
+                          <div class="counter-holder">
+                            <ul class="counter-nav">
+                              <li><span class="answer_votes_<%= ans.id %>">Votes:<%= ans.votes.sum(:status) %> </span>
+                              </li>
                             </ul>
+                            <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+                              <span>Asked<span class="ago-days"> <%= time_ago_in_words(ans.created_at) %>
+                                ago</span></span>
+                            </strong>
+
                           </div>
-                      <% end %>
-
-                      <div class="txt-field4">
-
-                        <%= f.text_field :description %>
+                          <%= render :partial => 'answer_with_comments', :locals => {:ans => ans} %>
+                        </div>
                       </div>
-
-                        <%= f.submit :class=>"comment-btn"%>
-
                   <% end %>
+              <% end %>
 
-              </div>
+              <!--//////////////////////////////////////////////answer with votes(desc) shuru /////////////////////////////////////////////////////////////////////-->
+
+
+              <%#= render :partial => 'vote_rating' %>
             </div>
           </div>
+
+          <!--////////////////////////////////---End of answer to the question --------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+          <%= render :partial => 'answer_editor' %>
+        </div>
+    </article>
+
+    <aside id="sidebar">
+      <div class="stay-us"><span class="stay-heading">share this on</span>
+        <ul class="social-icon">
+          <li><a href="#" class="twitter">twitter</a></li>
+          <li><a href="#" class="facebook">facebook</a></li>
+          <li><a href="#" class="messenger">messenger</a></li>
+        </ul>
+        <span class="stay-heading">stay in touch</span>
+
+        <div class="facebook-plugin"><img src="/assets/coding-stack-img.png" width="271" height="60" alt="facebook">
         </div>
       </div>
-      <div class="q-btm">&nbsp;</div>
-    </div>
-    <!--////////////////////////////// -----Answer to the question -----------------////////////////////////////////////////////////////////////////////////////////////-->
-
-    <div class="nav-holder">
-      <ul class="active-question align-left">
-        <li><a href="#" class="active"> <%= @question.answers.count %>  answers</a></li>
-      </ul>
-      <ul class="active-question">
-        <li><a href="#">newest</a></li>
-        <li><a href="#">votes</a></li>
-        <li><a href="#">oldest</a></li>
-      </ul>
-    </div>
- <div class="testing">
-  <div class="voting_thought_ajax ">
-  <div class="class_with_status_tick">
-    <% @answer_of_the_question.each do |ans| %>
-    <% if ans.tick_status == 1%>
-        <div class="q-post">
-          <div class="q-top">
-            <div class="counter-holder">
-              <ul class="counter-nav">
-                <li><span class="answer_votes_<%= ans.id%>">Votes:<%= ans.votes.sum(:status) %> </span></li>
-              </ul>
-              <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
-                <span>Asked<span class="ago-days"> <%= time_ago_in_words(ans.created_at) %> ago</span></span>
-              </strong>
-            </div>
-            <div class="middle-holder">
-              <div class="rating-icon-holder">
-                <ul class="a-q-flag">
-                  <li><a href="#" class="flag">flag</a></li>
-                  <li><a href="#" class="link-icon">link</a></li>
-                </ul>
-
-
-
-               <% if current_user && current_user.id == @question.user_id  %>
-                    <% if ans.tick_status == 1 %>
-                        <%= link_to  "Tick", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-colour" %>
-                    <% else %>
-                        <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-simple" %>
-                    <% end %>
-
-               <% elsif ans.tick_status == 1 %>
-                    <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-colour" %>
-               <% end %>
-
-                <% logger.debug "Answer-"*20 %>
-
-                <div class="about-question">
-                  <span class="ans_<%= ans.id%>">
-
-                  <% if current_user && current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").present? && ans.votes.present?  %>
-
-                      <% if current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").last.status == 1 %>
-                          <input type="hidden" name="question_id" id="question_id" value='<%= @question.id %>' />
-                          <%= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id, ans.id), :class => "unlike-down-answer" , :data => ans.id%>
-
-                      <% elsif current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").last.status == -1   %>
-
-                          <%= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, ans.id), :class => "like-up-answer", :data => ans.id  %>
-                          <input type="hidden" name="answer_id" id="answer_id" value='<%= ans.id %>' />
-
-                      <% end %>
-                  <% else %>
-                      <%= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, ans.id), :class => "like-up-answer", :data => ans.id  %>
-                      <input type="hidden" name="answer_id" id="answer_id" value='<%= ans.id %>' />
-                      <%= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id,ans.id), :class => "unlike-down-answer" , :data => ans.id%>
-                  <% end %>
-                   </span>
-                </div>
-              </div>
-              <div class="user-question">
-                <span class="user-img"> <img src="/assets/img-1.jpg" width="42" height="42" alt="image"></span>
-                <span class="post-heading"><%= raw(ans.answer) %></span>
-                <!--Start --Comment-List -- Start-->
-                <div class="comment-holder">
-                  <div class="comment-copy-Answer<%= ans.id%>">
-
-                    <input type="hidden" name="comment-question-id" id="comment-question-id" value='<%= ans.id %>' />
-
-                    <% @comments.each do |comment| %>
-                        <tr>
-                          <% logger.debug "Q-Comment_Q" * 8 %>
-                          <% logger.debug comment.inspect %>
-                          <% logger.debug  %>
-                          <% logger.debug %>
-                          <% logger.debug " End Q End "*15 %>
-
-                          <% if comment.commentable_id == ans.id && comment.commentable_type == "Answer"%>
-                            <div class="inner-c">
-
-                              <% if current_user.present? && current_user.id == comment.user_id %>
-                                  <%= best_in_place comment, :description, :path => comment_path(answer_id: comment.commentable_id, id: comment) %>
-
-                              <% else %>
-                                  <span><%=  comment.description %> </span>
-                              <% end %>
-                              <span class="by-post-user">
-                            <a href="#" class="us-name"> <%= comment.user.email %></a>
-                            <a href="#" class="by-date-user">Jan3 '10 at 23:56 <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
-                             </span>
-                            </div>
-
-                        <% end %>
-
-                    <% end %>
-
-                  </div>
-
-                  <div class="create-comment">
-                    <%= form_for  @comment, :url =>  comments_path(answer_id: ans.id) do |f| %>
-                        <% if @comment.errors.any? %>
-                            <div id="errorExplanation">
-                              <h2><%= pluralize(@comment.errors.count, "error") %> prohibited
-                                this post from being saved:</h2>
-                              <ul>
-                                <% @comment.errors.full_messages.each do |msg| %>
-                                    <li><%= msg %></li>
-                                <% end %>
-                              </ul>
-                            </div>
-                        <% end %>
-
-                        <div class="txt-field4">
-
-                          <%= f.text_field :description, :class=> "answer_comment" %>
-                        </div>
-
-                          <%= f.submit :class => "comment-btn" %>
-
-                    <% end %>
-
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="q-btm">&nbsp;</div>
-        </div>
-      <% end %>
-  <% end %>
-  </div>
-<!--//////////////////////////////////////////////answer with votes(desc) shuru /////////////////////////////////////////////////////////////////////-->
-
-
-           <% @answer.vote_calculate(@question).each do |x|%>
-            <% if x.tick_status.blank?%>
-            <% logger.debug "ENTER TICK_STATUS.blank?"*20 %>
-                  <div class="q-post">
-                    <div class="q-top">
-                      <div class="counter-holder">
-                        <ul class="counter-nav">
-                          <li><span class="answer_votes_<%= x.id%>">Votes:<%= x.votes.sum(:status) %> </span></li>
-                        </ul>
-                        <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
-                          <span>Asked<span class="ago-days"> <%= time_ago_in_words(x.created_at) %> ago</span></span>
-                        </strong>
-                      </div>
-                      <div class="middle-holder">
-                        <div class="rating-icon-holder">
-                          <ul class="a-q-flag">
-                            <li><a href="#" class="flag">flag</a></li>
-                            <li><a href="#" class="link-icon">link</a></li>
-                          </ul>
-                          <% logger.debug "aaaaaa"*20 %>
-                          <% logger.debug " " * 8 %>
-                          <% logger.debug current_user.id if current_user.present? %>
-                          <% logger.debug  @question.user_id   %>
-                          <%# logger.debug current_user.votes.present? %>
-
-                          <% if current_user && current_user.id == @question.user_id  %>
-                              <% if x.tick_status == 1 %>
-                                  <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, x.id), :class => "tick-colour" %>
-                              <% else %>
-                                  <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, x.id), :class => "tick-simple" %>
-                              <% end %>
-
-                          <% elsif x.tick_status == 1 %>
-                              <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, x.id), :class => "tick-colour" %>
-                          <% end %>
-
-                          <% logger.debug "Answer-"*20 %>
-                          <% logger.debug current_user.inspect %>
-                          <% logger.debug current_user.present?  %>
-                          <%# logger.debug   ans.votes.present?   %>
-                          <% logger.debug "EEEEE " *20%>
-                          <div class="about-question">
-                            <span class="ans_<%= x.id%>">
-                            <% if current_user && current_user.votes.where(votable_id: x.id , Votable_type: "Answer").present? && x.votes.present?  %>
-
-                                <% if current_user.votes.where(votable_id: x.id , Votable_type: "Answer").last.status == 1 %>
-                                    <input type="hidden" name="answer_id" id="answer_id" value='<%= x.id %>' />
-                                    <%= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id, x.id), :class => "unlike-down-answer" , :data => x.id %>
-
-                                <% elsif current_user.votes.where(votable_id: x.id , Votable_type: "Answer").last.status == -1   %>
-
-                                    <%= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, x.id), :class => "like-up-answer", :data => x.id  %>
-                                    <input type="hidden" name="answer_id" id="answer_id" value='<%= x.id %>' />
-
-                                <% end %>
-                            <% else %>
-                                <%= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, x.id), :class => "like-up-answer"  , :data => x.id%>
-                                <input type="hidden" name="answer_id" id="answer_id" value='<%= x.id %>' />
-                                <%= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id,x.id), :class => "unlike-down-answer" , :data => x.id%>
-                            <% end %>
-                             </span>
-                          </div>
-                        </div>
-                        <div class="user-question">
-                          <span class="user-img"> <img src="/assets/img-1.jpg" width="42" height="42" alt="image"></span>
-                          <span class="post-heading"><%= raw(x.answer) %></span>
-                          <!--<///////// -- Comment loop --answer-- --//////>-->
-                          <div class="comment-holder">
-                            <div class="comment-copy-Answer<%= x.id%>">
-
-
-                                <% @comments.each do |comment| %>
-                                    <% logger.debug "COMENT ON ANSWER" * 12 %>
-                                    <% logger.debug comment.inspect  %>
-                                    <% logger.debug comment.commentable_id %>
-                                    <%# logger.debug ans.id %>
-                                    <% logger.debug  comment.commentable_type   %>
-                                    <% logger.debug  "comENDcom " * 3   %>
-
-                              <% if comment.commentable_id == x.id && comment.commentable_type == "Answer"%>
-
-                              <div class="inner-c">
-                                <% if current_user.present? && current_user.id == comment.user_id %>
-                                    <span><%= best_in_place comment, :description, :path => comment_path(answer_id: comment.commentable_id, id: comment.id) %> </span>
-                                <% else %>
-                                    <span><%=  comment.description %> </span>
-                                <% end %>
-
-                                <span class="by-post-user">
-                                    <a href="#" class="us-name"> <%= comment.user.email %></a>
-                                    <a href="#" class="by-date-user">Jan3 '10 at 23:56 <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
-                                </span>
-                              </div>
-
-                               <% end %>
-                             <% end %>
-
-
-                              </div>
-
-                            <div class="create-comment">
-                              <%= form_for  @comment, :url => comments_path(answer_id: x.id) do |f| %>
-                              <% if @comment.errors.any? %>
-                                  <div id="errorExplanation">
-                                    <h2><%= pluralize(@comment.errors.count, "error") %> prohibited
-                                      this post from being saved:</h2>
-                                    <ul>
-                                      <% @comment.errors.full_messages.each do |msg| %>
-                                          <li><%= msg %></li>
-                                      <% end %>
-                                    </ul>
-                                  </div>
-                              <% end %>
-                              <div class="txt-field4">
-                                <%#= f.label :description %>
-                                <!--<br />-->
-                                <%= f.text_field :description, :class => "answer_comment" %>
-                              </div>
-
-                                <%= f.submit :class=>"comment-btn"%>
-
-                            <% end %>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="q-btm">&nbsp;</div>
-                  </div>
-
-             <% end %>
-           <% end %>
-      </div>
-    </div>
-
-  <!--////////////////////////////////---End of answer to the question --------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-
-    <div class="answer-the-question">
-      <p class="recent-question"><span class="answer-note">Answer the question</span></p>
-
-      <div class="ask-question">
-        <h2 class="a-y-question"></h2>
-
-        <%= form_for @answer, :url => askquestion_answers_path(@askquestion_id) do |f| %>
-            <% if @answer.errors.any? %>
-                <div class="error_messages">
-                  <h2>Form is invalid, prohibited this record from being saved</h2>
-                  <ul>
-                    <% for message in @answer.errors.full_messages %>
-                        <li><%= message %></li>
-                    <% end %>
-                  </ul>
-                </div>
-            <% end %>
-
-
-
-            <div class="field">
-              <%= f.hidden_field :answer, id: "wmd-preview-input" %>
-              <div class="wmd-panel">
-                <div id="wmd-button-bar"></div>
-                <textarea class="wmd-input" id="wmd-input"></textarea>
-              </div>
-              <div id="wmd-preview" class="wmd-panel wmd-preview">
-              </div>
-            </div>
-            <div class="create-holder"> <span class="btn-holder">
-                   <button class="create-btn" name="Create Askquestion" value="Create Askquestion"></button>
-            <small>or</small>
-            <button class="create-btn cancel-btn" name="#" value=""></button>
-            </span>
-              <!--<span class="click-to-add">-->
-              <!--<label for="wiki">wikki</label>-->
-              <!--<input type="checkbox" name="#" id="wiki" value="">-->
-              <!--</span>-->
-            </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</article>
-<script type="text/javascript">
-    (function () {
-        var converter1 = Markdown.getSanitizingConverter();
-        var editor1 = new Markdown.Editor(converter1);
-        editor1.run();
-        var converter2 = new Markdown.Converter();
-        converter2.hooks.chain("preConversion", function (text) {
-            return text.replace(/\b(a\w*)/gi, "*$1*");
-        });
-        converter2.hooks.chain("plainLinkText", function (url) {
-            return "This is a link to " + url.replace(/^https?:\/\//, "");
-        });
-        var help = function () {
-            alert("Do you need help?");
-        }
-        var editor2 = new Markdown.Editor(converter2, "-second", { handler:help });
-        editor2.run();
-    })();
-</script>
-<aside id="sidebar">
-  <div class="stay-us"><span class="stay-heading">share this on</span>
-    <ul class="social-icon">
-      <li><a href="#" class="twitter">twitter</a></li>
-      <li><a href="#" class="facebook">facebook</a></li>
-      <li><a href="#" class="messenger">messenger</a></li>
-    </ul>
-    <span class="stay-heading">stay in touch</span>
-
-    <div class="facebook-plugin"><img src="/assets/coding-stack-img.png" width="271" height="60" alt="facebook"></div>
-  </div>
-  <div class="tags-title">
-    <ul class="tags-nav">
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-    </ul>
-  </div>
-</aside>
-</section>
-<!--<footer id="footer"> <span>All <a href="#">codingstack.com</a> content and data are available under the Creative Commons Attribution 3.0 license</span> <span><a href="#">blog</a> | <a href="#">twitter</a> | <a href="#">buzz</a> | <a href="#">identi.ca</a> | <a href="#">code</a> | <a href="#">irc (web chat)</a> | <a href="#">feedback</a> | <a href="#">tos</a> | <a href="#">privacy</a></span> <span>Powered by <a href="#">codingstack.com</a> under the GNU Affero General Public License</span> </footer>-->
+      <%= render :partial => 'shared/tags_all' %>
+    </aside>
+  </section>
+  <!--<footer id="footer"> <span>All <a href="#">codingstack.com</a> content and data are available under the Creative Commons Attribution 3.0 license</span> <span><a href="#">blog</a> | <a href="#">twitter</a> | <a href="#">buzz</a> | <a href="#">identi.ca</a> | <a href="#">code</a> | <a href="#">irc (web chat)</a> | <a href="#">feedback</a> | <a href="#">tos</a> | <a href="#">privacy</a></span> <span>Powered by <a href="#">codingstack.com</a> under the GNU Affero General Public License</span> </footer>-->
 </div>
+
+<!--Record if the like or dislike is clicked without login session-->
+<input type="hidden" id="ans_like_recorder" name="ans_like_recorder" value="" >
+<input type="hidden" id="ans_unlike_recorder" name="ans_unlike_recorder" value="">
+
+
 <!--/////////////////////////////////////////////////////////////End Code for the answer page////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->

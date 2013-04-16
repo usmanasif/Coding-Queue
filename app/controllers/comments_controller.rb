@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
- respond_to :html , :json
- before_filter :require_login, :except => [:index, :show,:new]
- skip_before_filter :verify_authenticity_token
+  respond_to :html, :json
+  before_filter :require_login, :except => [:index, :show, :new]
+  skip_before_filter :verify_authenticity_token
 
   def new
     @comment = Comment.new
@@ -33,16 +33,14 @@ class CommentsController < ApplicationController
     #    @comment = @comment_on_answer.comments.build(params[:comment])
     #end
 
-     @comment.user = current_user
+    @comment.user = current_user
+    if @comment.save
+      @user_email = User.find(@comment.user_id)
+      #redirect_to :back
+      return render :json => [@comment, :email => @user_email.email]
+      #redirect_to :back  , :notice => 'Comment was successfully created.'
 
-
-      if @comment.save
-        @user_email = User.find(@comment.user_id)
-        #redirect_to :back
-        return render :json =>  [@comment, :email => @user_email.email]
-        #redirect_to :back  , :notice => 'Comment was successfully created.'
-
-      end
+    end
   end
 
 
@@ -57,51 +55,57 @@ class CommentsController < ApplicationController
   end
 
 
-
-
   def edit
     #return render :json => params
     @comment = Comment.find(params[:id])
     #@comment = Comment.all
-    @ques =  Askquestion.find(params[:askquestion_id])
+    @ques = Askquestion.find(params[:askquestion_id])
     #return render :json => params
     #return render :json =>  @comment
     #redirect_to :back
   end
 
   def update
-    #return render  :json => params
+    # return render  :json => params
+    @comment = Comment.find(params[:id])
+    #respond_to do |format|
+    if @comment.update_attributes(params[:comment])
+      respond_with @comment
+      #format.json { respond_with_bip(@comment) }
+    else
+      #format.json { respond_with_bip(@comment.errors), :status => :unprocessable_entity }
+      render :json => @comment.errors, :status => :unprocessable_entity
+    #end
+    end
+
+
+  end
+
+  def update_test
     @comment = Comment.find(params[:id])
 
-    @comment.update_attributes(params[:comment])
 
-    respond_with @comment
+    if @comment.update_attributes(params[:comment])
+      redirect_to :back
+      #respond_with @comment
+      #return render  :json => params
 
+      #else
+      #  format.html  { render :action => "edit" }
+      #  format.json  { render :json => @comment.errors,
+      #                        :status => :unprocessable_entity }
+      #end
     end
- def update_test
-   @comment = Comment.find(params[:id])
+  end
 
+  def show
+    @comment = Comment.find(params[:id])
 
-   if @comment.update_attributes(params[:comment])
-     redirect_to :back
-     #respond_with @comment
-     #return render  :json => params
-
-     #else
-     #  format.html  { render :action => "edit" }
-     #  format.json  { render :json => @comment.errors,
-     #                        :status => :unprocessable_entity }
-     #end
-   end
- end
- def show
-   @comment = Comment.find(params[:id])
-
-   #respond_to do |format|
-   #  format.html  # show.html.erb
-   #  format.json  { render :json => @comment }
-   #end
- end
+    #respond_to do |format|
+    #  format.html  # show.html.erb
+    #  format.json  { render :json => @comment }
+    #end
+  end
 
   def destroy
     @comment = Comment.find(params[:id])

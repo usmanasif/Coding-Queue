@@ -1,208 +1,72 @@
-<%#= stylesheet_link_tag "prettify.css" %>
-<%#= stylesheet_link_tag "style.css" %>
-<%#= stylesheet_link_tag "demo.css" %>
-
-
-
-
 
 <body class="bg-2" onload="prettyPrint()">
-<div id="wrapper">
-  <section id="main">
-    <article id="content">
-      <div class="holder-2">
-        <p class="recent-question"><span>recent questions</span>72.</p>
-        <ul class="active-question">
-          <li><a href="#" class="active">active</a></li>
-          <li><a href="#">hot</a></li>
-        </ul>
-      </div>
-      <div class="ask-question"><span class="tell-question">What is your question? Be descriptive.</span>
+    <div id="wrapper">
+      <section id="main">
+        <article id="content">
+          <div class="holder-2">
+            <p class="recent-question"><span>recent questions</span>72.</p>
+            <ul class="active-question">
+              <li><a href="#" class="active">active</a></li>
+              <li><a href="#">hot</a></li>
+            </ul>
+          </div>
+          <div class="ask-question"><span class="tell-question">What is your question? Be descriptive.</span>
 
-        <form method="post" action="#">
-          <input type="submit" name="#" value="" class="sbmt-btn">
-          <input type="text" name="#" value="" class="txt-field">
-        </form>
-      </div>
-      <%= form_tag askquestions_path, method: :get do %>
-          <div class="field">
-            <%= text_field_tag :search, params[:search], data: {autocomplete_source: Askquestion.order(:title).map(&:title)} %>
-            <%= submit_tag "Search", name: nil %>
-      <% end %>
-      <div class="apple_pagination">
-        <%= will_paginate @askquestions, :container => false %>
-      </div>
+            <form method="post" action="#" id="question_form">
+              <input type="submit" name="#" value="" class="sbmt-btn">
+              <input type="text" name="#" value="" class="txt-field">
+            </form>
+          </div>
 
-      <% @askquestions.each do |question| %>
-          <div class="q-post-holder">
-            <div class="q-post">
-              <div class="q-top">
-                <div class="counter-holder">
-                  <ul class="counter-nav">
-                    <%# logger.debug "PPPPPPPPPPPPP * 8  %>
+          <!--Thinking sphinx-->
 
-                    <li><span class="vote_question_<%= question.id%>"> Votes: <%= question.votes.sum(:status) %> </span></li>
-                    <li class="green-bg"><span>Answer: <%= question.answers.count %></span></li>
-                    <li><span>View: <%= question.view_counter %></span></li>
-                  </ul>
-                  <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
-                    <span>Asked<span class="ago-days"> <%= time_ago_in_words(question.created_at) %> ago</span></span>
-                  </strong>
+          <div class="apple_pagination">
+            <%= will_paginate @askquestions, :container => false %>
+          </div>
+
+          <%= render :partial => "shared/questions_index"%>
+          <span class="review">See the <a href="#">full list of questions</a> or <a href="#">browse by tags</a> Help us answer <a href="#">Unanswered
+            questions</a> </span>
+        </article>
+        <aside id="sidebar">
+          <div class="about-c-s">
+            <div class="bg-top">&nbsp;</div>
+                <div class="bg-center"><strong class="logo2"><a href="#">coding stack</a></strong>
+                    <p>Questions and Answers regarding any tool, any language or any framework. It's 100% free, no registration required.</p>
                 </div>
-                <div class="middle-holder">
-                  <div class="user-question">
-                    <span class="user-img"><img src="/assets/img-1.jpg" width="42" height="42" alt="image"/></span>
 
-                    <p class="question-txt ">
-                      <a href=<%=new_askquestion_answer_path(question.id) %>><%= raw(question.title) %></a>
-                    </p>
-                  </div>
-                  <div class="tags-holder"><span class="tag-name">tags:</span>
-                    <ul class="question-tags">
+                <div class="bg-btm">&nbsp;</div>
+          </div>
+          <div class="own-site"><span>create your own question answer site in 10 seconds for free</span></div>
+            <div class="search-site">
 
-                        <% question.tags.each do |a| %>
-                          <li><a href="#"><%= a.name %></a></li>
-                          <% end %>
-                      <!--<li><a href="#">tag 2</a></li>-->
-                    </ul>
-                    <div class="about-question">
-                      <div class = "abc_<%= question.id%>">
-                      <% logger.debug "-QUESTION-"*20 %>
-                      <%# logger.debug current_user.votes.where(votable_id:question.id ,Votable_type: "Askquestion").present?  %>
-                      <% logger.debug "first if statement" * 8 %>
-                      <% logger.debug current_user.present?  %>
-                      <% logger.debug  !question.votes.blank?   %>
-                      <%# logger.debug current_user.votes.present? %>
-                      <% logger.debug "f" * 8 %>
-                      <% logger.debug " " * 8%>
-                      <%# logger.debug current_user.votes.where(votable_id: question.id , Votable_type: "Askquestion").last.status %>
-                      <% logger.debug "=" * 15 %>
-                      <%# logger.debug current_user.votes.where(votable_id: question.id , Votable_type: "Askquestion").last.status if current_user.votes.where(votable_id: question.id , Votable_type: "Askquestion").last.present? %>
-                      <% logger.debug  "8" * 8  %>
-                      <% logger.debug " End Q End "*15 %>
-                    <% if current_user && current_user.votes.where(votable_id:question.id ,Votable_type: "Askquestion").present?   %>
+              <%= form_tag askquestions_path, method: :get do %>
+                  <span class="st-site">search the site</span>
 
-                          <% if current_user.votes.where(votable_id:question.id , Votable_type: "Askquestion").last.status == 1 %>
-                              <input type="hidden" name="question_id" class="question_id" value='<%= question.id %>' />
-                              <%= link_to  "VOTE DOWN",  vote_down_askquestion_path(question.id), :class => "unlike-down", :data => question.id  %>
+                  <div class="search-holder">
+                    <div class="field">
 
-                          <% elsif current_user.votes.where(votable_id: question.id , Votable_type: "Askquestion").last.status == -1   %>
+                    <%= text_field_tag :search, params[:search], data: {autocomplete_source: Askquestion.order(:title).map(&:title)} %>
+                    <span style="display: none;"><%= submit_tag "Search", name: nil %></span>
+                      <input type="submit" name="#" value="" class="search-btn">
 
-                              <%= link_to 'VOTE UP',   vote_up_askquestion_path(question.id), :class => "like-up", :data => question.id, :id => "like-ups-#{question.id}"    %>
-                              <input type="hidden" name="question_id" class ="question_id" value='<%= question.id %>' />
-                         <% end %>
-                    <% else %>
-                          <%= link_to 'VOTE UP',   vote_up_askquestion_path(question.id), :class => "like-up" , :data => question.id  %>
-                          <input type="hidden" name="question_id" id="question_id" value='<%= question.id %>' />
-                          <%= link_to  "VOTE DOWN",  vote_down_askquestion_path(question.id), :class => "unlike-down" , :data => question.id  %>
-                    <% end %>
-
-                     </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="q-btm">&nbsp;</div>
+              <% end %>
             </div>
-          </div>
-      <% end %>
-      <span class="review">See the <a href="#">full list of questions</a> or <a href="#">browse by tags</a> Help us answer <a href="#">Unanswered
-        questions</a> </span>
-    </article>
-    <aside id="sidebar">
-      <div class="about-c-s">
-        <div class="bg-top">&nbsp;</div>
-        <div class="bg-center"><strong class="logo2"><a href="#">coding stack</a></strong>
 
-          <p>Questions and Answers regarding any tool, any language or any framework. It's 100% free, no registration
-            required.</p>
-        </div>
-        <div class="bg-btm">&nbsp;</div>
-      </div>
-      <div class="own-site"><span>create your own question answer site in 10 seconds for free</span></div>
-      <div class="search-site">
-        <form method="post" action="#">
-          <span class="st-site">search the site</span>
 
-          <div class="search-holder">
-            <input type="submit" name="#" value="" class="search-btn">
+          <%= render :partial => 'shared/tags_all' %>
+          <%= render :partial => 'shared/users_right_bar' %>
 
-            <div class="txt-field2">
-              <input type="text" name="#" value="">
+          <div class="stay-us"><span class="stay-heading">Stay in touch</span>
+
+            <div class="facebook-plugin"><img src="/assets/coding-stack-img.png" width="271" height="60" alt="facebook">
             </div>
+            <span class="stay-heading">subscribe</span> <a href="#" class="rss-field">Subscribe to all questions</a>
           </div>
-        </form>
-      </div>
-      <div class="tags-title">
-        <ul class="tags-nav">
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-        </ul>
-      </div>
-      <div class="user-holder"><strong class="user-heading">Top 5 users</strong>
-        <ul class="user-bio">
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>(265)</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>(265)</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>(265)</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>(265)</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>(265)</span></li>
-        </ul>
-      </div>
-      <div class="user-holder"><strong class="user-heading">Recent users</strong>
-        <ul class="user-bio">
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>joined 2 months ago</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>joined 2 months ago</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>joined 2 months ago</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>joined 2 months ago</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>joined 2 months ago</span></li>
-        </ul>
-      </div>
-      <div class="stay-us"><span class="stay-heading">Stay in touch</span>
+        </aside>
+      </section>
+    </div>
 
-        <div class="facebook-plugin"><img src="/assets/coding-stack-img.png" width="271" height="60" alt="facebook">
-        </div>
-        <span class="stay-heading">subscribe</span> <a href="#" class="rss-field">Subscribe to all questions</a></div>
-    </aside>
-  </section>
-</div>
 </body>

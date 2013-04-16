@@ -1,0 +1,9 @@
+<input type="hidden" name="login_user_id" id="login_user_id" value= <%= user.id %> />
+<input type="hidden" name="login_user_email" id="login_user_email" value= <%= user.email %> />
+<ul>
+  <li>
+    <a href='#'>Faq</a>
+  </li>
+<%= link_to('Log out', logout_path, :class => 'log-Out') %>
+    <span class='loged-user'>Logged in as <%= user.email %></span>
+</ul>

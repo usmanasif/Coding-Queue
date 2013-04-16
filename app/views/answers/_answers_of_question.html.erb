@@ -9,64 +9,22 @@
 <!--##################### First loop ###########################################-->
 
 <% @answer_of_question.each do |ans| %>
-<% if ans.tick_status == 1%>
+
+    <% if ans.tick_status == 1%>
     <div class="q-post">
       <div class="q-top">
         <div class="counter-holder">
           <ul class="counter-nav">
             <li><span class="answer_votes_<%= ans.id%>">Votes:<%= ans.votes.sum(:status) %> </span></li>
           </ul>
-          <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+          <strong class="by-date"> <span class="u-name"><a href="#"><%= ans.user.email %></a> 245</span>
             <span>Asked<span class="ago-days"> <%= time_ago_in_words(ans.created_at) %> ago</span></span>
           </strong>
         </div>
         <div class="middle-holder">
-          <div class="rating-icon-holder">
-            <ul class="a-q-flag">
-              <li><a href="#" class="flag">flag</a></li>
-              <li><a href="#" class="link-icon">link</a></li>
-            </ul>
-
-
-
-            <% if current_user && current_user.id == @question.user_id  %>
-                <% if ans.tick_status == 1 %>
-                    <%= link_to  "Tick", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-colour" %>
-                <% else %>
-                    <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-simple" %>
-                <% end %>
-
-            <% elsif ans.tick_status == 1 %>
-                <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-colour" %>
-            <% end %>
-
-            <% logger.debug "Answer-"*20 %>
-
-            <div class="about-question">
-                  <span class="ans_<%= ans.id%>">
-
-                  <% if current_user && current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").present? && ans.votes.present?  %>
-
-                      <% if current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").last.status == 1 %>
-                          <input type="hidden" name="question_id" id="question_id" value='<%= @question.id %>' />
-                            <%= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id, ans.id), :class => "unlike-down-answer" , :data => ans.id%>
-
-                      <% elsif current_user.votes.where(votable_id: ans.id , Votable_type: "Answer").last.status == -1   %>
-
-                          <%= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, ans.id), :class => "like-up-answer", :data => ans.id  %>
-                            <input type="hidden" name="answer_id" id="answer_id" value='<%= ans.id %>' />
-
-                      <% end %>
-                  <% else %>
-                      <%= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, ans.id), :class => "like-up-answer", :data => ans.id  %>
-                        <input type="hidden" name="answer_id" id="answer_id" value='<%= ans.id %>' />
-                        <%= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id,ans.id), :class => "unlike-down-answer" , :data => ans.id%>
-                  <% end %>
-                   </span>
-            </div>
-          </div>
+          <%= render :partial => 'answer_vote_rating'  %>
           <div class="user-question">
-            <span class="user-img"> <img src="/assets/img-1.jpg" width="42" height="42" alt="image"></span>
+            <span class="user-img"> <%= image_tag avatar_url(ans.user) %></span>
             <span class="post-heading"><%= raw(ans.answer) %></span>
             <!--Start --Comment-List -- Start-->
             <div class="comment-holder">
@@ -104,7 +62,7 @@
               </div>
 
               <div class="create-comment">
-                <%= form_for  @comment, :url =>  comments_path(answer_id: ans.id) do |f| %>
+                <%= form_for  @comment, :url =>  comments_path(answer_id: ans.id), :html => { :id => "new_comment_#{ans.id}"} do |f| %>
                     <% if @comment.errors.any? %>
                         <div id="errorExplanation">
                           <h2><%= pluralize(@comment.errors.count, "error") %> prohibited
@@ -122,7 +80,7 @@
                       <%= f.text_field :description, :class=> "answer_comment" %>
                     </div>
 
-                    <%= f.submit :class => "comment-btn" %>
+                    <%= f.submit :class => "comment-btn create-btn" %>
 
                 <% end %>
 
@@ -149,7 +107,7 @@
               <ul class="counter-nav">
                 <li><span class="answer_votes_<%= x.id%>">Votes:<%= x.votes.sum(:status) %> </span></li>
               </ul>
-              <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+              <strong class="by-date"> <span class="u-name"><a href="#"><%= x.user.email %></a> 245</span>
                 <span>Asked<span class="ago-days"> <%= time_ago_in_words(x.created_at) %> ago</span></span>
               </strong>
             </div>
@@ -181,30 +139,33 @@
                 <% logger.debug current_user.present?  %>
                 <%# logger.debug   ans.votes.present?   %>
                 <% logger.debug "EEEEE " *20%>
-                <div class="about-question">
-                                    <span class="ans_<%= x.id%>">
-                                    <% if current_user && current_user.votes.where(votable_id: x.id , Votable_type: "Answer").present? && x.votes.present?  %>
+                <div class="about-question" id="answers_of_Question">
 
-                                        <% if current_user.votes.where(votable_id: x.id , Votable_type: "Answer").last.status == 1 %>
-                                            <input type="hidden" name="answer_id" id="answer_id" value='<%= x.id %>' />
-                                              <%= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id, x.id), :class => "unlike-down-answer" , :data => x.id %>
+                    <span class="ans_<%= x.id%>">
+                    <% if(current_user && current_user.votes.where(votable_id: x.id , Votable_type: "Answer").present? && x.votes.present? ) %>
 
-                                        <% elsif current_user.votes.where(votable_id: x.id , Votable_type: "Answer").last.status == -1   %>
+                        <input type="hidden" name="last_voted_<%= x.id %>" id="last_voted_<%= x.id %>" value='<%= current_user.votes.where(votable_id: x.id , Votable_type: "Answer").last.status %>' />
 
-                                            <%= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, x.id), :class => "like-up-answer", :data => x.id  %>
-                                              <input type="hidden" name="answer_id" id="answer_id" value='<%= x.id %>' />
+                        <% if current_user.votes.where(votable_id: x.id , Votable_type: "Answer").last.status == 1 %>
+                            <input type="hidden" name="answer_id" id="answer_id" value='<%= x.id %>' />
+                              <%= link_to  "VOTE DOWN", 'javascript:void(0);', :id => "ans_vote_down_#{x.id}", :class => "unlike-down-answer" , :data => x.id %>
 
-                                        <% end %>
-                                    <% else %>
-                                        <%= link_to 'VOTE UP',   vote_up_askquestion_answer_path(@question.id, x.id), :class => "like-up-answer"  , :data => x.id%>
-                                          <input type="hidden" name="answer_id" id="answer_id" value='<%= x.id %>' />
-                                          <%= link_to  "VOTE DOWN",  vote_down_askquestion_answer_path(@question.id,x.id), :class => "unlike-down-answer" , :data => x.id%>
-                                    <% end %>
-                                     </span>
+                        <% elsif current_user.votes.where(votable_id: x.id , Votable_type: "Answer").last.status == -1   %>
+
+                            <%= link_to 'VOTE UP', 'javascript:void(0);', :class => "like-up-answer", :id => "ans_vote_up_#{x.id}", :data => x.id  %>
+                              <input type="hidden" name="answer_id" id="answer_id" value='<%= x.id %>' />
+
+                        <% end %>
+                    <% else %>
+                          <%= link_to 'VOTE UP', 'javascript:void(0);', :id => "ans_vote_up_#{x.id}", :class => "like-up-answer"  , :data => x.id%>
+                            <input type="hidden" name="answer_id" id="answer_id" value='<%= x.id %>' />
+                          <%= link_to  "VOTE DOWN", 'javascript:void(0);' ,:id => "ans_vote_down_#{x.id}", :class => "unlike-down-answer" , :data => x.id%>
+                    <% end %>
+                    </span>
                 </div>
               </div>
               <div class="user-question">
-                <span class="user-img"> <img src="/assets/img-1.jpg" width="42" height="42" alt="image"></span>
+                <span class="user-img"> <%= image_tag avatar_url(x.user) %></span>
                 <span class="post-heading"><%= raw(x.answer) %></span>
                 <!--<///////// -- Comment loop --answer-- --//////>-->
                 <div class="comment-holder">
@@ -241,7 +202,7 @@
                   </div>
 
                   <div class="create-comment">
-                    <%= form_for  @comment, :url => comments_path(answer_id: x.id) do |f| %>
+                    <%= form_for  @comment, :url =>  comments_path(answer_id: x.id), :html => { :id => "new_comment_#{x.id}"} do |f| %>
                         <% if @comment.errors.any? %>
                             <div id="errorExplanation">
                               <h2><%= pluralize(@comment.errors.count, "error") %> prohibited
@@ -259,7 +220,7 @@
                           <%= f.text_field :description, :class => "answer_comment" %>
                         </div>
 
-                        <%= f.submit :class=>"comment-btn"%>
+                        <%= f.submit :class=>"comment-btn create-btn"%>
 
                     <% end %>
 

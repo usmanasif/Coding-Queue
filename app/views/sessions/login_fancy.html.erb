@@ -1,0 +1,174 @@
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#user_login_form').submit(function () {
+            var user_data = $(this).serialize();
+            $.ajax({
+                type:'POST',
+                url:'/sessions',
+                data:user_data,
+                dataType:"html",
+                success:function (userStatus) {
+                    if (userStatus == "false") {
+                        $(".error_messages").html("<ul><li>Email or password was invalid Please enter again.</li></ul>");
+                    }
+                    else {
+                        parent.$.fancybox.close();
+                        parent.$("#loginmenu").html(userStatus);
+                        parent.$("#flash_notice").html("Logged in");
+                        //submit the form
+                        if(parent.$("#form_recorder").val() != '')
+                        {
+                            //submit parent page
+                            parent.$("#"+parent.$("#form_recorder").val()).submit();
+
+                        }
+
+                        else{
+                            like_unlike();
+                        }
+                    }
+
+                }
+            });
+            return false;
+        });
+
+        $(".signup-btn").click(function () {
+            $("#inline1").show();
+            $("#inline2").hide();
+        });
+
+        $('#signup-form').submit(function () {
+            var user_data = $(this).serialize();
+            $.ajax({
+                type:'POST',
+                url:'/users',
+                data:user_data,
+                dataType:"html",
+                success:function (userStatus) {
+                    if (userStatus == "false") {
+                        //alert($("#error_messages").html())
+                        $("#error_messages").html("Invalid credetials.");
+                    }
+                    else {
+                        parent.$.fancybox.close();
+                        parent.$("#loginmenu").html(userStatus);
+                        parent.$("#flash_notice").html("");
+                    }
+
+
+                }
+
+            });
+            return false;
+        });
+    });
+</script>
+
+<section id="main">
+  <div id="inline1" style="width:500;display: none;" class="light-box">
+    <div class="b-top">&nbsp;</div>
+    <div class="b-center">
+      <div class="box-signup">
+        <% user = User.new %>
+        <%= form_for user, :html => {:class => "login-form-base", :id => "signup-form"} do |f| %>
+            <%# if user.errors.any? %>
+            <div class="error_messages" id="error_messages">
+              <!--<h2>Form is invalid</h2>-->
+              <ul>
+                <% for message in user.errors.full_messages %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+            <%# end %>
+            <div class="user-holder">
+              <label class="user-text">Email</label>
+              <%= f.text_field :email, :class => "txt-field5" %>
+            </div>
+            <div class="user-holder">
+              <label class="user-text">password</label>
+              <%= f.password_field :password, :class => "txt-field5" %>
+            </div>
+            <div class="user-holder">
+              <label class="user-text">confirm password</label>
+              <%= f.password_field :password_confirmation, :class => "txt-field5" %>
+            </div>
+            <div class="submit-holder">
+              <div class="actions sign-btn"><%= f.submit :class => 'sign-btn' %> </div>
+              <!--<a class="fancybox sign-in-btn" href="#inline2" title="login">login</a>-->
+
+            </div>
+        <% end %>
+      </div>
+
+      <ul class="feature-holder">
+
+        <li><a href="<%= auth_at_provider_path(:provider => :google) %>" class="google-icon"></a></li>
+
+        <li><a href=" <%= auth_at_provider_path(:provider => :facebook) %>" class="facebook-icon"></a></li>
+
+
+        <li><a href="<%= auth_at_provider_path(:provider => :twitter) %>" class="twitter-icon"></a></li>
+
+
+        <li><a href=" <%= auth_at_provider_path(:provider => :github) %>" class="github-icon"></a></li>
+      </ul>
+    </div>
+    <div class="b-btm">&nbsp;</div>
+
+  </div>
+</section>
+
+<div id="inline2" style="width:500;display: block;" class="light-box">
+  <div class="b-top">&nbsp;</div>
+  <div class="b-center">
+    <div class="box-signup" id="signup-box">
+      <%#= form_tag sessions_path, :html => {:class => "login-form-base1"}, remote: true, :url => sessions_path, :update => { :success => "usersssssss", :failure => "errorrrrrr" },  :method => :post do %>
+      <%= form_tag sessions_path, :method => :post, :id => "user_login_form" do %>
+          <%#= form_tag sessions_path, :html => {:class => "login-form-base1"} do %>
+          <div class="error_messages" id="error_messages">
+            <!--<h2>Form is invalid</h2>-->
+            <ul>
+              <% for message in user.errors.full_messages %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="user-holder">
+            <label class="user-text">Email</label>
+            <%= text_field_tag :email, params[:email], :class => "txt-field5", :placeholder => 'Email' %>
+          </div>
+          <div class="user-holder">
+            <label class="user-text">Password</label>
+            <%= password_field_tag :password, '', :class => "txt-field5", :placeholder => 'Password' %>
+
+          </div>
+          <div class="user-holder">
+            <label class="user-text">remember me</label>
+            <%= check_box_tag :remember_me, 1, params[:remember_me], :class => "check-Box" %>
+          </div>
+          <div class="actions submit-holder"><%= submit_tag "Log in", :class => "sign-btn sign-in-btn" %>
+            <span class="text-or">or</span>
+            <a class="fancybox sign-btn signup-btn" href="#inline1" title="Sign Up">signUp</a>
+          </div>
+
+      <% end %>
+
+    </div>
+    <ul class="feature-holder">
+      <li><a href="<%= auth_at_provider_path(:provider => :google) %>" class="google-icon"></a></li>
+
+      <li><a href=" <%= auth_at_provider_path(:provider => :facebook) %>" class="facebook-icon"></a></li>
+
+
+      <li><a href="<%= auth_at_provider_path(:provider => :twitter) %>" class="twitter-icon"></a></li>
+
+
+      <li><a href=" <%= auth_at_provider_path(:provider => :github) %>" class="github-icon"></a></li>
+    </ul>
+  </div>
+  <div class="b-btm">&nbsp;</div>
+
+</div>

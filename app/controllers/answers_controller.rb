@@ -2,12 +2,13 @@ class AnswersController < ApplicationController
 
   before_filter :require_login, :except => [:new]
   skip_before_filter :verify_authenticity_token
-
   def new
 
     @question = Askquestion.find(params[:askquestion_id])
     @answer = Answer.new
-    @answer_of_the_question = Answer.find_all_by_askquestion_id(params[:askquestion_id])
+    @answer_of_question = Answer.find_all_by_askquestion_id(params[:askquestion_id])
+
+
     @votes_on_answer = Answer.find_all_by_askquestion_id(params[:askquestion_id])
 
     @answer_tick = @question.answers
@@ -18,16 +19,25 @@ class AnswersController < ApplicationController
 
   def create
     #TODO create a before filter to check if the user is logged in.
-
+    #return render :json => params
+    @question = Askquestion.find(params[:askquestion_id])
+    @answer_of_the_question = Answer.find_all_by_askquestion_id(params[:askquestion_id])
+    @comments = Comment.all
+    @comment = Comment.new
 
     params[:answer][:user_id] = current_user.id if(params[:answer])
 
     params[:answer][:askquestion_id] = params[:askquestion_id] if(params[:askquestion_id])
-
+   
     @answer = Answer.new(params[:answer])
     if @answer.save
       flash[:notice] = "Successfully created question."
-      redirect_to root_path, :notice => "Answer  has been posted"
+      #redirect_to root_path, :notice => "Answer  has been posted"
+      #test mail
+        UserMailer.send_update(@answer.user).deliver
+      #test mail
+
+      redirect_to new_askquestion_answer_path, :notice => "Answer  has been posted"
     else
       render :new
     end
@@ -37,17 +47,9 @@ class AnswersController < ApplicationController
 
 
   def vote_up
-
-
-
-    logger.info "=Ans_controller" * 20
-    logger.info params.inspect
-    logger.info current_user.inspect
-    logger.info "" * 20
-    logger.info "end" * 20
-
     @vote_up =  Answer.find(params[:id])
-    @vote = @vote_up.votes.build
+    @vote = Vote.where("user_id = ? AND votable_id = ? AND votable_type = ?", current_user,  @vote_up, 'Answer').first
+    @vote = @vote_up.votes.build if @vote.blank?
     @vote.user = current_user
     @vote.status = 1
     ############################################
@@ -59,18 +61,20 @@ class AnswersController < ApplicationController
     @comment = Comment.new
     ############################################
     if @vote.save
-      return render :partial => 'answers/answers_of_question', :locals => { :sum_status => @vote_up.votes.sum(:status), :vote_answer => @vote_answer }
+      #return render :partial => 'answers/answers_of_question', :locals => { :sum_status => @vote_up.votes.sum(:status), :vote_answer => @vote_answer }
+      return render :json => @vote_up.votes.sum(:status)
     else
       #@subjects = Subject.find(:all)
       render :action => 'new'
     end
   end
 
-
   def vote_down
 
     @vote_down =  Answer.find(params[:id])
-    @vote = @vote_down.votes.build
+    @vote = Vote.where("user_id = ? AND votable_id = ? AND votable_type = ?", current_user,  @vote_down, 'Answer').first
+    @vote = @vote_down.votes.build if @vote.blank?
+
     @vote.user = current_user
     @vote.status = -1
     ############################################
@@ -82,13 +86,11 @@ class AnswersController < ApplicationController
     @comment = Comment.new
     ############################################
     if @vote.save
-      return render :partial => 'answers/answers_of_question', :locals => { :sum_status => @vote_down.votes.sum(:status), :vote_answer => @vote_answer }
-      #return render :json => @vote_down.votes.sum(:status)
-
+      #return render :partial => 'answers/answers_of_question', :locals => { :sum_status => @vote_down.votes.sum(:status), :vote_answer => @vote_answer }
+      return render :json => @vote_down.votes.sum(:status)
     else
       render :action => 'new'
     end
-
   end
 
   def tick_status
@@ -118,7 +120,5 @@ class AnswersController < ApplicationController
     end
 
   end
-
-
 
 end

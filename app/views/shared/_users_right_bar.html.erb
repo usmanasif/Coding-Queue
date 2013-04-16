@@ -1,0 +1,24 @@
+<div class="user-holder"><strong class="user-heading">Top 5 users</strong>
+  <ul class="user-bio">
+    <% User.order("rating DESC").limit(5).each do |u| %>
+        <li>
+          <span class="user-icon"><%= image_tag(avatar_url(u), :width=> 34) %></span>
+            <span class="user-proxi"><a href="#"><%= truncate(u.email, :length => 12)%> </a>(<%= u.rating %>)</span>
+        </li>
+
+    <% end %>
+   </ul>
+</div>
+
+<div class="user-holder"><strong class="user-heading">Recent users</strong>
+      <ul class="user-bio">
+        <% User.order("created_at DESC").limit(5).each do |u| %>
+        <li>
+          <!--<span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>-->
+          <span class="user-icon"><%= image_tag(avatar_url(u), :width=> 34) %></span>
+          <span class="user-proxi"><a href="#"><%= truncate(u.email, :length => 12)%> </a>  joined <%= time_ago_in_words(u.created_at) %></span>
+
+        </li>
+    <% end %>
+  </ul>
+</div>
