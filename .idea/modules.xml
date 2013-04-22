@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/codingstack.iml" filepath="$PROJECT_DIR$/.idea/codingstack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Coding-Queue.iml" filepath="$PROJECT_DIR$/.idea/Coding-Queue.iml" />
     </modules>
   </component>
 </project>

@@ -35,6 +35,14 @@ class CommentsController < ApplicationController
 
     @comment.user = current_user
     if @comment.save
+
+      #user rating
+        comment_rating = Rating.where("name_event = 'comment_posted'").first.points
+         
+        current_user.rating += comment_rating
+        current_user.save
+
+
       @user_email = User.find(@comment.user_id)
       #redirect_to :back
       return render :json => [@comment, :email => @user_email.email]

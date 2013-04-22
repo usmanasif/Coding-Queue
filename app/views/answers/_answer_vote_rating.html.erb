@@ -1,19 +1,19 @@
 <div class="rating-icon-holder">
   <ul class="a-q-flag">
-    <li><a href="#" class="flag">flag</a></li>
+    <li><a href="javascript:void(0);" data-id="<%= ans.id %>" data-type="Answer" class="flag">flag</a></li>
     <li><a href="#" class="link-icon">link</a></li>
   </ul>
 
 
   <% if current_user && current_user.id == @question.user_id  %>
       <% if ans.tick_status == 1 %>
-          <%= link_to  "Tick", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-colour" %>
+          <%= link_to  "Tick", "javascript:void(0);", :class => "tick-colour" %>
       <% else %>
           <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-simple" %>
       <% end %>
 
   <% elsif ans.tick_status == 1 %>
-      <%= link_to  " Tick ", tick_status_askquestion_answer_path(@question.id, ans.id), :class => "tick-colour" %>
+      <%= link_to  " Tick ", "javascript:void(0);", :class => "tick-colour" %>
   <% end %>
 
   <% logger.debug "Answer-"*20 %>

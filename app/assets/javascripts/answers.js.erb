@@ -24,6 +24,7 @@ $(document).ready(function () {
         var current_user = $('#login_user_id').val();
         data = $("div#wmd-preview").html();
         $("input#wmd-preview-input").val(data);
+       // alert(current_user);
         if (!current_user){
             login_fancy_box();
 
@@ -34,7 +35,7 @@ $(document).ready(function () {
 
     });
 
-    $(".eye").click(function (e) {
+    /*$(".eye").click(function (e) {
         e.preventDefault();
         var question_id = $("#question_id").val();
         console.log($(".like-up").attr("action"));
@@ -45,11 +46,11 @@ $(document).ready(function () {
                 $("#views_count").html("Views:" + data);
             }
         });
-    });
+    });*/
 
     $(".favourite").click(function (e) {
         e.preventDefault();
-
+        current_user = $('#login_user_id').val();
        // var Q_number    =   $(this).find('img').data("question-id");
         var Q_number    =   $(this).attr("data-question-id");
 
@@ -73,30 +74,45 @@ $(document).ready(function () {
 
     $(".flag").click(function (e) {
         e.preventDefault();
+        current_user = $('#login_user_id').val();
+        // entity type and id (Question or answer)
+        var e_id    =   $(this).attr("data-id");
+        var e_type  =   $(this).attr("data-type");
 
-        // var Q_number    =   $(this).find('img').data("question-id");
-        var Q_number    =   $(this).attr("data-question-id");
-
+        var Q_number   =   $("#question_id").val();
         if (!current_user){
-            //alert(Q_number);
             login_fancy_box();
         }
-        //alert(Q_number);
-        var question_id = $("#question_id").val();
-
-//        console.log($(".like-up").attr("action"));
-        $.ajax({
+        if(e_type == "Askquestion")
+        {
+            //alert(e_type+" "+ e_id );
+            $.ajax({
             type:'POST',
-            url:'/askquestions/' + question_id + '/inappropriate',
+            url:'/askquestions/' + e_id + '/inappropriate',
             success:function (data) {
                 alert("flagged as inappropriate!");
-            }
-        });
+                }
+            });
+        }
+        else if(e_type == "Answer")
+        {
+            //alert(e_type+" "+ e_id );
+            //alert(Q_number );
+            url =  e_id + '/inappropriate'
+            alert(url );
+            $.ajax({
+                type:'POST',
+                url: url,
+                success:function (data) {
+                    alert("flagged as inappropriate!");
+                }
+            });
+        }
     });
 
     $(".eye").click(function (e) {
         e.preventDefault();
-
+        current_user = $('#login_user_id').val();
         // var Q_number    =   $(this).find('img').data("question-id");
         var Q_number    =   $(this).attr("data-question-id");
 
@@ -256,11 +272,16 @@ $(document).ready(function () {
 
     $(".tick-simple").live('click', function (e) {
         e.preventDefault();
-
-       // $(this).toggle();
+        var answer_id = $(this).attr('data_id');
+        var question_id = $('#question_id').val();
+        $(this).attr('class', 'tick-colour');
+       var url = '/askquestions/'+question_id+'/answers/'+answer_id+'/tick_status'
+       //alert(url);
         $.ajax({
             type:'GET',
-            url:$(this).attr('href'),
+            url: url,
+            
+            
             success:function (data) {
 
 //                $('.answer_votes_' + answer_id).html("Votes: " + data[0]);

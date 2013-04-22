@@ -41,7 +41,7 @@
                     <li class="green-bg"><span>Answer: <%= question.answers.count %></span></li>
                     <li><span>View: <%= question.view_counter %></span></li>
                   </ul>
-                  <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+                  <strong class="by-date"> <span class="u-name"><a href="#"><%= question.user.email %></a> <%= question.user.rating %></span>
                     <span>Asked<span class="ago-days"> <%= time_ago_in_words(question.created_at) %> ago</span></span>
                   </strong>
                 </div>
@@ -130,7 +130,10 @@
           </div>
         </form>
       </div>
-      <div class="tags-title">
+          <%= render :partial => 'shared/tags_all' %>
+          <%= render :partial => 'shared/users_right_bar' %>
+
+      <!-- <div class="tags-title">
         <ul class="tags-nav">
           <li><a href="#">php</a></li>
           <li><a href="#">google</a></li>
@@ -198,7 +201,7 @@
 
         <div class="facebook-plugin"><img src="/assets/coding-stack-img.png" width="271" height="60" alt="facebook">
         </div>
-        <span class="stay-heading">subscribe</span> <a href="#" class="rss-field">Subscribe to all questions</a></div>
+        <span class="stay-heading">subscribe</span> <a href="#" class="rss-field">Subscribe to all questions</a></div> -->
     </aside>
   </section>
 </div>

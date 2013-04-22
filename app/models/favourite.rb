@@ -3,4 +3,5 @@ class Favourite < ActiveRecord::Base
   belongs_to :user
   belongs_to :askquestion
 
+  validates_uniqueness_of :user_id, :scope => [:askquestion_id]
 end

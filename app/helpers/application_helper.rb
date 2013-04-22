@@ -23,9 +23,9 @@ module ApplicationHelper
     #if user.avatar_url.present?
     #  user.avatar_url
     #else
-      #default_url = "#{root_url}/assets/img-1.jpg"
+      default_url = "#{root_url}/assets/img-1.jpg"
       gravatar_id = Digest::MD5.hexdigest(user.email.downcase)
-      "http://gravatar.com/avatar/#{gravatar_id}.png?s=42"
+      "http://gravatar.com/avatar/#{gravatar_id}.png?s=42" 
     #end
   end
 

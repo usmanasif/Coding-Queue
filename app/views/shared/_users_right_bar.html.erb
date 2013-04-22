@@ -2,7 +2,7 @@
   <ul class="user-bio">
     <% User.order("rating DESC").limit(5).each do |u| %>
         <li>
-          <span class="user-icon"><%= image_tag(avatar_url(u), :width=> 34) %></span>
+          <span class="user-icon"><%= image_tag(avatar_url(u), :width=> 34, :alt => 'no image') %></span>
             <span class="user-proxi"><a href="#"><%= truncate(u.email, :length => 12)%> </a>(<%= u.rating %>)</span>
         </li>
 
@@ -15,10 +15,16 @@
         <% User.order("created_at DESC").limit(5).each do |u| %>
         <li>
           <!--<span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>-->
-          <span class="user-icon"><%= image_tag(avatar_url(u), :width=> 34) %></span>
+          <span class="user-icon"><%= image_tag(avatar_url(u), :width=> 34, :alt => 'no image') %></span>
           <span class="user-proxi"><a href="#"><%= truncate(u.email, :length => 12)%> </a>  joined <%= time_ago_in_words(u.created_at) %></span>
 
         </li>
     <% end %>
   </ul>
+</div>
+<div class="stay-us"><span class="stay-heading">Stay in touch</span>
+
+    <div class="facebook-plugin"><img src="/assets/coding-stack-img.png" width="271" height="60" alt="facebook">
+    </div>
+    <span class="stay-heading">subscribe</span> <a href="#" class="rss-field">Subscribe to all questions</a>
 </div>

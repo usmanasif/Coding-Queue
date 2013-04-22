@@ -4573,7 +4573,7 @@ to { background-position: 0 0; }
 }
 
 .logo {
-    background: url(logo.jpg) no-repeat;
+    background: url(logo.png) no-repeat;
     width: 156px;
     height: 27px;
     margin: 0 0 0 30px;
@@ -5028,7 +5028,7 @@ to { background-position: 0 0; }
 }
 
 .logo2 {
-    background: url(logo-2.png) no-repeat;
+    background: url(logo.png) no-repeat;
     width: 164px;
     height: 28px;
     text-indent: -9999px;

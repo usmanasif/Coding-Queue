@@ -12,3 +12,4 @@ class CreateInappropriates < ActiveRecord::Migration
 
   end
 end
+

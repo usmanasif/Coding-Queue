@@ -27,9 +27,6 @@ class AskquestionsController < ApplicationController
     #return render :json => params
     #return render :json => params
     #return render :json => session
-     logger.info "="*80
-     logger.info current_user
-     logger.info "="*80
     @askquestion = current_user.askquestions.build(params[:askquestion])
     # return render :json => params
 
@@ -54,6 +51,11 @@ class AskquestionsController < ApplicationController
         #return render :json=> params
         flash[:notice] = "Successfully created question."
         redirect_to askquestions_path, :notice => "new question has been created"
+
+         question_rating = Rating.where("name_event = 'question_posted'").first.points
+         
+        current_user.rating += question_rating
+        current_user.save
       else
         #return render :json=> params
         render :new
@@ -80,11 +82,6 @@ class AskquestionsController < ApplicationController
 
    def vote_up
 
-     #logger.info "=" * 20
-     #logger.info params.inspect
-     #logger.info "end" * 20
-
-
       @vote_up =  Askquestion.find(params[:id])
 
       @vote = Vote.where("user_id = ? AND votable_id = ? AND votable_type = ?", current_user,  @vote_up, 'Askquestion').first
@@ -93,8 +90,14 @@ class AskquestionsController < ApplicationController
       @vote.user = current_user
       @vote.status = 1
       if @vote.save
+        #user rating
+        vote_rating = Rating.where("name_event = 'vote_posted'").first.points
+         
+        current_user.rating += vote_rating
+        current_user.save
         return render :json => @vote_up.votes.sum(:status)
         #return render :json => @vote
+        
       else
         #@subjects = Subject.find(:all)
         render :action => 'new'
@@ -113,7 +116,12 @@ class AskquestionsController < ApplicationController
       @vote.status = -1
 
       if @vote.save
-
+        #user rating
+        vote_rating = Rating.where("name_event = 'vote_posted'").first.points
+         
+        current_user.rating += vote_rating
+        current_user.save
+        
         return render :json => @vote_down.votes.sum(:status)
 
       else
@@ -144,16 +152,19 @@ class AskquestionsController < ApplicationController
 
   def favourite
     Favourite.create!(:user_id => current_user.id, :askquestion_id => params[:id])
+    flash[:notice] = "marked as favourite!"
     return render :text => 'success'
   end
 
   def inappropriate
-    Inappropriate.create!(:user_id => current_user.id, :askquestion_id => params[:id])
+    Inappropriate.create!(:user_id => current_user.id, :entity_id => params[:id], :entity => "Askquestion")
+    flash[:notice] = "marked as inappropriate!"
     return render :text => 'success'
   end
 
   def watch
     Watch.create!(:user_id => current_user.id, :askquestion_id => params[:id])
+    flash[:notice] = "Watch activated!"
     return render :text => 'success'
   end
 end

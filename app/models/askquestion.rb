@@ -1,5 +1,5 @@
 class Askquestion < ActiveRecord::Base
-  attr_accessible :title,:description,:tag,:view_counter,:votes,:answer_counter,:user_id,:tag_names
+  attr_accessible :title,:description,:tag,:view_counter,:votes,:answer_counter,:user_id,:tag_names, :name_event,:points 
 
   validates :title, :presence => true
   validates :tag_names, :presence => true
@@ -12,6 +12,7 @@ class Askquestion < ActiveRecord::Base
   has_many :askquestion_tags,:dependent =>:destroy
   has_many :tags, :through => :askquestion_tags
   has_many :answers
+  has_many :watches
 
   attr_writer :tag_names
 

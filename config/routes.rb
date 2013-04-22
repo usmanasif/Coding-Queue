@@ -43,6 +43,7 @@ Codingstack::Application.routes.draw do
         post 'vote_up'
         post 'vote_down'
         get 'tick_status'
+        post 'inappropriate'
       end
     end
 

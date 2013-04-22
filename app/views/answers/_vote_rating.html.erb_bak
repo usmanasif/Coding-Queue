@@ -6,7 +6,7 @@
         <li class="green-bg"><span >answers:  <%= @question && @question.answers && @question.answers.count %> </span></li>
         <li><span id="views_count">views: <%= @question && @question.view_counter %></span></li>
       </ul>
-      <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+      <strong class="by-date"> <span class="u-name"><a href="#"><%= @question.user.email %></a> <%= @question.user.rating %></span>
         <span>Asked<span class="ago-days"> <%= time_ago_in_words(@question.created_at) %> ago</span></span>
       </strong>
     </div>

@@ -1,6 +1,6 @@
 <div class="rating-icon-holder">
   <ul class="a-q-flag">
-    <li><a href="javascript:void(0);" data="Askquestion" class="flag">flag</a></li>
+    <li><a href="javascript:void(0);" data-id="<%= @question.id %>" data-type="Askquestion" class="flag">flag</a></li>
     <li><%#= link_to 'VIEWS',   views_askquestion_path(@question.id), :class => "eye"  %>
       <a href="javascript:void(0);" data-question-id="<%= @question.id %>" class="eye">eye</a>
       <input type="hidden" name="question_id" id="question_id" value='<%= @question.id %>' /></li>

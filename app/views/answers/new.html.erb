@@ -18,9 +18,9 @@
         </div>
         <%= render :partial => 'answers_of_question' %>
         <div class="testing">
-          <div class="voting_thought_ajax ">
+          <div class="voting_thought_ajax">
             <div class="class_with_status_tick">
-              <% @answer_of_question.each do |ans| %>
+              <% @answer_of_question && @answer_of_question.each do |ans| %>
                   <% if ans.tick_status == 1 %>
                       <div class="q-post">
                         <div class="q-top">
@@ -29,7 +29,7 @@
                               <li><span class="answer_votes_<%= ans.id %>">Votes:<%= ans.votes.sum(:status) %> </span>
                               </li>
                             </ul>
-                            <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+                            <strong class="by-date"> <span class="u-name"><a href="#">ans.user.id</a> ans.user.rating</span>
                               <span>Asked<span class="ago-days"> <%= time_ago_in_words(ans.created_at) %>
                                 ago</span></span>
                             </strong>
