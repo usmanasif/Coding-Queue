@@ -54,6 +54,6 @@ group :development, :test do
   gem 'railroady'
 
 end
-group :production, do
+group :production do
   adapter: mysql2
 end
