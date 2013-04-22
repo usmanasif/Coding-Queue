@@ -55,6 +55,6 @@ group :development, :test do
 
 end
 group :production do
-  adapter: 'mysql2'
+  gem 'mysql2', '~> 0.2.7'
   
 end
