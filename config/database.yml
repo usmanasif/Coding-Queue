@@ -26,6 +26,4 @@ production:
   database: db/production.mysql2
   pool: 5
   timeout: 5000
-  password:
-
-
+  password:devsinc81passwd
