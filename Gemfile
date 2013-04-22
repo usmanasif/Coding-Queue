@@ -55,5 +55,5 @@ group :development, :test do
 
 end
 group :production do
-  adapter: mysql2
+  adapter: 'mysql2'
 end
