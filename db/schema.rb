@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130415074500) do
+ActiveRecord::Schema.define(:version => 20130423171057) do
 
   create_table "answers", :force => true do |t|
     t.integer  "askquestion_id"
@@ -66,6 +66,22 @@ ActiveRecord::Schema.define(:version => 20130415074500) do
     t.datetime "updated_at",       :null => false
   end
 
+  create_table "delayed_jobs", :force => true do |t|
+    t.integer  "priority",   :default => 0
+    t.integer  "attempts",   :default => 0
+    t.text     "handler"
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
   create_table "favourites", :force => true do |t|
     t.integer  "user_id"
     t.integer  "askquestion_id"
@@ -75,9 +91,17 @@ ActiveRecord::Schema.define(:version => 20130415074500) do
 
   create_table "inappropriates", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "askquestion_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "entity_id"
+    t.string   "entity"
+  end
+
+  create_table "ratings", :force => true do |t|
+    t.string   "name_event"
+    t.integer  "points"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "tags", :force => true do |t|
@@ -91,11 +115,11 @@ ActiveRecord::Schema.define(:version => 20130415074500) do
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
     t.string   "remember_me_token"
     t.datetime "remember_me_token_expires_at"
-    t.integer  "rating"
+    t.integer  "rating",                       :default => 0
   end
 
   add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
