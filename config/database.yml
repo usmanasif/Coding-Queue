@@ -8,6 +8,7 @@ development:
   database: db/development.mysql2
   pool: 5
   timeout: 5000
+  username: root
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -18,6 +19,7 @@ test:
   database: db/test.mysql2
   pool: 5
   timeout: 5000
+  username: root
   password:
 
 
@@ -26,6 +28,5 @@ production:
   database: production_cqna
   pool: 5
   timeout: 5000
-  password:
-
-
+  username: root
+  password: devsinc81passwd
