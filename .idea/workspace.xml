@@ -2,31 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" name="Default" comment="Merge branch 'master' of github.com:usmanasif/Coding-Queue into umar&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;Gemfile&#10;&#9;db/migrate/20121019072637_remove_column_count_votes.rb&#10;&#9;db/schema.rb&#10;&#9;log/searchd.development.pid&#10;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.rvmrc.06.04.2012-11:23:51" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.rvmrc.06.04.2012-11_23_51" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery-1.7.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.autosize-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.autosize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.mousewheel-3.0.6.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_core.spl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log/searchd.development.pid" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Coding-Queue.iml" afterPath="$PROJECT_DIR$/.idea/Coding-Queue.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/askquestions.js.coffee" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spa" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spa" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spd" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.sph" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.sph" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spi" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spp" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.sps" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.sps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <list id="28405740-34da-4399-b750-3448f37befc2" name="Failed commit: Default" comment="Merge branch 'master' of github.com:usmanasif/Coding-Queue into umar&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;Gemfile&#10;&#9;db/migrate/20121019072637_remove_column_count_votes.rb&#10;&#9;db/schema.rb&#10;&#9;log/searchd.development.pid&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-    </list>
+    <list id="28405740-34da-4399-b750-3448f37befc2" name="Failed commit: Default" comment="Merge branch 'master' of github.com:usmanasif/Coding-Queue into umar&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;Gemfile&#10;&#9;db/migrate/20121019072637_remove_column_count_votes.rb&#10;&#9;db/schema.rb&#10;&#9;log/searchd.development.pid&#10;" />
     <ignored path="codingstack.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366702581424" ignored="false" />
+    <file path="/Dummy.txt" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366727143297" ignored="false" />
     <file path="/Gemfile" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366651325427" ignored="false" />
     <file path="/database.yml" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366651948945" ignored="false" />
-    <file path="$PROJECT_DIR$/Gemfile.lock" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366702527680" ignored="false" />
-    <file path="$PROJECT_DIR$/Gemfile" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366702522244" ignored="false" />
+    <file path="/a.dummy" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366711850599" ignored="false" />
+    <file path="/askquestions.js.coffee" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366716861998" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,28 +43,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_vote_rating.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/answers/_vote_rating.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="41" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="setup_mail.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/setup_mail.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="7" column="33" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="answers.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/answers.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="50" selection-start="3120" selection-end="3126" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,25 +64,61 @@
       <file leaf-file-name="Gemfile.lock" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile.lock">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="0" selection-start="3261" selection-end="3261" vertical-scroll-proportion="-0.0">
+            <state line="148" column="0" selection-start="3261" selection-end="3261" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="61" selection-start="870" selection-end="870" vertical-scroll-proportion="0.47265625">
+            <state line="42" column="0" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="askquestions.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/askquestions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="24" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="answers_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/answers_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="22" selection-start="1937" selection-end="1942" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="2" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sorcery.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/initializers/sorcery.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="20" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="32" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
+            <state line="15" column="47" selection-start="421" selection-end="421" vertical-scroll-proportion="0.37688443">
               <folding />
             </state>
           </provider>
@@ -132,8 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/answers/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/answers/_answer_editor.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/answers_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/favourite.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130415070020_create_inappropriates.rb" />
@@ -145,9 +154,11 @@
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/controllers/askquestions_controller.rb" />
         <option value="$PROJECT_DIR$/config/initializers/setup_mail.rb" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/Gemfile.lock" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/askquestions.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/askquestions.js" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -229,16 +240,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -337,6 +338,16 @@
             <PATH_ELEMENT USER_OBJECT="environments">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -695,7 +706,11 @@
       <created>1366652062097</created>
       <updated>1366652062097</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge branch 'master' of github.com:usmanasif/Coding-Queue into umar&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;Gemfile&#10;&#9;db/migrate/20121019072637_remove_column_count_votes.rb&#10;&#9;db/schema.rb&#10;&#9;log/searchd.development.pid&#10;">
+      <created>1366716998545</created>
+      <updated>1366716998545</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -722,12 +737,11 @@
     <frame x="48" y="-4" width="1319" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09287926" sideWeight="0.49723756" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48142415" sideWeight="0.42383584" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2392638" sideWeight="0.08955224" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2761605" sideWeight="0.90712076" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28560188" sideWeight="0.49226007" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2392638" sideWeight="0.18714121" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.030546624" sideWeight="0.49723756" order="10" side_tool="true" content_ui="tabs" x="71" y="301" width="1267" height="290" />
@@ -737,7 +751,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30401236" sideWeight="0.9984215" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50773996" sideWeight="0.49724627" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.095975235" sideWeight="0.49645948" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39871383" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -800,21 +815,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.60273975" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/askquestion_index.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.518727" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/answers/_question.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="720" selection-end="720" vertical-scroll-proportion="0.42942345" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="17" selection-start="674" selection-end="674" vertical-scroll-proportion="0.75680584" />
@@ -832,26 +832,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/answers.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="50" selection-start="3120" selection-end="3126" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="2" selection-start="658" selection-end="658" vertical-scroll-proportion="0.60301507" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/answers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="17" selection-start="1347" selection-end="1347" vertical-scroll-proportion="1.2454696" />
+        <state line="112" column="34" selection-start="3120" selection-end="3126" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/answers/_vote_rating.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="41" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="41" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/setup_mail.rb">
@@ -873,13 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="32" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state line="148" column="0" selection-start="3261" selection-end="3261" vertical-scroll-proportion="-0.0">
@@ -887,9 +866,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="2" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/sorcery.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="20" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="61" selection-start="870" selection-end="870" vertical-scroll-proportion="0.47265625">
+        <state line="42" column="0" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/askquestions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="24" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/answers_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="22" selection-start="1937" selection-end="1942" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/development.sphinx.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="47" selection-start="421" selection-end="421" vertical-scroll-proportion="0.37688443">
           <folding />
         </state>
       </provider>
