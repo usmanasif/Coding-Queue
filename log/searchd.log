@@ -1,0 +1,832 @@
+[Mon Mar  4 20:20:12.233 2013] [14953] accepting connections
+[Mon Mar  4 20:36:48.077 2013] [14953] caught SIGTERM, shutting down
+[Mon Mar  4 20:36:48.078 2013] [14953] shutdown complete
+[Tue Mar  5 11:20:26.864 2013] [19223] accepting connections
+[Tue Mar  5 14:08:53.899 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 14:08:53.903 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 14:08:53.903 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 14:08:53.903 2013] [19223] rotating finished
+[Tue Mar  5 14:10:35.954 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 14:10:35.955 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 14:10:35.955 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 14:10:35.955 2013] [19223] rotating finished
+[Tue Mar  5 17:07:59.982 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 17:07:59.983 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 17:07:59.983 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 17:07:59.983 2013] [19223] rotating finished
+[Tue Mar  5 17:09:13.258 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 17:09:13.261 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 17:09:13.261 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 17:09:13.261 2013] [19223] rotating finished
+[Tue Mar  5 17:31:37.837 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 17:31:37.840 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 17:31:37.840 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 17:31:37.843 2013] [19223] WARNING: rotating index 'askquestion_core': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_core.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_core.old.mvp' failed: No such file or directory
+[Tue Mar  5 17:31:37.843 2013] [19223] rotating index 'askquestion_core': success
+[Tue Mar  5 17:31:37.843 2013] [19223] rotating finished
+[Tue Mar  5 20:14:37.385 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 20:14:37.386 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 20:14:37.386 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 20:14:37.386 2013] [19223] rotating finished
+[Tue Mar  5 20:14:46.100 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 20:14:46.102 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 20:14:46.102 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 20:14:46.102 2013] [19223] rotating finished
+[Tue Mar  5 20:15:04.223 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 20:15:04.225 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 20:15:04.225 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 20:15:04.225 2013] [19223] rotating finished
+[Tue Mar  5 20:15:34.611 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 20:15:34.614 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 20:15:34.614 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 20:15:34.614 2013] [19223] rotating finished
+[Tue Mar  5 20:26:53.138 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 20:26:53.142 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 20:26:53.143 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 20:26:53.143 2013] [19223] rotating finished
+[Tue Mar  5 20:38:43.172 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 20:38:43.173 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 20:38:43.173 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 20:38:43.173 2013] [19223] rotating finished
+[Tue Mar  5 21:21:18.765 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 21:21:18.766 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 21:21:18.766 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 21:21:18.767 2013] [19223] rotating finished
+[Tue Mar  5 21:29:49.181 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 21:29:49.182 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 21:29:49.182 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 21:29:49.182 2013] [19223] rotating finished
+[Tue Mar  5 22:15:11.640 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 22:15:11.643 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 22:15:11.644 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 22:15:11.644 2013] [19223] rotating finished
+[Tue Mar  5 22:22:38.000 2013] [19223] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar  5 22:22:38.001 2013] [19223] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar  5 22:22:38.001 2013] [19223] rotating index 'askquestion_delta': success
+[Tue Mar  5 22:22:38.001 2013] [19223] rotating finished
+[Tue Mar  5 22:40:56.806 2013] [19223] caught SIGTERM, shutting down
+[Tue Mar  5 22:40:57.016 2013] [19223] shutdown complete
+[Wed Mar  6 11:13:06.563 2013] [ 3085] accepting connections
+[Wed Mar  6 11:24:14.808 2013] [ 3085] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar  6 11:24:14.809 2013] [ 3085] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar  6 11:24:14.810 2013] [ 3085] rotating index 'askquestion_delta': success
+[Wed Mar  6 11:24:14.810 2013] [ 3085] rotating finished
+[Wed Mar  6 11:28:18.110 2013] [ 3085] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar  6 11:28:18.111 2013] [ 3085] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar  6 11:28:18.111 2013] [ 3085] rotating index 'askquestion_delta': success
+[Wed Mar  6 11:28:18.111 2013] [ 3085] rotating finished
+[Wed Mar  6 12:38:33.431 2013] [ 3085] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar  6 12:38:33.432 2013] [ 3085] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar  6 12:38:33.539 2013] [ 3085] rotating index 'askquestion_delta': success
+[Wed Mar  6 12:38:33.539 2013] [ 3085] rotating finished
+[Wed Mar  6 14:03:04.581 2013] [ 3085] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar  6 14:03:04.582 2013] [ 3085] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar  6 14:03:04.582 2013] [ 3085] rotating index 'askquestion_delta': success
+[Wed Mar  6 14:03:04.582 2013] [ 3085] rotating finished
+[Wed Mar  6 16:01:17.505 2013] [ 3085] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar  6 16:01:17.533 2013] [ 3085] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar  6 16:01:17.538 2013] [ 3085] rotating index 'askquestion_delta': success
+[Wed Mar  6 16:01:17.538 2013] [ 3085] rotating finished
+[Wed Mar  6 16:30:32.512 2013] [ 3085] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar  6 16:30:32.694 2013] [ 3085] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar  6 16:30:32.694 2013] [ 3085] rotating index 'askquestion_delta': success
+[Wed Mar  6 16:30:32.696 2013] [ 3085] WARNING: rotating index 'askquestion_core': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_core.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_core.old.mvp' failed: No such file or directory
+[Wed Mar  6 16:30:32.711 2013] [ 3085] rotating index 'askquestion_core': success
+[Wed Mar  6 16:30:32.711 2013] [ 3085] rotating finished
+[Wed Mar  6 17:08:59.951 2013] [ 3085] caught SIGTERM, shutting down
+[Wed Mar  6 17:09:00.023 2013] [ 3085] shutdown complete
+[Wed Mar  6 17:09:06.626 2013] [17061] accepting connections
+[Wed Mar  6 17:53:24.145 2013] [ 3338] accepting connections
+[Wed Mar  6 18:44:27.922 2013] [ 3338] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar  6 18:44:27.925 2013] [ 3338] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar  6 18:44:27.925 2013] [ 3338] rotating index 'askquestion_delta': success
+[Wed Mar  6 18:44:27.925 2013] [ 3338] rotating finished
+[Wed Mar  6 18:44:42.075 2013] [ 3338] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar  6 18:44:42.075 2013] [ 3338] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar  6 18:44:42.076 2013] [ 3338] rotating index 'askquestion_delta': success
+[Wed Mar  6 18:44:42.076 2013] [ 3338] rotating finished
+[Wed Mar  6 20:29:52.046 2013] [ 3338] caught SIGTERM, shutting down
+[Wed Mar  6 20:29:52.114 2013] [ 3338] shutdown complete
+[Thu Mar  7 12:00:59.291 2013] [ 6211] accepting connections
+[Thu Mar  7 13:01:21.917 2013] [ 6211] caught SIGHUP (seamless=1, in queue=1)
+[Thu Mar  7 13:01:21.918 2013] [ 6211] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Mar  7 13:01:21.918 2013] [ 6211] rotating index 'askquestion_delta': success
+[Thu Mar  7 13:01:21.927 2013] [ 6211] rotating finished
+[Thu Mar  7 13:01:40.181 2013] [ 6211] caught SIGHUP (seamless=1, in queue=1)
+[Thu Mar  7 13:01:40.184 2013] [ 6211] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Mar  7 13:01:40.184 2013] [ 6211] rotating index 'askquestion_delta': success
+[Thu Mar  7 13:01:40.186 2013] [ 6211] WARNING: rotating index 'askquestion_core': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_core.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_core.old.mvp' failed: No such file or directory
+[Thu Mar  7 13:01:40.186 2013] [ 6211] rotating index 'askquestion_core': success
+[Thu Mar  7 13:01:40.186 2013] [ 6211] rotating finished
+[Thu Mar  7 13:02:04.732 2013] [ 6211] caught SIGTERM, shutting down
+[Thu Mar  7 13:02:04.733 2013] [ 6211] shutdown complete
+[Thu Mar  7 13:02:12.144 2013] [ 8325] accepting connections
+[Thu Mar  7 15:14:27.261 2013] [ 8325] caught SIGHUP (seamless=1, in queue=1)
+[Thu Mar  7 15:14:27.262 2013] [ 8325] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Mar  7 15:14:27.262 2013] [ 8325] rotating index 'askquestion_delta': success
+[Thu Mar  7 15:14:27.262 2013] [ 8325] rotating finished
+[Thu Mar  7 15:49:58.259 2013] [ 8325] caught SIGHUP (seamless=1, in queue=1)
+[Thu Mar  7 15:49:58.260 2013] [ 8325] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Mar  7 15:49:58.260 2013] [ 8325] rotating index 'askquestion_delta': success
+[Thu Mar  7 15:49:58.260 2013] [ 8325] rotating finished
+[Thu Mar  7 16:11:56.543 2013] [ 8325] caught SIGHUP (seamless=1, in queue=1)
+[Thu Mar  7 16:11:56.544 2013] [ 8325] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Mar  7 16:11:56.544 2013] [ 8325] rotating index 'askquestion_delta': success
+[Thu Mar  7 16:11:56.544 2013] [ 8325] rotating finished
+[Thu Mar  7 17:28:57.615 2013] [ 8325] caught SIGHUP (seamless=1, in queue=1)
+[Thu Mar  7 17:28:57.616 2013] [ 8325] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Mar  7 17:28:57.616 2013] [ 8325] rotating index 'askquestion_delta': success
+[Thu Mar  7 17:28:57.616 2013] [ 8325] rotating finished
+[Thu Mar  7 17:29:47.891 2013] [ 8325] caught SIGHUP (seamless=1, in queue=1)
+[Thu Mar  7 17:29:47.891 2013] [ 8325] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Mar  7 17:29:47.892 2013] [ 8325] rotating index 'askquestion_delta': success
+[Thu Mar  7 17:29:47.892 2013] [ 8325] rotating finished
+[Thu Mar  7 19:31:39.035 2013] [ 8325] caught SIGTERM, shutting down
+[Thu Mar  7 19:31:39.036 2013] [ 8325] shutdown complete
+[Fri Mar  8 11:19:51.875 2013] [ 3548] accepting connections
+[Fri Mar  8 19:13:37.862 2013] [ 3548] caught SIGHUP (seamless=1, in queue=1)
+[Fri Mar  8 19:13:37.885 2013] [ 3548] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Mar  8 19:13:37.886 2013] [ 3548] rotating index 'askquestion_delta': success
+[Fri Mar  8 19:13:37.886 2013] [ 3548] rotating finished
+[Fri Mar  8 19:14:19.438 2013] [ 3548] caught SIGHUP (seamless=1, in queue=1)
+[Fri Mar  8 19:14:19.439 2013] [ 3548] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Mar  8 19:14:19.439 2013] [ 3548] rotating index 'askquestion_delta': success
+[Fri Mar  8 19:14:19.444 2013] [ 3548] rotating finished
+[Fri Mar  8 19:19:27.249 2013] [ 3548] caught SIGHUP (seamless=1, in queue=1)
+[Fri Mar  8 19:19:27.251 2013] [ 3548] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Mar  8 19:19:27.251 2013] [ 3548] rotating index 'askquestion_delta': success
+[Fri Mar  8 19:19:27.251 2013] [ 3548] rotating finished
+[Fri Mar  8 19:20:59.202 2013] [ 3548] caught SIGHUP (seamless=1, in queue=1)
+[Fri Mar  8 19:20:59.203 2013] [ 3548] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Mar  8 19:20:59.203 2013] [ 3548] rotating index 'askquestion_delta': success
+[Fri Mar  8 19:20:59.204 2013] [ 3548] rotating finished
+[Fri Mar  8 19:27:58.656 2013] [ 3548] caught SIGHUP (seamless=1, in queue=1)
+[Fri Mar  8 19:27:58.659 2013] [ 3548] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Mar  8 19:27:58.659 2013] [ 3548] rotating index 'askquestion_delta': success
+[Fri Mar  8 19:27:58.660 2013] [ 3548] rotating finished
+[Fri Mar  8 19:30:06.262 2013] [ 3548] caught SIGHUP (seamless=1, in queue=1)
+[Fri Mar  8 19:30:06.263 2013] [ 3548] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Mar  8 19:30:06.263 2013] [ 3548] rotating index 'askquestion_delta': success
+[Fri Mar  8 19:30:06.263 2013] [ 3548] rotating finished
+[Fri Mar  8 19:35:34.532 2013] [ 3548] caught SIGHUP (seamless=1, in queue=1)
+[Fri Mar  8 19:35:34.533 2013] [ 3548] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Mar  8 19:35:34.533 2013] [ 3548] rotating index 'askquestion_delta': success
+[Fri Mar  8 19:35:34.533 2013] [ 3548] rotating finished
+[Fri Mar 15 18:43:17.074 2013] [ 8467] accepting connections
+[Fri Mar 15 19:25:05.229 2013] [ 8467] caught SIGTERM, shutting down
+[Fri Mar 15 19:25:05.230 2013] [ 8467] shutdown complete
+[Mon Mar 18 12:28:57.699 2013] [ 3749] accepting connections
+[Mon Mar 18 19:53:02.401 2013] [ 3749] caught SIGHUP (seamless=1, in queue=1)
+[Mon Mar 18 19:53:02.467 2013] [ 3749] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Mon Mar 18 19:53:02.492 2013] [ 3749] rotating index 'askquestion_delta': success
+[Mon Mar 18 19:53:02.492 2013] [ 3749] rotating finished
+[Mon Mar 18 19:54:01.828 2013] [ 3749] caught SIGHUP (seamless=1, in queue=1)
+[Mon Mar 18 19:54:01.829 2013] [ 3749] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Mon Mar 18 19:54:01.829 2013] [ 3749] rotating index 'askquestion_delta': success
+[Mon Mar 18 19:54:01.829 2013] [ 3749] rotating finished
+[Mon Mar 18 19:54:22.580 2013] [ 3749] caught SIGHUP (seamless=1, in queue=1)
+[Mon Mar 18 19:54:22.583 2013] [ 3749] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Mon Mar 18 19:54:22.583 2013] [ 3749] rotating index 'askquestion_delta': success
+[Mon Mar 18 19:54:22.584 2013] [ 3749] rotating finished
+[Mon Mar 18 19:54:31.655 2013] [ 3749] caught SIGHUP (seamless=1, in queue=1)
+[Mon Mar 18 19:54:31.656 2013] [ 3749] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Mon Mar 18 19:54:31.656 2013] [ 3749] rotating index 'askquestion_delta': success
+[Mon Mar 18 19:54:31.656 2013] [ 3749] rotating finished
+[Mon Mar 18 20:54:26.986 2013] [ 3749] caught SIGTERM, shutting down
+[Mon Mar 18 20:54:27.318 2013] [ 3749] shutdown complete
+[Tue Mar 19 13:08:15.854 2013] [ 3108] accepting connections
+[Tue Mar 19 16:02:15.571 2013] [ 3108] caught SIGHUP (seamless=1, in queue=1)
+[Tue Mar 19 16:02:15.603 2013] [ 3108] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Tue Mar 19 16:02:15.612 2013] [ 3108] rotating index 'askquestion_delta': success
+[Tue Mar 19 16:02:15.612 2013] [ 3108] rotating finished
+[Tue Mar 19 21:23:32.682 2013] [ 3108] caught SIGTERM, shutting down
+[Tue Mar 19 21:23:32.782 2013] [ 3108] shutdown complete
+[Wed Mar 20 12:06:59.204 2013] [ 4782] accepting connections
+[Wed Mar 20 15:23:27.322 2013] [ 4782] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar 20 15:23:27.324 2013] [ 4782] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar 20 15:23:27.324 2013] [ 4782] rotating index 'askquestion_delta': success
+[Wed Mar 20 15:23:27.324 2013] [ 4782] rotating finished
+[Wed Mar 20 15:33:01.902 2013] [ 4782] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar 20 15:33:01.903 2013] [ 4782] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar 20 15:33:01.904 2013] [ 4782] rotating index 'askquestion_delta': success
+[Wed Mar 20 15:33:01.904 2013] [ 4782] rotating finished
+[Wed Mar 20 15:33:02.846 2013] [ 4782] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar 20 15:33:02.849 2013] [ 4782] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar 20 15:33:02.849 2013] [ 4782] rotating index 'askquestion_delta': success
+[Wed Mar 20 15:33:02.850 2013] [ 4782] rotating finished
+[Wed Mar 20 21:06:11.284 2013] [ 4782] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar 20 21:06:11.302 2013] [ 4782] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar 20 21:06:11.302 2013] [ 4782] rotating index 'askquestion_delta': success
+[Wed Mar 20 21:06:11.303 2013] [ 4782] rotating finished
+[Wed Mar 20 21:12:50.740 2013] [ 4782] caught SIGHUP (seamless=1, in queue=1)
+[Wed Mar 20 21:12:50.742 2013] [ 4782] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Mar 20 21:12:50.743 2013] [ 4782] rotating index 'askquestion_delta': success
+[Wed Mar 20 21:12:50.743 2013] [ 4782] rotating finished
+[Thu Mar 21 11:33:51.808 2013] [ 3544] accepting connections
+[Thu Mar 21 14:33:53.544 2013] [ 3544] caught SIGHUP (seamless=1, in queue=1)
+[Thu Mar 21 14:33:53.565 2013] [ 3544] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Mar 21 14:33:53.565 2013] [ 3544] rotating index 'askquestion_delta': success
+[Thu Mar 21 14:33:53.565 2013] [ 3544] rotating finished
+[Thu Mar 21 20:09:18.520 2013] [ 3544] caught SIGTERM, shutting down
+[Thu Mar 21 20:09:18.589 2013] [ 3544] shutdown complete
+[Mon Mar 25 13:41:01.019 2013] [ 3700] accepting connections
+[Mon Mar 25 22:18:51.262 2013] [ 3700] caught SIGHUP (seamless=1, in queue=1)
+[Mon Mar 25 22:18:51.288 2013] [ 3700] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Mon Mar 25 22:18:51.288 2013] [ 3700] rotating index 'askquestion_delta': success
+[Mon Mar 25 22:18:51.288 2013] [ 3700] rotating finished
+[Mon Mar 25 23:29:32.177 2013] [ 3700] caught SIGTERM, shutting down
+[Mon Mar 25 23:29:32.230 2013] [ 3700] shutdown complete
+[Tue Mar 26 12:24:16.128 2013] [ 6010] accepting connections
+[Tue Mar 26 21:22:24.150 2013] [ 6010] caught SIGTERM, shutting down
+[Tue Mar 26 21:22:24.203 2013] [ 6010] shutdown complete
+[Thu Mar 28 11:55:32.429 2013] [ 3406] accepting connections
+[Thu Mar 28 13:59:16.461 2013] [ 3406] caught SIGHUP (seamless=1, in queue=1)
+[Thu Mar 28 13:59:16.462 2013] [ 3406] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Mar 28 13:59:16.462 2013] [ 3406] rotating index 'askquestion_delta': success
+[Thu Mar 28 13:59:16.462 2013] [ 3406] rotating finished
+[Thu Mar 28 20:34:16.788 2013] [ 3406] caught SIGTERM, shutting down
+[Thu Mar 28 20:34:17.022 2013] [ 3406] shutdown complete
+[Fri Mar 29 18:56:34.122 2013] [ 3309] accepting connections
+[Fri Mar 29 19:57:19.012 2013] [ 3309] caught SIGTERM, shutting down
+[Fri Mar 29 19:57:19.023 2013] [ 3309] shutdown complete
+[Mon Apr  1 11:32:35.491 2013] [ 2842] accepting connections
+[Mon Apr  1 11:44:12.209 2013] [ 2842] caught SIGHUP (seamless=1, in queue=1)
+[Mon Apr  1 11:44:12.212 2013] [ 2842] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Mon Apr  1 11:44:12.217 2013] [ 2842] rotating index 'askquestion_delta': success
+[Mon Apr  1 11:44:12.217 2013] [ 2842] rotating finished
+[Mon Apr  1 11:51:16.249 2013] [ 2842] caught SIGHUP (seamless=1, in queue=1)
+[Mon Apr  1 11:51:16.269 2013] [ 2842] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Mon Apr  1 11:51:16.270 2013] [ 2842] rotating index 'askquestion_delta': success
+[Mon Apr  1 11:51:16.270 2013] [ 2842] rotating finished
+[Mon Apr  1 22:09:55.699 2013] [ 2842] caught SIGTERM, shutting down
+[Mon Apr  1 22:09:56.176 2013] [ 2842] shutdown complete
+[Tue Apr  2 12:21:10.912 2013] [ 4885] accepting connections
+[Tue Apr  2 20:38:42.180 2013] [ 4885] caught SIGTERM, shutting down
+[Tue Apr  2 20:38:42.309 2013] [ 4885] shutdown complete
+[Wed Apr  3 11:15:11.354 2013] [ 3134] accepting connections
+[Wed Apr  3 20:47:02.595 2013] [ 3134] caught SIGTERM, shutting down
+[Wed Apr  3 20:47:02.746 2013] [ 3134] shutdown complete
+[Thu Apr  4 11:12:38.981 2013] [ 3113] accepting connections
+[Thu Apr  4 19:42:44.939 2013] [ 3113] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr  4 19:42:44.941 2013] [ 3113] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr  4 19:42:44.941 2013] [ 3113] rotating index 'askquestion_delta': success
+[Thu Apr  4 19:42:44.941 2013] [ 3113] rotating finished
+[Thu Apr  4 20:04:57.094 2013] [ 3113] caught SIGTERM, shutting down
+[Thu Apr  4 20:04:57.129 2013] [ 3113] shutdown complete
+[Fri Apr  5 11:30:26.901 2013] [ 3359] accepting connections
+[Fri Apr  5 16:18:07.783 2013] [ 3359] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr  5 16:18:07.785 2013] [ 3359] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr  5 16:18:07.785 2013] [ 3359] rotating index 'askquestion_delta': success
+[Fri Apr  5 16:18:07.785 2013] [ 3359] rotating finished
+[Fri Apr  5 16:22:25.143 2013] [ 3359] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr  5 16:22:25.144 2013] [ 3359] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr  5 16:22:25.151 2013] [ 3359] rotating index 'askquestion_delta': success
+[Fri Apr  5 16:22:25.151 2013] [ 3359] rotating finished
+[Fri Apr  5 16:25:33.761 2013] [ 3359] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr  5 16:25:33.762 2013] [ 3359] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr  5 16:25:33.763 2013] [ 3359] rotating index 'askquestion_delta': success
+[Fri Apr  5 16:25:33.763 2013] [ 3359] rotating finished
+[Fri Apr  5 16:37:59.960 2013] [ 3359] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr  5 16:37:59.963 2013] [ 3359] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr  5 16:37:59.963 2013] [ 3359] rotating index 'askquestion_delta': success
+[Fri Apr  5 16:37:59.963 2013] [ 3359] rotating finished
+[Fri Apr  5 18:05:57.517 2013] [ 3359] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr  5 18:05:57.520 2013] [ 3359] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr  5 18:05:57.520 2013] [ 3359] rotating index 'askquestion_delta': success
+[Fri Apr  5 18:05:57.520 2013] [ 3359] rotating finished
+[Fri Apr  5 20:24:15.177 2013] [ 3359] caught SIGTERM, shutting down
+[Fri Apr  5 20:24:15.250 2013] [ 3359] shutdown complete
+[Mon Apr  8 11:33:14.580 2013] [ 3390] accepting connections
+[Mon Apr  8 15:35:40.979 2013] [ 3390] caught SIGHUP (seamless=1, in queue=1)
+[Mon Apr  8 15:35:40.980 2013] [ 3390] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Mon Apr  8 15:35:40.980 2013] [ 3390] rotating index 'askquestion_delta': success
+[Mon Apr  8 15:35:40.980 2013] [ 3390] rotating finished
+[Mon Apr  8 15:48:14.536 2013] [ 3390] caught SIGHUP (seamless=1, in queue=1)
+[Mon Apr  8 15:48:14.538 2013] [ 3390] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Mon Apr  8 15:48:14.538 2013] [ 3390] rotating index 'askquestion_delta': success
+[Mon Apr  8 15:48:14.538 2013] [ 3390] rotating finished
+[Mon Apr  8 18:04:40.150 2013] [ 3390] caught SIGHUP (seamless=1, in queue=1)
+[Mon Apr  8 18:04:40.151 2013] [ 3390] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Mon Apr  8 18:04:40.151 2013] [ 3390] rotating index 'askquestion_delta': success
+[Mon Apr  8 18:04:40.152 2013] [ 3390] rotating finished
+[Mon Apr  8 18:55:53.756 2013] [ 3390] caught SIGTERM, shutting down
+[Mon Apr  8 18:55:53.931 2013] [ 3390] shutdown complete
+[Tue Apr  9 12:03:59.136 2013] [ 3330] accepting connections
+[Tue Apr  9 20:41:20.713 2013] [ 3330] caught SIGTERM, shutting down
+[Tue Apr  9 20:41:20.833 2013] [ 3330] shutdown complete
+[Wed Apr 10 12:06:57.812 2013] [ 2946] accepting connections
+[Wed Apr 10 20:45:27.516 2013] [ 2946] caught SIGTERM, shutting down
+[Wed Apr 10 20:45:27.791 2013] [ 2946] shutdown complete
+[Thu Apr 11 13:57:29.605 2013] [ 2972] accepting connections
+[Thu Apr 11 15:04:03.925 2013] [ 2972] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 11 15:04:03.927 2013] [ 2972] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 11 15:04:03.927 2013] [ 2972] rotating index 'askquestion_delta': success
+[Thu Apr 11 15:04:03.939 2013] [ 2972] rotating finished
+[Thu Apr 11 15:05:11.987 2013] [ 2972] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 11 15:05:11.990 2013] [ 2972] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 11 15:05:11.991 2013] [ 2972] rotating index 'askquestion_delta': success
+[Thu Apr 11 15:05:11.991 2013] [ 2972] rotating finished
+[Thu Apr 11 15:09:51.702 2013] [ 2972] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 11 15:09:51.703 2013] [ 2972] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 11 15:09:51.703 2013] [ 2972] rotating index 'askquestion_delta': success
+[Thu Apr 11 15:09:51.703 2013] [ 2972] rotating finished
+[Thu Apr 11 15:16:21.428 2013] [ 2972] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 11 15:16:21.432 2013] [ 2972] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 11 15:16:21.432 2013] [ 2972] rotating index 'askquestion_delta': success
+[Thu Apr 11 15:16:21.432 2013] [ 2972] rotating finished
+[Thu Apr 11 15:42:09.719 2013] [ 2972] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 11 15:42:09.720 2013] [ 2972] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 11 15:42:09.720 2013] [ 2972] rotating index 'askquestion_delta': success
+[Thu Apr 11 15:42:09.720 2013] [ 2972] rotating finished
+[Thu Apr 11 15:52:13.214 2013] [ 2972] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 11 15:52:13.215 2013] [ 2972] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 11 15:52:13.215 2013] [ 2972] rotating index 'askquestion_delta': success
+[Thu Apr 11 15:52:13.215 2013] [ 2972] rotating finished
+[Thu Apr 11 15:54:56.499 2013] [ 2972] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 11 15:54:56.502 2013] [ 2972] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 11 15:54:56.502 2013] [ 2972] rotating index 'askquestion_delta': success
+[Thu Apr 11 15:54:56.502 2013] [ 2972] rotating finished
+[Thu Apr 11 16:01:58.559 2013] [ 2972] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 11 16:01:58.561 2013] [ 2972] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 11 16:01:58.561 2013] [ 2972] rotating index 'askquestion_delta': success
+[Thu Apr 11 16:01:58.561 2013] [ 2972] rotating finished
+[Thu Apr 11 16:05:28.912 2013] [ 2972] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 11 16:05:28.915 2013] [ 2972] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 11 16:05:28.915 2013] [ 2972] rotating index 'askquestion_delta': success
+[Thu Apr 11 16:05:28.916 2013] [ 2972] rotating finished
+[Thu Apr 11 16:21:29.547 2013] [ 2972] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 11 16:21:29.548 2013] [ 2972] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 11 16:21:29.548 2013] [ 2972] rotating index 'askquestion_delta': success
+[Thu Apr 11 16:21:29.549 2013] [ 2972] rotating finished
+[Thu Apr 11 19:00:04.371 2013] [ 2972] caught SIGTERM, shutting down
+[Thu Apr 11 19:00:04.371 2013] [ 2972] shutdown complete
+[Fri Apr 12 16:22:06.274 2013] [ 8156] accepting connections
+[Fri Apr 12 21:48:17.273 2013] [ 8156] caught SIGTERM, shutting down
+[Fri Apr 12 21:48:17.428 2013] [ 8156] shutdown complete
+[Sun Apr 14 13:44:46.655 2013] [ 2731] accepting connections
+[Sun Apr 14 13:50:13.447 2013] [ 2731] caught SIGTERM, shutting down
+[Sun Apr 14 13:50:13.451 2013] [ 2731] shutdown complete
+[Mon Apr 15 11:01:33.557 2013] [ 2974] accepting connections
+[Tue Apr 16 16:22:14.444 2013] [ 2994] accepting connections
+[Tue Apr 16 22:31:33.298 2013] [ 2994] caught SIGTERM, shutting down
+[Tue Apr 16 22:31:33.496 2013] [ 2994] shutdown complete
+[Wed Apr 17 13:36:51.959 2013] [ 2940] accepting connections
+[Wed Apr 17 15:44:14.598 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 15:44:14.600 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 15:44:14.600 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 15:44:14.600 2013] [ 2940] rotating finished
+[Wed Apr 17 15:46:15.100 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 15:46:15.103 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 15:46:15.112 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 15:46:15.112 2013] [ 2940] rotating finished
+[Wed Apr 17 15:50:29.147 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 15:50:29.148 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 15:50:29.148 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 15:50:29.148 2013] [ 2940] rotating finished
+[Wed Apr 17 15:54:00.805 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 15:54:00.807 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 15:54:00.807 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 15:54:00.807 2013] [ 2940] rotating finished
+[Wed Apr 17 15:57:02.085 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 15:57:02.086 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 15:57:02.086 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 15:57:02.086 2013] [ 2940] rotating finished
+[Wed Apr 17 16:17:20.548 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 16:17:20.549 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 16:17:20.549 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 16:17:20.549 2013] [ 2940] rotating finished
+[Wed Apr 17 16:24:59.219 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 16:24:59.220 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 16:24:59.220 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 16:24:59.221 2013] [ 2940] rotating finished
+[Wed Apr 17 16:38:09.174 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 16:38:09.175 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 16:38:09.175 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 16:38:09.175 2013] [ 2940] rotating finished
+[Wed Apr 17 17:01:08.614 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 17:01:08.618 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 17:01:08.618 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 17:01:08.619 2013] [ 2940] rotating finished
+[Wed Apr 17 17:02:31.061 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 17:02:31.063 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 17:02:31.064 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 17:02:31.064 2013] [ 2940] rotating finished
+[Wed Apr 17 17:03:01.419 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 17:03:01.421 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 17:03:01.421 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 17:03:01.421 2013] [ 2940] rotating finished
+[Wed Apr 17 17:04:39.064 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 17:04:39.065 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 17:04:39.066 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 17:04:39.066 2013] [ 2940] rotating finished
+[Wed Apr 17 19:07:41.152 2013] [ 2940] caught SIGHUP (seamless=1, in queue=1)
+[Wed Apr 17 19:07:41.153 2013] [ 2940] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Wed Apr 17 19:07:41.153 2013] [ 2940] rotating index 'askquestion_delta': success
+[Wed Apr 17 19:07:41.153 2013] [ 2940] rotating finished
+[Wed Apr 17 19:48:04.567 2013] [ 2940] caught SIGTERM, shutting down
+[Wed Apr 17 19:48:04.567 2013] [ 2940] shutdown complete
+[Wed Apr 17 21:22:39.766 2013] [ 2774] accepting connections
+[Wed Apr 17 22:36:09.568 2013] [ 2774] caught SIGTERM, shutting down
+[Wed Apr 17 22:36:09.674 2013] [ 2774] shutdown complete
+[Thu Apr 18 11:41:19.828 2013] [ 2877] accepting connections
+[Thu Apr 18 11:47:06.858 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 11:47:06.861 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 11:47:06.861 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 11:47:07.107 2013] [ 2877] rotating finished
+[Thu Apr 18 11:47:24.827 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 11:47:24.829 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 11:47:24.829 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 11:47:24.829 2013] [ 2877] rotating finished
+[Thu Apr 18 12:02:52.490 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:02:52.493 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:02:52.494 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:02:52.494 2013] [ 2877] rotating finished
+[Thu Apr 18 12:03:03.968 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:03:03.969 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:03:03.969 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:03:03.969 2013] [ 2877] rotating finished
+[Thu Apr 18 12:05:29.036 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:05:29.037 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:05:29.037 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:05:29.038 2013] [ 2877] rotating finished
+[Thu Apr 18 12:15:48.347 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:15:48.348 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:15:48.348 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:15:48.348 2013] [ 2877] rotating finished
+[Thu Apr 18 12:18:11.616 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:18:11.620 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:18:11.620 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:18:11.620 2013] [ 2877] rotating finished
+[Thu Apr 18 12:19:37.680 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:19:37.681 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:19:37.681 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:19:37.681 2013] [ 2877] rotating finished
+[Thu Apr 18 12:29:48.620 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:29:48.621 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:29:48.621 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:29:48.621 2013] [ 2877] rotating finished
+[Thu Apr 18 12:32:36.486 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:32:36.487 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:32:36.488 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:32:36.488 2013] [ 2877] rotating finished
+[Thu Apr 18 12:34:59.686 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:34:59.688 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:34:59.688 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:34:59.689 2013] [ 2877] rotating finished
+[Thu Apr 18 12:37:38.138 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:37:38.139 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:37:38.139 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:37:38.139 2013] [ 2877] rotating finished
+[Thu Apr 18 12:39:48.074 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:39:48.076 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:39:48.076 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:39:48.076 2013] [ 2877] rotating finished
+[Thu Apr 18 12:40:44.755 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:40:44.756 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:40:44.757 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:40:44.757 2013] [ 2877] rotating finished
+[Thu Apr 18 12:40:53.967 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:40:53.970 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:40:53.970 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:40:53.970 2013] [ 2877] rotating finished
+[Thu Apr 18 12:42:16.648 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:42:16.649 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:42:16.649 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:42:16.649 2013] [ 2877] rotating finished
+[Thu Apr 18 12:42:50.611 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:42:50.615 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:42:50.615 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:42:50.615 2013] [ 2877] rotating finished
+[Thu Apr 18 12:46:31.355 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:46:31.356 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:46:31.356 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:46:31.357 2013] [ 2877] rotating finished
+[Thu Apr 18 12:47:54.541 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:47:54.543 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:47:54.543 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:47:54.543 2013] [ 2877] rotating finished
+[Thu Apr 18 12:48:06.197 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:48:06.198 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:48:06.198 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:48:06.199 2013] [ 2877] rotating finished
+[Thu Apr 18 12:49:52.867 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:49:52.868 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:49:52.868 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:49:52.868 2013] [ 2877] rotating finished
+[Thu Apr 18 12:50:44.260 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:50:44.262 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:50:44.262 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:50:44.262 2013] [ 2877] rotating finished
+[Thu Apr 18 12:55:07.113 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:55:07.115 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:55:07.115 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:55:07.115 2013] [ 2877] rotating finished
+[Thu Apr 18 12:58:22.969 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 12:58:22.972 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 12:58:22.972 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 12:58:22.973 2013] [ 2877] rotating finished
+[Thu Apr 18 13:00:38.567 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 13:00:38.568 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 13:00:38.568 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 13:00:38.568 2013] [ 2877] rotating finished
+[Thu Apr 18 13:00:46.447 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 13:00:46.448 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 13:00:46.448 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 13:00:46.448 2013] [ 2877] rotating finished
+[Thu Apr 18 13:19:29.605 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 13:19:29.606 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 13:19:29.606 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 13:19:29.606 2013] [ 2877] rotating finished
+[Thu Apr 18 13:20:09.139 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 13:20:09.143 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 13:20:09.143 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 13:20:09.143 2013] [ 2877] rotating finished
+[Thu Apr 18 13:23:54.742 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 13:23:54.743 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 13:23:54.743 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 13:23:54.743 2013] [ 2877] rotating finished
+[Thu Apr 18 13:27:31.114 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 13:27:31.115 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 13:27:31.115 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 13:27:31.115 2013] [ 2877] rotating finished
+[Thu Apr 18 13:42:11.156 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 13:42:11.157 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 13:42:11.157 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 13:42:11.158 2013] [ 2877] rotating finished
+[Thu Apr 18 14:00:48.715 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 14:00:48.715 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 14:00:48.716 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 14:00:48.716 2013] [ 2877] rotating finished
+[Thu Apr 18 15:06:13.900 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 15:06:13.900 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 15:06:13.901 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 15:06:13.901 2013] [ 2877] rotating finished
+[Thu Apr 18 15:12:39.383 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 15:12:39.384 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 15:12:39.385 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 15:12:39.385 2013] [ 2877] rotating finished
+[Thu Apr 18 15:28:34.679 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 15:28:34.683 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 15:28:34.683 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 15:28:34.683 2013] [ 2877] rotating finished
+[Thu Apr 18 15:28:50.654 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 15:28:50.656 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 15:28:50.656 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 15:28:50.656 2013] [ 2877] rotating finished
+[Thu Apr 18 15:30:13.259 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 15:30:13.262 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 15:30:13.263 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 15:30:13.263 2013] [ 2877] rotating finished
+[Thu Apr 18 15:48:47.968 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 15:48:47.971 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 15:48:47.972 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 15:48:47.972 2013] [ 2877] rotating finished
+[Thu Apr 18 15:53:43.790 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 15:53:43.791 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 15:53:43.791 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 15:53:43.791 2013] [ 2877] rotating finished
+[Thu Apr 18 16:11:42.186 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 16:11:42.187 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 16:11:42.187 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 16:11:42.187 2013] [ 2877] rotating finished
+[Thu Apr 18 16:12:04.323 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 16:12:04.324 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 16:12:04.325 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 16:12:04.325 2013] [ 2877] rotating finished
+[Thu Apr 18 16:12:35.899 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 16:12:35.901 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 16:12:35.901 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 16:12:35.902 2013] [ 2877] rotating finished
+[Thu Apr 18 16:13:20.231 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 16:13:20.233 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 16:13:20.233 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 16:13:20.233 2013] [ 2877] rotating finished
+[Thu Apr 18 16:14:03.993 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 16:14:03.997 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 16:14:03.997 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 16:14:03.997 2013] [ 2877] rotating finished
+[Thu Apr 18 16:15:01.989 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 16:15:01.991 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 16:15:01.991 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 16:15:01.991 2013] [ 2877] rotating finished
+[Thu Apr 18 16:21:15.517 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 16:21:15.518 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 16:21:15.518 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 16:21:15.519 2013] [ 2877] rotating finished
+[Thu Apr 18 16:22:00.233 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 16:22:00.235 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 16:22:00.235 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 16:22:00.235 2013] [ 2877] rotating finished
+[Thu Apr 18 16:22:36.416 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 16:22:36.417 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 16:22:36.417 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 16:22:36.417 2013] [ 2877] rotating finished
+[Thu Apr 18 16:41:34.137 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 16:41:34.138 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 16:41:34.138 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 16:41:34.138 2013] [ 2877] rotating finished
+[Thu Apr 18 17:04:03.486 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 17:04:03.490 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 17:04:03.490 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 17:04:03.491 2013] [ 2877] rotating finished
+[Thu Apr 18 17:04:37.916 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 17:04:37.919 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 17:04:37.919 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 17:04:37.919 2013] [ 2877] rotating finished
+[Thu Apr 18 17:06:59.110 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 17:06:59.113 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 17:06:59.114 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 17:06:59.114 2013] [ 2877] rotating finished
+[Thu Apr 18 17:39:43.369 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 17:39:43.372 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 17:39:43.372 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 17:39:43.373 2013] [ 2877] rotating finished
+[Thu Apr 18 17:40:16.649 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 17:40:16.650 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 17:40:16.651 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 17:40:16.651 2013] [ 2877] rotating finished
+[Thu Apr 18 17:40:31.494 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 17:40:31.498 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 17:40:31.498 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 17:40:31.499 2013] [ 2877] rotating finished
+[Thu Apr 18 17:40:44.344 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 17:40:44.347 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 17:40:44.348 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 17:40:44.348 2013] [ 2877] rotating finished
+[Thu Apr 18 17:41:47.515 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 17:41:47.519 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 17:41:47.519 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 17:41:47.519 2013] [ 2877] rotating finished
+[Thu Apr 18 17:44:47.099 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 17:44:47.100 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 17:44:47.100 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 17:44:47.100 2013] [ 2877] rotating finished
+[Thu Apr 18 18:07:07.723 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:07:07.725 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:07:07.725 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:07:07.725 2013] [ 2877] rotating finished
+[Thu Apr 18 18:08:29.517 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:08:29.518 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:08:29.519 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:08:29.519 2013] [ 2877] rotating finished
+[Thu Apr 18 18:08:55.169 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:08:55.171 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:08:55.171 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:08:55.171 2013] [ 2877] rotating finished
+[Thu Apr 18 18:09:24.965 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:09:24.966 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:09:24.966 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:09:24.966 2013] [ 2877] rotating finished
+[Thu Apr 18 18:09:27.441 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:09:27.443 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:09:27.443 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:09:27.443 2013] [ 2877] rotating finished
+[Thu Apr 18 18:09:28.496 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:09:28.497 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:09:28.498 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:09:28.498 2013] [ 2877] rotating finished
+[Thu Apr 18 18:10:30.321 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:10:30.322 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:10:30.322 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:10:30.322 2013] [ 2877] rotating finished
+[Thu Apr 18 18:10:51.074 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:10:51.075 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:10:51.075 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:10:51.075 2013] [ 2877] rotating finished
+[Thu Apr 18 18:22:13.943 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:22:13.945 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:22:13.945 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:22:13.946 2013] [ 2877] rotating finished
+[Thu Apr 18 18:24:45.854 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:24:45.856 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:24:45.856 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:24:45.856 2013] [ 2877] rotating finished
+[Thu Apr 18 18:24:58.439 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:24:58.440 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:24:58.440 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:24:58.440 2013] [ 2877] rotating finished
+[Thu Apr 18 18:25:18.210 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:25:18.213 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:25:18.214 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:25:18.214 2013] [ 2877] rotating finished
+[Thu Apr 18 18:27:28.530 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:27:28.531 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:27:28.532 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:27:28.532 2013] [ 2877] rotating finished
+[Thu Apr 18 18:27:43.416 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:27:43.417 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:27:43.417 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:27:43.417 2013] [ 2877] rotating finished
+[Thu Apr 18 18:28:06.666 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:28:06.667 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:28:06.667 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:28:06.667 2013] [ 2877] rotating finished
+[Thu Apr 18 18:30:12.024 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 18:30:12.026 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 18:30:12.027 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 18:30:12.027 2013] [ 2877] rotating finished
+[Thu Apr 18 19:12:15.275 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 19:12:15.276 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 19:12:15.276 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 19:12:15.276 2013] [ 2877] rotating finished
+[Thu Apr 18 19:44:22.307 2013] [ 2877] caught SIGHUP (seamless=1, in queue=1)
+[Thu Apr 18 19:44:22.310 2013] [ 2877] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Thu Apr 18 19:44:22.311 2013] [ 2877] rotating index 'askquestion_delta': success
+[Thu Apr 18 19:44:22.311 2013] [ 2877] rotating finished
+[Thu Apr 18 20:59:29.568 2013] [ 2877] caught SIGTERM, shutting down
+[Thu Apr 18 20:59:29.569 2013] [ 2877] shutdown complete
+[Fri Apr 19 11:41:51.367 2013] [ 2876] accepting connections
+[Fri Apr 19 13:11:18.723 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 13:11:18.736 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 13:11:18.755 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 13:11:18.755 2013] [ 2876] rotating finished
+[Fri Apr 19 13:13:11.650 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 13:13:11.651 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 13:13:11.678 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 13:13:11.678 2013] [ 2876] rotating finished
+[Fri Apr 19 13:15:10.449 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 13:15:10.450 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 13:15:10.450 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 13:15:10.450 2013] [ 2876] rotating finished
+[Fri Apr 19 13:16:50.909 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 13:16:50.911 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 13:16:50.911 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 13:16:50.911 2013] [ 2876] rotating finished
+[Fri Apr 19 13:20:00.977 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 13:20:00.978 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 13:20:00.978 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 13:20:00.978 2013] [ 2876] rotating finished
+[Fri Apr 19 13:25:03.673 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 13:25:03.674 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 13:25:03.674 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 13:25:03.674 2013] [ 2876] rotating finished
+[Fri Apr 19 13:25:06.992 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 13:25:06.995 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 13:25:06.996 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 13:25:06.996 2013] [ 2876] rotating finished
+[Fri Apr 19 13:31:10.066 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 13:31:10.067 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 13:31:10.068 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 13:31:10.068 2013] [ 2876] rotating finished
+[Fri Apr 19 13:33:00.593 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 13:33:00.594 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 13:33:00.595 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 13:33:00.595 2013] [ 2876] rotating finished
+[Fri Apr 19 16:47:58.003 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 16:47:58.005 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 16:47:58.006 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 16:47:58.006 2013] [ 2876] rotating finished
+[Fri Apr 19 16:51:30.159 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 16:51:30.162 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 16:51:30.163 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 16:51:30.163 2013] [ 2876] rotating finished
+[Fri Apr 19 17:18:50.587 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 17:18:50.588 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 17:18:50.588 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 17:18:50.588 2013] [ 2876] rotating finished
+[Fri Apr 19 17:19:48.545 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 17:19:48.547 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 17:19:48.547 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 17:19:48.547 2013] [ 2876] rotating finished
+[Fri Apr 19 17:20:03.479 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 17:20:03.480 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 17:20:03.480 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 17:20:03.481 2013] [ 2876] rotating finished
+[Fri Apr 19 17:33:21.313 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 17:33:21.314 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 17:33:21.314 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 17:33:21.314 2013] [ 2876] rotating finished
+[Fri Apr 19 17:35:16.965 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 17:35:16.967 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 17:35:16.967 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 17:35:16.967 2013] [ 2876] rotating finished
+[Fri Apr 19 17:44:31.433 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 17:44:31.434 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 17:44:31.434 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 17:44:31.434 2013] [ 2876] rotating finished
+[Fri Apr 19 17:45:24.624 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 17:45:24.625 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 17:45:24.625 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 17:45:24.625 2013] [ 2876] rotating finished
+[Fri Apr 19 17:46:30.523 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 17:46:30.524 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 17:46:30.525 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 17:46:30.525 2013] [ 2876] rotating finished
+[Fri Apr 19 17:48:11.045 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 17:48:11.046 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 17:48:11.046 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 17:48:11.046 2013] [ 2876] rotating finished
+[Fri Apr 19 17:49:26.111 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 17:49:26.113 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 17:49:26.113 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 17:49:26.113 2013] [ 2876] rotating finished
+[Fri Apr 19 18:03:35.416 2013] [ 2876] caught SIGHUP (seamless=1, in queue=1)
+[Fri Apr 19 18:03:35.417 2013] [ 2876] WARNING: rotating index 'askquestion_delta': rename '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.mvp' to '/home/ghulamjilani/myprojects/codingstack_nts/db/sphinx/development/askquestion_delta.old.mvp' failed: No such file or directory
+[Fri Apr 19 18:03:35.418 2013] [ 2876] rotating index 'askquestion_delta': success
+[Fri Apr 19 18:03:35.418 2013] [ 2876] rotating finished
+[Fri Apr 19 21:03:29.950 2013] [ 2876] caught SIGTERM, shutting down
+[Fri Apr 19 21:03:30.331 2013] [ 2876] shutdown complete
+[Mon Apr 22 12:40:28.142 2013] [ 3059] accepting connections
+[Mon Apr 22 23:04:39.868 2013] [ 3059] caught SIGTERM, shutting down
+[Mon Apr 22 23:04:40.034 2013] [ 3059] shutdown complete
+[Wed Apr 24 16:43:14.872 2013] [ 6896] accepting connections
