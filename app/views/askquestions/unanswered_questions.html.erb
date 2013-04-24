@@ -1,5 +1,4 @@
 
-
 <body class="bg-2" onload="prettyPrint()">
 <div class="active"></div>
 <div id="wrapper">
@@ -47,8 +46,7 @@
                 </div>
                 <div class="middle-holder">
                   <div class="user-question">
-                    <span class="user-img"><img src="/assets/img-1.jpg" width="42" height="42" alt="image"/></span>
-
+                    <span class="user-img"><%= image_tag avatar_url(question.user) %><!--<img src="/assets/img-1.jpg" width="42" height="42" alt="image"/>--></span>
                     <p class="question-txt ">
                       <a href=<%=new_askquestion_answer_path(question.id) %>><%= raw(question.title) %></a>
                     </p>
