@@ -1,5 +1,5 @@
 <% @askquestions.each do |question| %>
-    <input type="text" name="<%= question.id %>_Q_user_id" id="<%= question.id %>_Q_user_id" value="<%= question.user_id %>" >
+    <input type="hidden" name="<%= question.id %>_Q_user_id" id="<%= question.id %>_Q_user_id" value="<%= question.user_id %>" >
     <div class="q-post-holder">
       <div class="q-post">
         <div class="q-top">
