@@ -1,4 +1,5 @@
 <% @askquestions.each do |question| %>
+    <input type="text" name="<%= question.id %>_Q_user_id" id="<%= question.id %>_Q_user_id" value="<%= question.user_id %>" >
     <div class="q-post-holder">
       <div class="q-post">
         <div class="q-top">
@@ -28,8 +29,10 @@
                 <% end %>
                 <!--<li><a href="#">tag 2</a></li>-->
               </ul>
+
               <div class="about-question">
                 <div class = "ques_<%= question.id%>">
+
                   <% if current_user && current_user.votes.where(votable_id:question.id ,Votable_type: "Askquestion").present?   %>
 
                       <% if current_user.votes.where(votable_id:question.id , Votable_type: "Askquestion").last.status == 1 %>

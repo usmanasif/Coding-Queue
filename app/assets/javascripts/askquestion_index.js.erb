@@ -1,27 +1,31 @@
 $(document).ready(function () {
 
     $(".like-up").live('click',function (e) {
-        var current_user = $('#login_user_id').val();
-
         e.preventDefault();
+        var current_user = $('#login_user_id').val();
+        var Q_number    =   $(this).attr("data");
+        var question_user_id    =   $('#'+ Q_number +'_Q_user_id').val();
+        //alert(question_user_id + " == " + current_user);
         if (!current_user){
-            var Q_number    =   $(this).attr("data");
+
             //alert(Q_number);
             $("#like_recorder").val(Q_number);
             $("#unlike_recorder").val("");
             login_fancy_box();
+
         }
 
-        else{
+        else if(question_user_id != current_user){
             var question_id =  $(this).attr('data');
             $(this).hide();
-           //alert(current_user);
+            //alert("up");
             $.ajax({
                 type: 'POST',
-                url: $(this).attr('href'),
+                url:'/askquestions/' + question_id + '/vote_up',
                 success:function (data) {
-                    $('.vote_question_'+question_id).html("Votes:"+ data);
-                    $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="unlike-down" data='+question_id+' >VOTE DOWN</a>');
+
+                    $('.votes_count_'+question_id).html("Votes: "+ data);
+                    $('.ques_'+question_id).html('<a href=/askquestions/'+question_id+'/vote_up class="unlike-down" data='+question_id+' >VOTE DOWN</a>');
 
                 }
 
@@ -36,9 +40,13 @@ $(document).ready(function () {
 
 
     $(".unlike-down").live('click', function (e) {
-        var current_user = $('#login_user_id').val();
-        var Q_number    =   $("#unlike_recorder").val();
         e.preventDefault();
+        var current_user = $('#login_user_id').val();
+        var Q_number    =   $(this).attr("data");
+        var question_user_id    =   $('#'+ Q_number +'_Q_user_id').val();
+       // alert(question_user_id + " == " + current_user);
+
+
         if (!current_user){
             var Q_number    =   $(this).attr("data");
             $("#unlike_recorder").val(Q_number);
@@ -46,19 +54,19 @@ $(document).ready(function () {
             //show login fancybox form
             login_fancy_box();
         }
-        else{
+        else if(question_user_id != current_user){
             var question_id =  $(this).attr('data');
     //        $(this).toggle();
             $(this).hide();
 
             $.ajax({
                 type: 'POST',
-                url: $(this).attr('href'),
+                url:'/askquestions/' + question_id + '/vote_down',
                 success:function (data) {
                     //alert("success");
-                    $('.vote_question_'+question_id).html("Votes:"+ data);
+                    $('.votes_count_'+question_id).html("Votes: "+ data);
                     //alert("down ");
-                    $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="like-up" data='+question_id+'  >VOTE UP</a>');
+                    $('.ques_'+question_id).html('<a href=/askquestions/'+question_id+'/vote_up class="like-up" data='+question_id+'  >VOTE UP</a>');
 
 
                 }
@@ -116,7 +124,7 @@ $(document).ready(function () {
             url: '/askquestions/'+Q_number+'/vote_down',
             dataType: "json",
             success:function (data) {
-                //("DisLike");
+                ("DisLike");
                 $('.vote_question_'+question_id).html("Votes:"+ data);
                 $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="like-up" id="vote_up'+Q_number+'" data='+question_id+'  >VOTE UP</a>');
                 parent.window.location.reload();

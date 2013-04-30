@@ -37,7 +37,7 @@
 
                     <span class="ans_<%= x.id%>">
                     <% if(current_user && current_user.votes.where(votable_id: x.id , Votable_type: "Answer").present? && x.votes.present? ) %>
-
+                        <input type="hidden" name="<%= x.id %>_A_user_id" id="<%= x.id %>_A_user_id" value="<%= x.user_id %>" >
                         <input type="hidden" name="last_voted_<%= x.id %>" id="last_voted_<%= x.id %>" value='<%= current_user.votes.where(votable_id: x.id , Votable_type: "Answer").last.status %>' />
 
                         <% if current_user.votes.where(votable_id: x.id , Votable_type: "Answer").last.status == 1 %>

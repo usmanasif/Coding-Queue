@@ -9,7 +9,7 @@
 
   <div class="about-question">
        <span class="ques_<%= @question.id %>">
-
+          <input type="text" class="rating" name="<%= @question.id %>_Q_user_id" id="<%= @question.id %>_Q_user_id" value='<%= @question.user.id %>'/>
           <% if current_user && current_user.votes.where(votable_id: @question.id, Votable_type: "Askquestion").present? %>
 
               <% if current_user.votes.where(votable_id: @question.id, Votable_type: "Askquestion").last.status == 1 %>
