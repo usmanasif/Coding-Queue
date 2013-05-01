@@ -19,7 +19,7 @@ $(document).ready(function () {
         else if(question_user_id != current_user){
             var question_id =  $(this).attr('data');
             $(this).hide();
-            //alert("up");
+            alert("up");
             $.ajax({
                 type: 'POST',
                 url:'/askquestions/' + question_id + '/vote_up',
