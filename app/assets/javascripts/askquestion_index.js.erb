@@ -13,18 +13,15 @@ $(document).ready(function () {
             $("#like_recorder").val(Q_number);
             $("#unlike_recorder").val("");
             login_fancy_box();
-
         }
-
         else if(question_user_id != current_user){
             var question_id =  $(this).attr('data');
             $(this).hide();
-            //alert("up");
-            $.ajax({
+             $.ajax({
                 type: 'POST',
                 url:'/askquestions/' + question_id + '/vote_up',
                 success:function (data) {
-
+                    alert("up");
                     $('.votes_count_'+question_id).html("Votes: "+ data);
                     $('.ques_'+question_id).html('<a href=/askquestions/'+question_id+'/vote_up class="unlike-down" data='+question_id+' >VOTE DOWN</a>');
 
