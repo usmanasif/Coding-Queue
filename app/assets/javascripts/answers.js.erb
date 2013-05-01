@@ -1,5 +1,4 @@
 
-
 $(document).ready(function () {
 
     var current_user = $('#login_user_id').val();
@@ -219,7 +218,7 @@ $(document).ready(function () {
         else if(answer_user_id != current_user){
             var answer_id = $(this).attr('data');
             var question_id = $('#question_id').val();
-
+            alert("answer voted up");
 
             $(this).toggle();
            // $('#vote_down_'+question_id).show();
@@ -258,6 +257,7 @@ $(document).ready(function () {
             login_fancy_box();
         }
         else if(answer_user_id != current_user){
+        alert("answer voted down");
             var answer_id = $(this).attr('data');
             var question_id = $('#question_id').val();
             $(this).toggle();
