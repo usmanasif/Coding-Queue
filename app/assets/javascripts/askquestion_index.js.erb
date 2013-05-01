@@ -5,7 +5,7 @@ $(document).ready(function () {
         var current_user = $('#login_user_id').val();
         var Q_number    =   $(this).attr("data");
         var question_user_id    =   $('#'+ Q_number +'_Q_user_id').val();
-        //alert(question_user_id + " == " + current_user);
+        alert("if" + question_user_id + " != " + current_user);
         
         if (!current_user){
             //alert(current_user);
