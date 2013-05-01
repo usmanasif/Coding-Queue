@@ -6,7 +6,7 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 #gem 'sqlite3'
-#gem 'mysql2'
+gem 'mysql2'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,16 +19,12 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 
-  gem 'redcarpet'
-
 
 end
 
-#gem 'jquery-rails'
-
-
-gem 'thinking-sphinx', '~> 2.0.13'
-
+gem 'jquery-rails'
+                                                                
+gem 'thinking-sphinx'
 
 gem 'will_paginate', '> 3.0'
 
@@ -48,14 +44,8 @@ gem 'will_paginate', '> 3.0'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'sorcery', '0.7.7'
 gem 'best_in_place'
-gem "mail"
 
 group :development, :test do
   gem 'railroady'
-
-end
-
-group :production do
-  gem 'mysql2'
 
 end
