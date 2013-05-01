@@ -21,7 +21,7 @@ $(document).ready(function () {
                 type: 'POST',
                 url:'/askquestions/' + question_id + '/vote_up',
                 success:function (data) {
-                    alert("up");
+                    alert("voted up");
                     $('.votes_count_'+question_id).html("Votes: "+ data);
                     $('.ques_'+question_id).html('<a href=/askquestions/'+question_id+'/vote_up class="unlike-down" data='+question_id+' >VOTE DOWN</a>');
 
