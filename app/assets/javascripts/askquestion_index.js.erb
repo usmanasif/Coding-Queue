@@ -5,9 +5,10 @@ $(document).ready(function () {
         var current_user = $('#login_user_id').val();
         var Q_number    =   $(this).attr("data");
         var question_user_id    =   $('#'+ Q_number +'_Q_user_id').val();
-        //alert(question_user_id + " == " + current_user);
+        alert(question_user_id + " == " + current_user);
+        
         if (!current_user){
-
+            alert(current_user);
             //alert(Q_number);
             $("#like_recorder").val(Q_number);
             $("#unlike_recorder").val("");
@@ -18,7 +19,7 @@ $(document).ready(function () {
         else if(question_user_id != current_user){
             var question_id =  $(this).attr('data');
             $(this).hide();
-            //alert("up");
+            alert("up");
             $.ajax({
                 type: 'POST',
                 url:'/askquestions/' + question_id + '/vote_up',
@@ -44,11 +45,11 @@ $(document).ready(function () {
         var current_user = $('#login_user_id').val();
         var Q_number    =   $(this).attr("data");
         var question_user_id    =   $('#'+ Q_number +'_Q_user_id').val();
-       // alert(question_user_id + " == " + current_user);
+        alert(question_user_id + " == " + current_user);
 
 
         if (!current_user){
-            var Q_number    =   $(this).attr("data");
+            alert(current_user);
             $("#unlike_recorder").val(Q_number);
             $("#like_recorder").val("");
             //show login fancybox form
@@ -56,7 +57,7 @@ $(document).ready(function () {
         }
         else if(question_user_id != current_user){
             var question_id =  $(this).attr('data');
-    //        $(this).toggle();
+    //      $(this).toggle();
             $(this).hide();
 
             $.ajax({
