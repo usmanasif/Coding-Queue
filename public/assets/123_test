@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coding Stack</title>
+  <link href="/assets/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link href="/assets/application.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/token-input-facebook.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/jquery.fancybox.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/prettify.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/answers.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/askquestions.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/comments.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/demo.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/oauths.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/pagination.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/sessions.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/style.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/tags.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/users.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/assets/jquery-1.7.2.min.js?body=1" type="text/javascript"></script>
+  <script src="/assets/jquery.fancybox.js?body=1" type="text/javascript"></script>
+  <script src="/assets/jquery.purr.js?body=1" type="text/javascript"></script>
+  <script src="/assets/best_in_place.purr.js?body=1" type="text/javascript"></script>
+  <script src="/assets/jquery.autosize-min.js?body=1" type="text/javascript"></script>
+  <script src="/assets/jquery.autosize.js?body=1" type="text/javascript"></script>
+  <script src="/assets/jquery.horizontal.scroll.js?body=1" type="text/javascript"></script>
+  <script src="/assets/jquery.mousewheel-3.0.6.pack.js?body=1" type="text/javascript"></script>
+  <script src="/assets/jquery.tokeninput.js?body=1" type="text/javascript"></script>
+  <script src="/assets/Markdown.Converter.js?body=1" type="text/javascript"></script>
+  <script src="/assets/Markdown.Editor.js?body=1" type="text/javascript"></script>
+  <script src="/assets/Markdown.Sanitizer.js?body=1" type="text/javascript"></script>
+  <script src="/assets/prettify.js?body=1" type="text/javascript"></script>
+  <script src="/assets/sessions.js?body=1" type="text/javascript"></script>
+  <script src="/assets/tags.js?body=1" type="text/javascript"></script>
+  <script src="/assets/users.js?body=1" type="text/javascript"></script>
+  <script src="/assets/oauths.js?body=1" type="text/javascript"></script>
+  <script src="/assets/best_in_place.js?body=1" type="text/javascript"></script>
+  <script src="/assets/html5.js?body=1" type="text/javascript"></script>
+  <script src="/assets/answers.js?body=1" type="text/javascript"></script>
+  <script src="/assets/askquestion_index.js?body=1" type="text/javascript"></script>
+  <script src="/assets/askquestion_new.js?body=1" type="text/javascript"></script>
+  <script src="/assets/askquestions.js?body=1" type="text/javascript"></script>
+  <script src="/assets/comments.js?body=1" type="text/javascript"></script>
+  <script src="/assets/greeting.js?body=1" type="text/javascript"></script>
+  <script src="/assets/application.js?body=1" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="xRquvVsEyFjlmEH329yS75Io7vMjyFXw9y/jNdffBA0=" name="csrf-token" />
+
+
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $('.fancybox').click(function () {
+              login_fancy_box();
+          });
+
+          $('.create-btn').click(function(){
+              var form_id =   (this.form.id);
+
+              parent.$("#form_recorder").val(form_id);
+
+          });
+
+
+
+      });
+
+      //function of calling fancy box of login
+      function login_fancy_box() {
+          $.fancybox({
+              //'hideOnContentClick':false
+              'width':500,
+              'height':500,
+              'enableEscapeButton':false,
+              'overlayShow':true,
+              'overlayOpacity':0,
+              'hideOnOverlayClick':false,
+              'type':'iframe',
+              'href':'/sessions/login_fancy'
+          });
+
+      }
+
+  </script>
+
+</head>
+<body class="answers" onload="prettyPrint()">
+
+<div id="wrapper">
+<header id="header">
+  <div class="holder">
+    <h1 class="logo"><a href="/">coding stack</a></h1>
+    <!--records the field to submit after login popup-->
+    <input type="text" id="form_recorder" name="form_recorder" value="" >
+    <!--records the action after login popup-->
+
+    <nav class="login-menu" id="loginmenu">
+      <ul><li><a href='#'>Faq</a></li> <input type='hidden' name='login_user_id' id='login_user_id' value=1 /><input type='hidden' name='login_user_email' id='login_user_email' value=a@devsinc.com /> <a href="/logout" class="log-Out">Log out</a> <span class='loged-user'>Logged in as a@devsinc.com.</span> </ul>
+
+    </nav>
+  </div>
+  <nav id="nav">
+    <ul>
+      <li><a href="/askquestions" class="active">Questions</a></li>
+      <li><a href="#">Tags</a></li>
+      <li><a href="#">Users</a></li>
+      <li><a href="#">Badges</a></li>
+      <li><a href="/askquestions/unanswered_questions">Unanswered</a></li>
+      <li><a href="#">Pages</a></li>
+    </ul>
+    <ul class="ask-q">
+      <li><a href="/askquestions/new">Ask Questions</a></li>
+    </ul>
+  </nav>
+</header>
+<div id="container">
+<div class="user_nav">
+
+</div>
+<!--/////////////////////////////////////////////--Question --///////Code for the answer page/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div id="wrapper">
+<section id="main">
+<article id="content">
+<div class="q-post-holder">
+<div class="q-post">
+<div class="q-top">
+<div class="counter-holder">
+  <ul class="counter-nav">
+    <li><span class="votes_count_21">votes: 0</span></li>
+    <li class="green-bg"><span >answers:  2 </span></li>
+    <li><span id="views_count">views: </span></li>
+  </ul>
+  <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+    <span>Asked<span class="ago-days"> 19 days ago</span></span>
+  </strong>
+</div>
+
+<div class="middle-holder">
+<div class="rating-icon-holder">
+
+
+  <div class="rating-icon-holder">
+    <ul class="a-q-flag">
+      <li><a href="#" class="flag">flag</a></li>
+      <li><a href="/askquestions/21/views" class="eye">VIEWS</a>
+        <input type="hidden" name="question_id" id="question_id" value='21' /></li>
+    </ul>
+
+    <a href="#" class="rating"><img src="/assets/star-icon.png" width="20" height="20" alt="image"></a>
+
+    <div class="about-question">
+
+       <span class="ques_21">
+
+              <a href="javascript:void(0);" class="like-up" data="21">VOTE UP</a>
+                <input type="hidden"  name="question_id" id="question_id" value='21'/>
+                <a href="javascript:void(0);" class="unlike-down" data="21">VOTE DOWN</a>
+       </span>
+    </div>
+  </div>
+
+</div>
+<div class="user-question">
+  <span class="user-img"><img src="/assets/img-1.jpg" width="42" height="42" alt="image"></span>
+
+  <p class="question-txt"> Question Number 012 </p>
+</div>
+<div class="post-txt">
+<span class="post-heading">Question Number 012</span>
+
+<div class="post-discription">
+  <!--<textarea class="post-info" cols="8" rows="8"></textarea>-->
+  <span class="post-heading"><p>red instead of being endlessly discussed. Try to be clear and simple. It’s a good approach to add code snippet with your question.</p></span>
+</div>
+<div class="comment-holder">
+<div class="comment-copy-Askquestion21">
+<!--Start --Comment-List -- Start-->
+<input type="hidden" name="comment-question-id" id="comment-question-id" value='21' />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="create-comment">
+
+  <form accept-charset="UTF-8" action="/comments?askquestion_id=21" class="new_comment" id="new_comment" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="xRquvVsEyFjlmEH329yS75Io7vMjyFXw9y/jNdffBA0=" /></div>
+
+
+    <div class="txt-field4">
+
+      <input id="comment_description" name="comment[description]" size="30" type="text" />
+    </div>
+
+    <input class="comment-btn create-btn" name="commit" type="submit" value="Create Comment" />
+
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="q-btm">&nbsp;</div>
+</div>
+
+<!--////////////////////////////// -----Answer to the question -----------------////////////////////////////////////////////////////////////////////////////////////-->
+<div class="nav-holder">
+  <ul class="active-question align-left">
+    <li><a href="#" class="active"> 2  answers</a></li>
+  </ul>
+  <ul class="active-question">
+    <li><a href="#">newest</a></li>
+    <li><a href="#">votes</a></li>
+    <li><a href="#">oldest</a></li>
+  </ul>
+</div>
+
+
+<!--##################### First loop ###########################################-->
+
+
+
+
+<!--##################### END First Loop ###########################################-->
+
+
+
+<div class="q-post">
+  <div class="q-top">
+    <div class="counter-holder">
+      <ul class="counter-nav">
+        <li><span class="answer_votes_53">Votes:1 </span></li>
+      </ul>
+      <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+        <span>Asked<span class="ago-days"> about 1 hour ago</span></span>
+      </strong>
+    </div>
+    <div class="middle-holder">
+      <div class="rating-icon-holder">
+        <ul class="a-q-flag">
+          <li><a href="#" class="flag">flag</a></li>
+          <li><a href="#" class="link-icon">link</a></li>
+        </ul>
+
+        <a href="/askquestions/21/answers/53/tick_status" class="tick-simple"> Tick </a>
+
+
+        <div class="about-question">
+
+                    <span class="ans_53">
+
+                        <input type="text" name="last_voted_53" id="last_voted_53" value='1' />
+
+                            <input type="hidden" name="answer_id" id="answer_id" value='53' />
+                              <a href="javascript:void(0);" class="unlike-down-answer" data="53" id="ans_vote_down_53">VOTE DOWN</a>
+
+                    </span>
+        </div>
+      </div>
+      <div class="user-question">
+        <span class="user-img"> <img src="/assets/img-1.jpg" width="42" height="42" alt="image"></span>
+        <span class="post-heading"><p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up o</span>
+        <!--<///////// -- Comment loop --answer-- --//////>-->
+        <div class="comment-holder">
+          <div class="comment-copy-Answer53">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+          <div class="create-comment">
+            <form accept-charset="UTF-8" action="/comments?answer_id=53" class="new_comment" id="new_comment_53" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="xRquvVsEyFjlmEH329yS75Io7vMjyFXw9y/jNdffBA0=" /></div>
+              <div class="txt-field4">
+                <!--<br />-->
+                <input class="answer_comment" id="comment_description" name="comment[description]" size="30" type="text" />
+              </div>
+
+              <input class="comment-btn create-btn" name="commit" type="submit" value="Create Comment" />
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="q-btm">&nbsp;</div>
+</div>
+
+<div class="q-post">
+  <div class="q-top">
+    <div class="counter-holder">
+      <ul class="counter-nav">
+        <li><span class="answer_votes_54">Votes:0 </span></li>
+      </ul>
+      <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+        <span>Asked<span class="ago-days"> about 1 hour ago</span></span>
+      </strong>
+    </div>
+    <div class="middle-holder">
+      <div class="rating-icon-holder">
+        <ul class="a-q-flag">
+          <li><a href="#" class="flag">flag</a></li>
+          <li><a href="#" class="link-icon">link</a></li>
+        </ul>
+
+        <a href="/askquestions/21/answers/54/tick_status" class="tick-simple"> Tick </a>
+
+
+        <div class="about-question">
+
+                    <span class="ans_54">
+                          <a href="javascript:void(0);" class="like-up-answer" data="54" id="ans_vote_up_54">VOTE UP</a>
+                            <input type="hidden" name="answer_id" id="answer_id" value='54' />
+                          <a href="javascript:void(0);" class="unlike-down-answer" data="54" id="ans_vote_down_54">VOTE DOWN</a>
+                    </span>
+        </div>
+      </div>
+      <div class="user-question">
+        <span class="user-img"> <img src="/assets/img-1.jpg" width="42" height="42" alt="image"></span>
+        <span class="post-heading"><p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versio</span>
+        <!--<///////// -- Comment loop --answer-- --//////>-->
+        <div class="comment-holder">
+          <div class="comment-copy-Answer54">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+          <div class="create-comment">
+            <form accept-charset="UTF-8" action="/comments?answer_id=54" class="new_comment" id="new_comment_54" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="xRquvVsEyFjlmEH329yS75Io7vMjyFXw9y/jNdffBA0=" /></div>
+              <div class="txt-field4">
+                <!--<br />-->
+                <input class="answer_comment" id="comment_description" name="comment[description]" size="30" type="text" />
+              </div>
+
+              <input class="comment-btn create-btn" name="commit" type="submit" value="Create Comment" />
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="q-btm">&nbsp;</div>
+</div>
+
+<div class="testing">
+  <div class="voting_thought_ajax ">
+    <div class="class_with_status_tick">
+
+      <!--//////////////////////////////////////////////answer with votes(desc) shuru /////////////////////////////////////////////////////////////////////-->
+
+
+    </div>
+  </div>
+
+  <!--////////////////////////////////---End of answer to the question --------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+  <div class="answer-the-question">
+    <p class="recent-question"><span class="answer-note">Answer the question</span></p>
+
+    <div class="ask-question">
+      <h2 class="a-y-question"></h2>
+
+      <form accept-charset="UTF-8" action="/askquestions/21/answers" class="new_answer" id="new_answer" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="xRquvVsEyFjlmEH329yS75Io7vMjyFXw9y/jNdffBA0=" /></div>
+
+
+
+        <div class="field">
+          <input id="wmd-preview-input" name="answer[answer]" type="hidden" />
+          <div class="wmd-panel">
+            <div id="wmd-button-bar"></div>
+            <textarea class="wmd-input" id="wmd-input"></textarea>
+          </div>
+          <div id="wmd-preview" class="wmd-panel wmd-preview">
+          </div>
+        </div>
+        <div class="create-holder"> <span class="btn-holder">
+                   <button class="create-btn create-new-answer" name="Create Askquestion" value="Create Askquestion"></button>
+            <small>or</small>
+            <button class="create-btn cancel-btn" name="#" value=""></button>
+            </span>
+          <!--<span class="click-to-add">-->
+          <!--<label for="wiki">wikki</label>-->
+          <!--<input type="checkbox" name="#" id="wiki" value="">-->
+          <!--</span>-->
+        </div>
+      </form>  </div>
+  </div>
+  <script type="text/javascript">
+      (function () {
+
+          var converter1 = Markdown.getSanitizingConverter();
+          var editor1 = new Markdown.Editor(converter1);
+          editor1.run();
+          var converter2 = new Markdown.Converter();
+          converter2.hooks.chain("preConversion", function (text) {
+              return text.replace(/\b(a\w*)/gi, "*$1*");
+          });
+          converter2.hooks.chain("plainLinkText", function (url) {
+              return "This is a link to " + url.replace(/^https?:\/\//, "");
+          });
+          var help = function () {
+              alert("Do you need help?");
+          }
+          var editor2 = new Markdown.Editor(converter2, "-second", { handler:help });
+          editor2.run();
+      })();
+
+  </script>
+</div>
+</article>
+
+<aside id="sidebar">
+  <div class="stay-us"><span class="stay-heading">share this on</span>
+    <ul class="social-icon">
+      <li><a href="#" class="twitter">twitter</a></li>
+      <li><a href="#" class="facebook">facebook</a></li>
+      <li><a href="#" class="messenger">messenger</a></li>
+    </ul>
+    <span class="stay-heading">stay in touch</span>
+
+    <div class="facebook-plugin"><img src="/assets/coding-stack-img.png" width="271" height="60" alt="facebook">
+    </div>
+  </div>
+  <div class="tags-title">
+    <ul class="tags-nav">
+      <li><a href="/askquestions?utf8=✓&search=jquery">jquery (2) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=Microsoft">Microsoft (1) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=javascript">javascript (2) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=firefox">firefox (10) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=cxvvv">cxvvv (1) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=aaaaa">aaaaa (5) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=chrome">chrome (1) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=abc">abc (4) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=blabla">blabla (1) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=d">d (0) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=new">new (4) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=ask">ask (7) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=123">123 (1) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=aaaaaaaaaaaaaaaaaaa">aaaaaaaaaaaaaaaaaaa (1) </a></li>
+      <li><a href="/askquestions?utf8=✓&search=gggg">gggg (1) </a></li>
+    </ul>
+  </div>
+</aside>
+</section>
+<!--<footer id="footer"> <span>All <a href="#">codingstack.com</a> content and data are available under the Creative Commons Attribution 3.0 license</span> <span><a href="#">blog</a> | <a href="#">twitter</a> | <a href="#">buzz</a> | <a href="#">identi.ca</a> | <a href="#">code</a> | <a href="#">irc (web chat)</a> | <a href="#">feedback</a> | <a href="#">tos</a> | <a href="#">privacy</a></span> <span>Powered by <a href="#">codingstack.com</a> under the GNU Affero General Public License</span> </footer>-->
+</div>
+
+<!--Record if the like or dislike is clicked without login session-->
+<input type="text" id="ans_like_recorder" name="ans_like_recorder" value="" >
+<input type="text" id="ans_unlike_recorder" name="ans_unlike_recorder" value="">
+
+
+<!--/////////////////////////////////////////////////////////////End Code for the answer page////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+</div>
+
+<input type="text" id="like_recorder" name="like_recorder" value="" >
+<input type="text" id="unlike_recorder" name="unlike_recorder" value="">
+<footer id="footer">
+  <span>All <a href="#">codingstack.com</a> content and data are available under the Creative Commons Attribution 3.0 license</span>
+<span><a href="#">blog</a> | <a href="#">twitter</a> | <a href="#">buzz</a> | <a href="#">identi.ca</a> | <a href="#">code</a> | <a href="#">irc
+  (web chat)</a> | <a href="#">feedback</a> | <a href="#">tos</a> | <a href="#">privacy</a></span>
+  <span>Powered by <a href="#">codingstack.com</a> under the GNU Affero General Public License</span></footer>
+</div>
+</div>
+
+
+</body>
+</html>

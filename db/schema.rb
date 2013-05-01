@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130419113042) do
+ActiveRecord::Schema.define(:version => 20130423171057) do
 
   create_table "answers", :force => true do |t|
     t.integer  "askquestion_id"
@@ -116,11 +116,11 @@ ActiveRecord::Schema.define(:version => 20130419113042) do
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
     t.string   "remember_me_token"
     t.datetime "remember_me_token_expires_at"
-    t.integer  "rating"
+    t.integer  "rating",                       :default => 0
   end
 
   add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
