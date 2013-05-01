@@ -93,7 +93,6 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
-    redcarpet (2.2.2)
     ref (1.0.4)
     riddle (1.5.5)
     sass (3.2.7)
@@ -135,14 +134,13 @@ DEPENDENCIES
   best_in_place
   coffee-rails (~> 3.2.1)
   execjs
-  mail
+  jquery-rails
   mysql2
   railroady
   rails (= 3.2.3)
-  redcarpet
   sass-rails (~> 3.2.3)
   sorcery (= 0.7.7)
   therubyracer
-  thinking-sphinx (~> 2.0.13)
+  thinking-sphinx
   uglifier (>= 1.0.3)
   will_paginate (> 3.0)
