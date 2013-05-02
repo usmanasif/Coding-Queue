@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/askquestions/_vote_rating.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/log/searchd.development.pid" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spa" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spa" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spd" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.sph" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.sph" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spi" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spp" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.spp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/answers.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/answers.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.sps" afterPath="$PROJECT_DIR$/db/sphinx/development/askquestion_delta.sps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/askquestion_index.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/askquestion_index.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/askquestions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/askquestions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/askquestions/index.html.erb" afterPath="$PROJECT_DIR$/app/views/askquestions/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/askquestions/unanswered_questions.html.erb" afterPath="$PROJECT_DIR$/app/views/askquestions/unanswered_questions.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="28405740-34da-4399-b750-3448f37befc2" name="Failed commit: Default" comment="Merge branch 'master' of github.com:usmanasif/Coding-Queue into umar&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;Gemfile&#10;&#9;db/migrate/20121019072637_remove_column_count_votes.rb&#10;&#9;db/schema.rb&#10;&#9;log/searchd.development.pid&#10;" />
     <list id="9d10b5d9-cb4d-4930-871e-8a4ea98a2b22" name="Failed commit: Default (2)" comment="Merge branch 'master' of github.com:usmanasif/Coding-Queue into umar&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;Gemfile&#10;&#9;db/migrate/20121019072637_remove_column_count_votes.rb&#10;&#9;db/schema.rb&#10;&#9;log/searchd.development.pid&#10;" />
     <ignored path="codingstack.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1367414763608" ignored="false" />
+    <file path="/Dummy.txt" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1367480233308" ignored="false" />
     <file path="/Gemfile" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366651325427" ignored="false" />
     <file path="/database.yml" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366651948945" ignored="false" />
     <file path="/a.dummy" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1367398887363" ignored="false" />
@@ -17,7 +31,7 @@
     <file path="/.gitignore" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366736569005" ignored="false" />
     <file path="/20130423170626_change_default_value_of_rating_to_user.rb" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366737244957" ignored="false" />
     <file path="/20130423171057_add_default_value_of_rating_to_user.rb" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366737133792" ignored="false" />
-    <file path="/index.html.erb" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366896127674" ignored="false" />
+    <file path="/index.html.erb" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1367486407926" ignored="false" />
     <file path="/unanswered_questions.html.erb" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366808006216" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/rubymine.jar!/resources/html5-schema/html5.rnc" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366812699893" ignored="false" />
     <file path="/answers_controller.rb" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1366894324054" ignored="false" />
@@ -29,6 +43,7 @@
     <file path="/_vote_rating.html.erb" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1367338261452" ignored="false" />
     <file path="/*.regexp" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1367337476888" ignored="false" />
     <file path="/askquestion_unanswered_questions.js.erb" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1367339559217" ignored="false" />
+    <file path="/askquestions_controller.rb" changelist="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" time="1367489041484" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,16 +70,7 @@
       <file leaf-file-name="_questions_index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_questions_index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="19" selection-start="173" selection-end="628" vertical-scroll-proportion="-0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_question.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/answers/_question.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="60" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
+            <state line="60" column="31" selection-start="0" selection-end="3372" vertical-scroll-proportion="-23.0">
               <folding />
             </state>
           </provider>
@@ -73,43 +79,16 @@
       <file leaf-file-name="askquestion_index.js.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/askquestion_index.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="36" selection-start="1162" selection-end="1162" vertical-scroll-proportion="-10.625">
+            <state line="24" column="38" selection-start="965" selection-end="976" vertical-scroll-proportion="-15.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <file leaf-file-name="askquestions_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/askquestions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="11" selection-start="347" selection-end="347" vertical-scroll-proportion="0.75418997">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_vote_rating.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/answers/_vote_rating.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="7" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-11.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="unanswered_questions.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/askquestions/unanswered_questions.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="73" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0">
+            <state line="120" column="23" selection-start="3539" selection-end="3539" vertical-scroll-proportion="0.28350514">
               <folding />
             </state>
           </provider>
@@ -118,7 +97,18 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/askquestions/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="74" selection-start="973" selection-end="980" vertical-scroll-proportion="0.0">
+            <state line="94" column="24" selection-start="5457" selection-end="5457" vertical-scroll-proportion="-1.4">
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#aside#0;n#section#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unanswered_questions.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/askquestions/unanswered_questions.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="22" selection-start="4986" selection-end="4986" vertical-scroll-proportion="-7.0">
               <folding />
             </state>
           </provider>
@@ -148,22 +138,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/log/searchd.log" />
-        <option value="$PROJECT_DIR$/app/controllers/answers_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/askquestions/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/answers/_answers_of_question.html.erb" />
         <option value="$PROJECT_DIR$/app/views/answers/_answer_vote_rating.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/answers.js.erb" />
         <option value="$PROJECT_DIR$/app/views/answers/_vote_rating.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/askquestion_unanswered_questions.js.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/askquestions/unanswered_questions.html.erb" />
         <option value="$PROJECT_DIR$/app/views/askquestions/vote_rating.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_questions_index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/_view_rating.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/askquestion_index.js.erb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/answers.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/askquestions/_vote_rating.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/askquestions/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/askquestions/unanswered_questions.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/askquestion_index.js.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/askquestions_controller.rb" />
       </list>
     </option>
   </component>
@@ -215,16 +205,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codingstack" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -255,6 +235,150 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="askquestions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -362,13 +486,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/config/application.rb" />
-    <property name="GoToClass.includeJavaFiles" value="true" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="GoToClass.includeJavaFiles" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -513,13 +637,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -553,6 +670,13 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
@@ -789,22 +913,22 @@
     <frame x="49" y="24" width="1317" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36842105" sideWeight="0.3690008" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48142415" sideWeight="0.42383584" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.68034726" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2392638" sideWeight="0.08955224" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2896606" sideWeight="0.6712963" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29518548" sideWeight="0.6712963" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2392638" sideWeight="0.18714121" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.030546624" sideWeight="0.49723756" order="10" side_tool="true" content_ui="tabs" x="71" y="301" width="1267" height="290" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287037" sideWeight="0.31965274" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.31965274" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.68034726" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36842105" sideWeight="0.3690008" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39871383" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -872,110 +996,122 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/answers/_answers_of_question.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="16" selection-start="2930" selection-end="2930" vertical-scroll-proportion="0.0">
+        <state line="29" column="20" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/users.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="64" selection-start="276" selection-end="276" vertical-scroll-proportion="0.10084034">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/tags.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sessions.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/oauths.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/html5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/greeting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/comments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/askquestions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/answers.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="42" selection-start="7543" selection-end="7543" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/askquestion_new.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="20" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.7302231" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/askquestions/unanswered_questions.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="73" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/answers/_question.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/vote.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="60" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/askquestions/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="74" selection-start="973" selection-end="980" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_questions_index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="173" selection-end="628" vertical-scroll-proportion="-0.625">
+        <state line="60" column="31" selection-start="0" selection-end="3372" vertical-scroll-proportion="-23.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/answers/_vote_rating.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/askquestions/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="7" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-11.25">
-          <folding />
+        <state line="94" column="24" selection-start="5457" selection-end="5457" vertical-scroll-proportion="-1.4">
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#aside#0;n#section#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/test.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/askquestions/unanswered_questions.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="11" selection-start="0" selection-end="11" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="154" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.13128492">
+        <state line="80" column="22" selection-start="4986" selection-end="4986" vertical-scroll-proportion="-7.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/askquestion_index.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="36" selection-start="1162" selection-end="1162" vertical-scroll-proportion="-10.625">
+        <state line="24" column="38" selection-start="965" selection-end="976" vertical-scroll-proportion="-15.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
+    <entry file="file://$PROJECT_DIR$/app/controllers/askquestions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="347" selection-end="347" vertical-scroll-proportion="0.75418997">
+        <state line="120" column="23" selection-start="3539" selection-end="3539" vertical-scroll-proportion="0.28350514">
           <folding />
         </state>
       </provider>
