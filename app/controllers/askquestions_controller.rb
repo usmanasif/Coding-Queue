@@ -51,8 +51,8 @@ class AskquestionsController < ApplicationController
         #return render :json=> params
         flash[:notice] = "Successfully created question."
         redirect_to askquestions_path, :notice => "new question has been created"
-
-         question_rating = Rating.where("name_event = 'question_posted'").first.points
+         rating = Rating.where("name_event = 'question_posted'")
+         question_rating = rating && rating.first.points
          
         current_user.rating += question_rating
         current_user.save
@@ -63,8 +63,7 @@ class AskquestionsController < ApplicationController
     else
       render :partial => 'sessions/new'
     end
-
-
+q
   end
 
   def index
