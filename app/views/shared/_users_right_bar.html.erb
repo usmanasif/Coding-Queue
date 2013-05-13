@@ -3,7 +3,7 @@
     <% User.order("rating DESC").limit(5).each do |u| %>
         <li>
           <span class="user-icon"><%= image_tag(avatar_url(u), :width=> 34, :alt => 'no image') %></span>
-            <span class="user-proxi"><a href="#"><%= truncate(u.email, :length => 12)%> </a>(<%= u.rating %>)</span>
+          <span class="user-proxi"><a href="users/<%= u.id %>"><%= truncate(u.email.gsub!(/@.*/, ""), :length => 12)%> </a>(<%= u.rating %>)</span>
         </li>
 
     <% end %>
@@ -16,7 +16,7 @@
         <li>
           <!--<span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>-->
           <span class="user-icon"><%= image_tag(avatar_url(u), :width=> 34, :alt => 'no image') %></span>
-          <span class="user-proxi"><a href="#"><%= truncate(u.email, :length => 12)%> </a>  joined <%= time_ago_in_words(u.created_at) %></span>
+          <span class="user-proxi"><a href="users/<%= u.id %>"><%= truncate(u.email.sub!(/@.*/, ""), :length => 12)%> </a>  joined <%= time_ago_in_words(u.created_at) %></span>
 
         </li>
     <% end %>

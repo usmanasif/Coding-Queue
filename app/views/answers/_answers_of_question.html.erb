@@ -67,12 +67,7 @@
 
 
                     <% @comments.each do |comment| %>
-                        <%# logger.debug "COMENT ON ANSWER" * 12 %>
-                        <%# logger.debug comment.inspect  %>
-                        <%# logger.debug comment.commentable_id %>
-                        <%# logger.debug ans.id %>
-                        <%# logger.debug  comment.commentable_type   %>
-                        <%# logger.debug  "comENDcom " * 3   %>
+
 
                         <% if comment.commentable_id == x.id && comment.commentable_type == "Answer"%>
 
@@ -84,8 +79,9 @@
                               <% end %>
 
                               <span class="by-post-user">
-                                            <a href="#" class="us-name"> <%= comment.user.email %></a>
-                                            <a href="#" class="by-date-user">Jan3 '10 at 23:56 <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
+
+                                            <a href="/users/<%= comment.user.id %>" class="us-name"> <%= comment.user.email %></a>
+                                            <a href="#" class="by-date-user"><%= comment.created_at.strftime('%b%e, %g at %H:%M') %> - <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
                                         </span>
                             </div>
 
