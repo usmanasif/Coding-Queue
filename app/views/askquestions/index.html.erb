@@ -36,7 +36,7 @@
                         <li class="green-bg"><span>Answer: <%= question.answers.count %></span></li>
                         <li><span>View: <%= question.view_counter %></span></li>
                       </ul>
-                      <strong class="by-date"> <span class="u-name"><a href="#"><%= question.user.email %></a> <%= question.user.rating %></span>
+                      <strong class="by-date"> <span class="u-name"><a href="/users/<%= question.user.id %>"><%= question.user.email.gsub(/@.*/, "") %></a> <%= question.user.rating %></span>
                         <span>Asked<span class="ago-days"> <%= time_ago_in_words(question.created_at) %> ago</span></span>
                       </strong>
                     </div>
