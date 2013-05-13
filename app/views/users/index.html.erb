@@ -1,0 +1,12 @@
+<div class="q-post" style="background-color: #ffffff">
+  <ul class="user-bio">
+    <% @users.order("created_at DESC").each do |u| %>
+        <li>
+          <!--<span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>-->
+          <span class="user-icon"><%= image_tag(avatar_url(u), :width=> 34, :alt => 'no image') %></span>
+          <span class="user-proxi"><a href="users/<%= u.id %>"><%= truncate(u.email).gsub!(/@.*/, "") %> </a>  joined <%= time_ago_in_words(u.created_at) %></span>
+
+        </li>
+    <% end %>
+  </ul>
+</div>

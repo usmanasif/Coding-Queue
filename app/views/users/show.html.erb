@@ -1,0 +1,18 @@
+<div class="user-holder" style="background-color: #ffffff">
+  <p>
+     <!--<span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>-->
+     <span class="user-icon"><%= image_tag(avatar_url(@user), :alt => 'no image') %></span>
+     <span class="user-proxi"><a href="#"><%= truncate(@user.email).gsub!(/@.*/, "") %> </a>  joined <%= time_ago_in_words(@user.created_at) %></span>
+  </p>
+  <br>
+  <br>
+  <p>
+    Total Questions Posted: <%= @user.askquestions.count %>
+  </p>
+  <p>
+    Total Answers Posted : <%= @user.answers.count %>
+  </p>
+  <p>
+    Total Points earned : <%= @user.rating %>
+  </p>
+</div>
