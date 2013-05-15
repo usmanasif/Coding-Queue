@@ -5,7 +5,7 @@ $(document).ready(function () {
         var current_user = $('#login_user_id').val();
         var Q_number    =   $(this).attr("data");
         var question_user_id    =   $('#'+ Q_number +'_Q_user_id').val();
-        //alert(question_user_id + " == " + current_user);
+        //alert( question_user_id + " != " + current_user);
         
         if (!current_user){
             //alert(current_user);
@@ -21,7 +21,7 @@ $(document).ready(function () {
                 type: 'POST',
                 url:'/askquestions/' + question_id + '/vote_up',
                 success:function (data) {
-                    alert("up");
+                    //alert("voted up from question_index");
                     $('.votes_count_'+question_id).html("Votes: "+ data);
                     $('.ques_'+question_id).html('<a href=/askquestions/'+question_id+'/vote_up class="unlike-down" data='+question_id+' >VOTE DOWN</a>');
 
@@ -61,7 +61,7 @@ $(document).ready(function () {
                 type: 'POST',
                 url:'/askquestions/' + question_id + '/vote_down',
                 success:function (data) {
-                    //alert("success");
+                    //alert("voted down from question_index_before login");
                     $('.votes_count_'+question_id).html("Votes: "+ data);
                     //alert("down ");
                     $('.ques_'+question_id).html('<a href=/askquestions/'+question_id+'/vote_up class="like-up" data='+question_id+'  >VOTE UP</a>');
@@ -94,9 +94,9 @@ $(document).ready(function () {
             url: '/askquestions/'+Q_number+'/vote_up',
             dataType: "json",
             success:function (data) {
-                //alert("Like");
+                //alert("voted up from question_index before login");
                 $('.vote_question_'+question_id).html("Votes:"+ data);
-                $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="unlike-down" data='+question_id+' >VOTE DOWN</a>');
+                $('.ques_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="unlike-down" data='+question_id+' >VOTE DOWN</a>');
                 parent.window.location.reload();
             }
 
@@ -122,9 +122,9 @@ $(document).ready(function () {
             url: '/askquestions/'+Q_number+'/vote_down',
             dataType: "json",
             success:function (data) {
-                ("DisLike");
+                //alert("voted down from question_index before login");
                 $('.vote_question_'+question_id).html("Votes:"+ data);
-                $('.abc_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="like-up" id="vote_up'+Q_number+'" data='+question_id+'  >VOTE UP</a>');
+                $('.ques_'+question_id).append('<a href=/askquestions/'+question_id+'/vote_up class="like-up" id="vote_up'+Q_number+'" data='+question_id+'  >VOTE UP</a>');
                 parent.window.location.reload();
             }
 

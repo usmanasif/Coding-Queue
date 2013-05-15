@@ -51,8 +51,8 @@ class AskquestionsController < ApplicationController
         #return render :json=> params
         flash[:notice] = "Successfully created question."
         redirect_to askquestions_path, :notice => "new question has been created"
-
-         question_rating = Rating.where("name_event = 'question_posted'").first.points
+         rating = Rating.where("name_event = 'question_posted'")
+         question_rating = rating && rating.first.points
          
         current_user.rating += question_rating
         current_user.save
@@ -63,8 +63,7 @@ class AskquestionsController < ApplicationController
     else
       render :partial => 'sessions/new'
     end
-
-
+q
   end
 
   def index
@@ -85,6 +84,9 @@ class AskquestionsController < ApplicationController
       @vote_up =  Askquestion.find(params[:id])
 
       @vote = Vote.where("user_id = ? AND votable_id = ? AND votable_type = ?", current_user,  @vote_up, 'Askquestion').first
+      puts "*"*80
+      puts @vote
+      puts "*"*80
       @vote = @vote_up.votes.build if @vote.blank?
 
       @vote.user = current_user
@@ -92,7 +94,9 @@ class AskquestionsController < ApplicationController
       if @vote.save
         #user rating
         vote_rating = Rating.where("name_event = 'vote_posted'").first.points
-         
+        puts "-"*80
+        puts vote_rating
+        puts "-"*80
         current_user.rating += vote_rating
         current_user.save
         return render :json => @vote_up.votes.sum(:status)

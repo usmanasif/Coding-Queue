@@ -33,11 +33,6 @@
 
         <% @comments.each do |comment| %>
             <tr>
-              <% logger.debug "Q-Comment_Q" * 8 %>
-              <% logger.debug comment.inspect %>
-              <% logger.debug  %>
-              <% logger.debug %>
-              <% logger.debug " End Q End "*15 %>
 
               <% if comment.commentable_id == ans.id && comment.commentable_type == "Answer"%>
                 <div class="inner-c">
@@ -49,8 +44,9 @@
                       <span><%=  comment.description %> </span>
                   <% end %>
                   <span class="by-post-user">
-                            <a href="#" class="us-name"> <%= comment.user.email %></a>
-                            <a href="#" class="by-date-user">Jan3 '10 at 23:56 <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
+                    TEST TEST TEST
+                            <a href="/users/<%= comment.user.id" class="us-name"><%= comment.user.email.gsub(/@.*/, "") %></a>
+                            <a href="#" class="by-date-user"><%= comment.created_at.strftime('%b%e, %g at %H:%M') %> - <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
                              </span>
                 </div>
 

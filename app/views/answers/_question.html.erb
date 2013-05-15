@@ -6,7 +6,7 @@
         <li class="green-bg"><span >answers:  <%= @question && @question.answers && @question.answers.count %> </span></li>
         <li><span id="views_count">views: <%= @question && @question.view_counter %></span></li>
       </ul>
-      <strong class="by-date"> <span class="u-name"><a href="#"><%= @question.user.email %></a> <%= @question.user.rating %></span>
+      <strong class="by-date"> <span class="u-name"><a href="/users/<%= @question.user.id %>"><%= @question.user.email.gsub(/@.*/, "") %></a> <%= @question.user.rating %></span>
         <span>Asked<span class="ago-days"> <%= time_ago_in_words(@question.created_at) %> ago</span></span>
       </strong>
     </div>
@@ -37,12 +37,6 @@
 
             <% @comments.each do |comment| %>
 
-                    <% logger.debug "Q-Comment_Q" * 8 %>
-                    <% logger.debug comment.inspect %>
-                    <% logger.debug  %>
-                    <% logger.debug %>
-                    <% logger.debug " End Q End "*15 %>
-
               <% if comment.commentable_id == @question.id && comment.commentable_type == "Askquestion"%>
                 <div class="inner-c">
 
@@ -53,8 +47,8 @@
                     <span><%= comment.description %> </span>
                   <% end %>
                   <span class="by-post-user">
-                        <a href="#" class="us-name"> <%= comment.user.email %></a>
-                        <a href="#" class="by-date-user">Jan3 '10 at 23:56 <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
+                        <a href="/users/<%= @question.user.id %>" class="us-name"> <%= comment.user.email.gsub(/@.*/, "") %></a>
+                        <a href="#" class="by-date-user"><%= comment.created_at.strftime('%b%e, %g at %H:%M') %> - <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
                   </span>
                 </div>
 

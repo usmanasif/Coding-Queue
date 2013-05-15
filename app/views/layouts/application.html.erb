@@ -21,6 +21,8 @@
 
               });
 
+          $("#" + $('body').attr('class') + "_link").addClass("active");
+
 
 
       });
@@ -61,12 +63,12 @@
     </div>
     <nav id="nav">
       <ul>
-        <li><a href="<%= askquestions_path %>" class="active">Questions</a></li>
-        <li><a href="#">Tags</a></li>
-        <li><a href="#">Users</a></li>
-        <li><a href="#">Badges</a></li>
-        <li><a href="<%= askquestions_unanswered_questions_path %>">Unanswered</a></li>
-        <li><a href="#">Pages</a></li>
+        <li><a id= "askquestions_link" href="<%= askquestions_path %>" data-controller = "askquestions">Questions</a></li>
+        <li><a id="tags_link" href="#" data-controller = "tags">Tags</a></li>
+        <li><a id= "users_link" href="<%= users_path %>" data-controller = "users">Users</a></li>
+        <li><a id= "badges_link" href="#" data-controller = "badges">Badges</a></li>
+        <li><a id= "unanswered_link" href="<%= askquestions_unanswered_questions_path %>" data-controller = "unanswered">Unanswered</a></li>
+        <li><a id= "pages_link" href="#" data-controller = "pages">Pages</a></li>
       </ul>
       <ul class="ask-q">
         <li><a href="<%= new_askquestion_path %>">Ask Questions</a></li>

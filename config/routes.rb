@@ -60,7 +60,8 @@ Codingstack::Application.routes.draw do
 
 
   get "sessions/new"
-  get "users/new"
+  #get "users/new"
+
 
   match "oauth/callback" => "oauths#callback"
   match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider

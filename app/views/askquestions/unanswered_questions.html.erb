@@ -1,4 +1,10 @@
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#askquestions_link').removeClass("active");
+        $('#unanswered_link').addClass("active");
 
+    });
+</script>
 
 <body class="bg-2" onload="prettyPrint()">
 <div class="active"></div>
@@ -40,39 +46,22 @@
                         <li class="green-bg"><span>Answer: <%= question.answers.count %></span></li>
                         <li><span>View: <%= question.view_counter %></span></li>
                       </ul>
-                      <strong class="by-date"> <span class="u-name"><a href="#"><%= question.user.email %></a> <%= question.user.rating %></span>
+                      <strong class="by-date"> <span class="u-name"><a href="/users/<%= question.user.id %>"><%= question.user.email.gsub(/@.*/, "") %></a> <%= question.user.rating %></span>
                         <span>Asked<span class="ago-days"> <%= time_ago_in_words(question.created_at) %> ago</span></span>
                       </strong>
                     </div>
                     <div class="middle-holder">
-                      <div class="user-question">
-                        <span class="user-img"><%= image_tag avatar_url(question.user) %><!--<img src="/assets/img-1.jpg" width="42" height="42" alt="image"/>--></span>
-
-                        <p class="question-txt ">
-                          <a href=<%=new_askquestion_answer_path(question.id) %>><%= raw(question.title) %></a>
-                        </p>
-                      </div>
-                      <div class="tags-holder"><span class="tag-name">tags:</span>
-                        <ul class="question-tags">
-
-                          <% question.tags.each do |a| %>
-                              <li><a href="#"><%= a.name %></a></li>
-                          <% end %>
-                          <!--<li><a href="#">tag 2</a></li>-->
+                      <div class="rating-icon-holder">
+                        <ul class="a-q-flag">
+                          <li><a href="javascript:void(0);" data-id="<%= question.id %>" data-type="Askquestion" class="flag">flag</a></li>
+                          <li><%#= link_to 'VIEWS',   views_askquestion_path(question.id), :class => "eye"  %>
+                            <a href="javascript:void(0);" data-question-id="<%= question.id %>" class="eye">eye</a>
+                            <input type="hidden" name="question_id" id="question_id" value='<%= question.id %>' /></li>
                         </ul>
 
+                        <a href="javascript:void(0);" class="rating favourite"  data-question-id="<%= question.id %>"><img src="/assets/star-icon.png" width="20" height="20" alt="image"></a>
 
-                        <div class="rating-icon-holder">
-                          <ul class="a-q-flag">
-                            <li><a href="javascript:void(0);" data-id="<%= question.id %>" data-type="Askquestion" class="flag">flag</a></li>
-                            <li><%#= link_to 'VIEWS',   views_askquestion_path(question.id), :class => "eye"  %>
-                              <a href="javascript:void(0);" data-question-id="<%= question.id %>" class="eye">eye</a>
-                              <input type="hidden" name="question_id" id="question_id" value='<%= question.id %>' /></li>
-                          </ul>
-
-                          <a href="javascript:void(0);" class="rating favourite"  data-question-id="<%= question.id %>"><img src="/assets/star-icon.png" width="20" height="20" alt="image"></a>
-
-                          <div class="about-question">
+                        <div class="about-question">
 
                                <span class="ques_<%= question.id %>">
                                   <input type="hidden" name="<%= question.id %>_Q_user_id" id="<%= question.id %>_Q_user_id" value="<%= question.user_id %>" >
@@ -95,8 +84,26 @@
                                      <%= link_to "VOTE DOWN", 'javascript:void(0);', :class => "unlike-down", :data => question.id %>
                                  <% end %>
                                </span>
-                          </div>
                         </div>
+                      </div>
+                      <div class="user-question">
+                        <span class="user-img"><%= image_tag(avatar_url(question.user)) %><!--<img src="/assets/img-1.jpg" width="42" height="42" alt="image"/>--></span>
+
+                        <p class="question-txt ">
+                          <a href=<%=new_askquestion_answer_path(question.id) %>><%= raw(question.title) %></a>
+                        </p>
+                      </div>
+                      <div class="tags-holder"><span class="tag-name">tags:</span>
+                        <ul class="question-tags">
+
+                          <% question.tags.each do |a| %>
+                              <li><a href="#"><%= a.name %></a></li>
+                          <% end %>
+                          <!--<li><a href="#">tag 2</a></li>-->
+                        </ul>
+
+
+
 
 
                       </div>
