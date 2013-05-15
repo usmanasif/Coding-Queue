@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" name="Default" comment="" />
+    <list default="true" id="edce4abb-c1ee-43a6-a83c-7dfc7670d7bc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <list id="28405740-34da-4399-b750-3448f37befc2" name="Failed commit: Default" comment="Merge branch 'master' of github.com:usmanasif/Coding-Queue into umar&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;Gemfile&#10;&#9;db/migrate/20121019072637_remove_column_count_votes.rb&#10;&#9;db/schema.rb&#10;&#9;log/searchd.development.pid&#10;" />
     <list id="9d10b5d9-cb4d-4930-871e-8a4ea98a2b22" name="Failed commit: Default (2)" comment="Merge branch 'master' of github.com:usmanasif/Coding-Queue into umar&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;Gemfile&#10;&#9;db/migrate/20121019072637_remove_column_count_votes.rb&#10;&#9;db/schema.rb&#10;&#9;log/searchd.development.pid&#10;" />
     <ignored path="codingstack.iws" />
@@ -110,7 +112,7 @@
       <file leaf-file-name="_users_right_bar.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_users_right_bar.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="55" selection-start="799" selection-end="863" vertical-scroll-proportion="0.28089887">
+            <state line="21" column="36" selection-start="799" selection-end="863" vertical-scroll-proportion="0.5898876">
               <folding />
             </state>
           </provider>
@@ -409,6 +411,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codingstack_nts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="askquestions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -890,14 +914,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-4" width="1319" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36842105" sideWeight="0.3690008" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48142415" sideWeight="0.42383584" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991317" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2392638" sideWeight="0.08955224" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34175217" sideWeight="0.5833333" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34175217" sideWeight="0.5833333" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2392638" sideWeight="0.18714121" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.030546624" sideWeight="0.49723756" order="10" side_tool="true" content_ui="tabs" x="71" y="301" width="1267" height="290" />
@@ -1072,7 +1096,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_users_right_bar.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="55" selection-start="799" selection-end="863" vertical-scroll-proportion="0.28089887">
+        <state line="21" column="36" selection-start="799" selection-end="863" vertical-scroll-proportion="0.5898876">
           <folding />
         </state>
       </provider>
