@@ -5,11 +5,11 @@
 # gem 'sqlite3'
 development:
   adapter: mysql2
-  database: db/development.mysql2
+  database: dev_cqna
   pool: 5
   timeout: 5000
   username: root
-  password:
+  password: devsinc81passwd
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
