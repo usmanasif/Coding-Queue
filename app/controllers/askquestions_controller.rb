@@ -63,7 +63,6 @@ class AskquestionsController < ApplicationController
     else
       render :partial => 'sessions/new'
     end
-q
   end
 
   def index
