@@ -10,22 +10,6 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require html5.js
-//= require jquery-1.7.2.min.js
 //= require jquery
 //= require jquery_ujs
-//= require jquery.purr
-//= require best_in_place
-//= require jquery.tokeninput
-//= require jquery.fancybox.js
-//= require jquery.mousewheel-3.0.6.pack.js
-//= require Markdown.Converter.js
-//= require Markdown.Editor.js
-//= require Markdown.Sanitizer.js
-//= require oauths.js.coffee
-//= require prettify.js
-//= require sessions.js.coffee
-//= require tags.js.coffee
-//= require users.js.coffee
-//= require answers
 //= require_tree .

@@ -6,14 +6,25 @@ class AskquestionsController < ApplicationController
 
   def new
 
-    ['{ %%%% -- '*33, Rails.configuration.session_options[:key], Rails.configuration.secret_token, request.host, session, request.cookie_jar['_codingstack_session'], '% -- '*33].each{|x| logger.debug x.inspect}
-    request.cookie_jar.each{|x, y| logger.debug x + ' ... ' + y.inspect}
+  # ['{ %%%% -- '*33, Rails.configuration.session_options[:key], Rails.configuration.secret_token, request.host, session, request.cookie_jar['_codingstack_session'], '% -- '*33].each{|x| logger.debug x.inspect}
+  # request.cookie_jar.each{|x, y| logger.debug x + ' ... ' + y.inspect}
 
     @askquestion = Askquestion.new
 
   end
 
+  def unanswer
+    @askquestions = Askquestion.page(params[:page]).per_page(6).order('created_at DESC')
+  end
+
+  def tagged
+    @askquestions = Askquestion.page(params[:page]).per_page(6).order('created_at DESC')
+    @tag = Tag.find(params[:id])
+
+  end
+
   def create
+    
     #['% -- '*33, session, '% -- '*33].each{|x| logger.debug x.inspect}
     #
     #if !logged_in?
@@ -31,27 +42,58 @@ class AskquestionsController < ApplicationController
     @askquestion = current_user.askquestions.build(params[:askquestion])
 
     # will be use in future
-    #    @tag=Tag.all
-    #    @tag.each do |question|
-    #      if @askquestion.tag==question.askquestion_tag
-    #        question.counter=question.counter+1
-    #
-    #        break
-    #
-    #      else
-    #        @tag= Tag.new
-    #        @tag.counter=1
-    #        @tag.askquestion_tag= @askquestion.tag
-    ##        create(@tag)
-    #      end
-    #    end
+    # @temp = 0
+    
 
+        # if @temp==0
+        #   @tag= Tag.new
+        #   @tag.counter=1
+        #   @tag.askquestion_tags= @askquestion.tag
+        # en
+    #     @askquestion.tag.each do |q|
+           # # @tag.askquestion_tags= @askquestion.tag
+    #    end
+#        break
+
+      
+# ##        create(@tag)
+#       end
+#     end
+       
+    # @tag=Tag.all
+    # @tag.each do |tag|
+    #   tag.counter += 1
+    #   tag.save
+    # end
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      # @tag=Tag.all
+      # @tag.each do |tag|
+      #   if tag.name == @askquestion.tag.split
+      #     tag.counter=tag.counter+1
+      #     tag.save
+      #   end
+      # end
 
 
     if @askquestion.save
       #return render :json=> params
       flash[:notice] = "Successfully created question."
-      redirect_to askquestions_path, :notice => "new question has been created"
+      redirect_to askquestions_path, :notice => "New question has been created"
     else
       #return render :json=> params
       render :new
@@ -60,16 +102,15 @@ class AskquestionsController < ApplicationController
   end
 
   def index
-
-
-
+    @tags = Tag.all
+    @recent_users = User.order('created_at DESC').limit(5).all
     #return render :json => params
     if(params[:search]).present?
-    @askquestions = Askquestion.search(params[:search], order: :title,:page => params[:page], :per_page => 3, field_weights: {title: 20, description: 10, tag: 5})
+    @askquestions = Askquestion.search(params[:search], order: :title,:page => params[:page], :per_page => 6, field_weights: {title: 20, description: 10, tag: 5})
 
     else
 
-      @askquestions = Askquestion.page(params[:page]).per_page(6)
+      @askquestions = Askquestion.page(params[:page]).per_page(6).order('created_at DESC')
 
       #@askquestions = Askquestion.paginate(:page => params[:page], :per_page => 5)
 
@@ -93,63 +134,47 @@ class AskquestionsController < ApplicationController
 
 
 
-   def vote_up
+
+  def vote_down
 
      #logger.info "=" * 20
      #logger.info params.inspect
      #logger.info "end" * 20
 
 
-      @vote_up =  Askquestion.find(params[:id])
-      @vote = @vote_up.votes.build
-      @vote.user = current_user
-      @vote.status = 1
-      if @vote.save
-        return render :json => @vote_up.votes.sum(:status)
-      else
-        #@subjects = Subject.find(:all)
-        render :action => 'new'
-
-      end
-
-  end
-
-
-<<<<<<< HEAD
-    def vote_down
-
       @vote_down =  Askquestion.find(params[:id])
       @vote = @vote_down.votes.build
       @vote.user = current_user
       @vote.status = -1
-
       if @vote.save
-
-        return render :json => @vote_down.votes.sum(:status)
-
+        return redirect_to :back, :notice => "Voted Down!"
       else
         #@subjects = Subject.find(:all)
         render :action => 'new'
+
       end
 
-    end
+  end
+def vote_up
 
-  def views
+     #logger.info "=" * 20
+     #logger.info params.inspect
+     #logger.info "end" * 20
 
-    @views =  Askquestion.find(params[:id])
-    @views.view_counter = @views.view_counter + 1
-    if @views.update_attributes(params[:views])
 
-      return render :json=> @views.view_counter
-    else
+      @vote_down =  Askquestion.find(params[:id])
+      @vote = @vote_down.votes.build
+      @vote.user = current_user
+      @vote.status = 1
+      if @vote.save
+        return redirect_to :back, :notice => "Voted Up!"
+      else
+        #@subjects = Subject.find(:all)
+        render :action => 'new'
 
-      render :action => 'new'
-    end
+      end
 
   end
-
-end
-=======
 #def vote_down
 #  @vote_down =  Askquestion.find(params[:askquestion_id])
 #  @vote_down.votes = @vote_down.votes - 1
@@ -175,4 +200,7 @@ end
 #  end
 #
 #end
->>>>>>> b6906e2955dd27412e35646981c57e3986a272d1
+
+
+
+end

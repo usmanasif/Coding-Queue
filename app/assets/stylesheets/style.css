@@ -14,6 +14,10 @@
     font-style: normal;
 }
 
+.btn-delete{
+    margin-left:5px;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
     display: block;
 }
@@ -23,7 +27,10 @@ audio, canvas, video {
     *display: inline;
     *zoom: 1;
 }
-
+.inputField{
+    padding-left: 25px;
+    width:240px;
+}
 audio:not([controls]) {
     display: none;
 }
@@ -5154,7 +5161,7 @@ to { background-position: 0 0; }
     color: #fff;
     height: 31px;
     padding: 5px 0 0 12px;
-    width: 288px;
+    width: 300px;
     font: 25px BebasNeueRegular;
     margin: 0 0 12px;
 }
@@ -5168,7 +5175,7 @@ to { background-position: 0 0; }
 
 .user-bio li {
     float: left;
-    width: 300px;
+    width: 312px;
     padding: 0 0 3px;
     font-size: 14px;
 }

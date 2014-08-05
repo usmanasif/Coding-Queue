@@ -26,8 +26,9 @@ class CommentsController < ApplicationController
 
 
       if @comment.save
-        redirect_to :back  , :notice => 'Comment was successfully created.'
-
+        redirect_to :back  , :notice => 'Commented successfully!'
+      else
+        redirect_to :back  , :flash => { :error => "Provide description" }
       #else
       #  format.html  { render :action => "new" }
       #  format.json  { render :json => @comment.errors,
@@ -62,10 +63,10 @@ class CommentsController < ApplicationController
   def update
     #return render  :json => params
     @comment = Comment.find(params[:id])
-
+    @ques =  Askquestion.find(params[:askquestion_id])
     @comment.update_attributes(params[:comment])
-
-    respond_with @comment
+    redirect_to new_askquestion_answer_path(@ques)
+    #respond_with @comment
 
     end
  def update_test
@@ -96,11 +97,11 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-
-    respond_to do |format|
-      format.html { redirect_to comments_url }
-      format.json { head :no_content }
-    end
+    redirect_to :back, :notice => 'Comment Deleted.'
+    # respond_to do |format|
+    #   format.html { redirect_to comments_url }
+    #   format.json { head :no_content }
+    # end
   end
 
 end

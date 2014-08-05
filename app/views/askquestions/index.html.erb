@@ -78,7 +78,7 @@
   <section id="main">
     <article id="content">
       <div class="holder-2">
-        <p class="recent-question"><span>recent questions</span>72.</p>
+        <p class="recent-question"><span>recent questions</span><%=@askquestions.count%>.</p>
         <ul class="active-question">
           <li><a href="#" class="active">active</a></li>
           <li><a href="#">hot</a></li>
@@ -112,7 +112,7 @@
                     <li class="green-bg"><span>Answer: <%= question.answers.count %></span></li>
                     <li><span>View: <%= question.view_counter %></span></li>
                   </ul>
-                  <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+                  <strong class="by-date"> <span class="u-name"><a href="#"><%= question.user.username %></a> 245</span>
                     <span>Asked<span class="ago-days"> <%= time_ago_in_words(question.created_at) %> ago</span></span>
                   </strong>
                 </div>
@@ -122,13 +122,14 @@
 
                     <p class="question-txt ">
                       <a href=<%=new_askquestion_answer_path(question.id) %>><%= raw(question.title) %></a>
+
                     </p>
                   </div>
                   <div class="tags-holder"><span class="tag-name">tags:</span>
                     <ul class="question-tags">
 
                         <% question.tags.each do |a| %>
-                          <li><a href="#"><%= a.name %></a></li>
+                          <li><a href="<%=questions_tagged_path(a)%>"><%= a.name %></a></li>
                           <% end %>
                       <!--<li><a href="#">tag 2</a></li>-->
                     </ul>
@@ -155,7 +156,7 @@
 
                           <% elsif current_user.votes.where(votable_id: question.id , Votable_type: "Askquestion").last.status == -1   %>
 
-                              <%= link_to 'VOTE UP',   vote_up_askquestion_path(question.id), :class => "like-up", :data => question.id, :id => "like-ups-#{question.id}"  %>
+                              <%= link_to 'VOTE UP',   vote_up_askquestion_path(question.id), :class => "like-up", :data => question.id, :id => "like-ups-#{question.id}", :remote =>true  %>
                               <input type="hidden" name="question_id" class ="question_id" value='<%= question.id %>' />
                          <% end %>
                     <% else %>
@@ -187,80 +188,37 @@
       </div>
       <div class="own-site"><span>create your own question answer site in 10 seconds for free</span></div>
       <div class="search-site">
-        <form method="post" action="#">
+        <%= form_tag askquestions_path, method: :get do %>
           <span class="st-site">search the site</span>
-
           <div class="search-holder">
-            <input type="submit" name="#" value="" class="search-btn">
-
-            <div class="txt-field2">
-              <input type="text" name="#" value="">
-            </div>
+          
+          <div class="field">
+            <%= text_field_tag :search, params[:search], data: {autocomplete_source: Askquestion.order(:title).map(&:title)}, :class => 'inputField' %>
+      
+            <input type="submit" name="#" value="" class="search-btn" style="margin-left:-10px;">
           </div>
-        </form>
+          </div>
+        <% end %>
       </div>
       <div class="tags-title">
         <ul class="tags-nav">
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">javascript</a></li>
-          <li><a href="#">css</a></li>
-          <li><a href="#">php</a></li>
-          <li><a href="#">google</a></li>
+          <% @tags.each do |t|%>
+            <li><a href="<%=questions_tagged_path(t)%>"><%=t.name%></a></li>
+          <%end%>
         </ul>
       </div>
       <div class="user-holder"><strong class="user-heading">Top 5 users</strong>
         <ul class="user-bio">
           <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
             <span class="user-proxi"><a href="#">pyroxicated</a>(265)</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>(265)</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>(265)</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>(265)</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>(265)</span></li>
         </ul>
       </div>
       <div class="user-holder"><strong class="user-heading">Recent users</strong>
         <ul class="user-bio">
+        <% @recent_users.each do |recent_user|%>
           <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>joined 2 months ago</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>joined 2 months ago</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>joined 2 months ago</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>joined 2 months ago</span></li>
-          <li><span class="user-icon"><img src="/assets/img-1.jpg" width="34" height="33" alt="image"/></span>
-            <span class="user-proxi"><a href="#">pyroxicated</a>joined 2 months ago</span></li>
+            <span class="user-proxi"><a href="#"><%= recent_user.username%></a>joined <%= time_ago_in_words(recent_user.created_at)%> ago</span></li>
+        <%end%>
         </ul>
       </div>
       <div class="stay-us"><span class="stay-heading">Stay in touch</span>

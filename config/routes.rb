@@ -11,7 +11,8 @@ Codingstack::Application.routes.draw do
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
-
+  get "unanswered" => "askquestions#unanswer", :as => "unanswered"
+  get "questions/tagged/:id" => "askquestions#tagged", :as => "questions/tagged"
 
 
   #resources :askquestions do
@@ -19,16 +20,18 @@ Codingstack::Application.routes.draw do
   #end
 
   resources :users
-
+  resources :sessions
   #get 'answers/vote_down'
 
   #get 'answers/vote_up'
   resources :askquestions do
-
     member do
+      get 'vote_up'
       post 'vote_up'
+      get 'vote_down'
       post 'vote_down'
       post 'views'
+      get 'views'
     end
     resources :comments do
       member do
@@ -39,6 +42,8 @@ Codingstack::Application.routes.draw do
       member do
         post 'vote_up'
         post 'vote_down'
+        get 'vote_up'
+        get 'vote_down'
 
       end
       member do
@@ -49,17 +54,12 @@ Codingstack::Application.routes.draw do
 
 end
   resources :tags
-  resources :sessions
+  resources :session
 
 
   root :to => "askquestions#index"
 
 
-
-
-  get "sessions/new"
-
-  get "users/new"
 
 match "oauth/callback" => "oauths#callback"
 match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider

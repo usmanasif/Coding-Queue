@@ -1,62 +1,60 @@
-
-      <section id="main">
-        <div id="inline1" style="width:500;display: none;" class="light-box">
-          <div class="b-top">&nbsp;</div>
-          <div class="b-center">
-              <div class="box-signup">
-
-                <%= form_for @user do |f| %>
-                  <% if @user.errors.any? %>
-                    <div class="error_messages">
-                      <h2>Form is invalid</h2>
-                      <ul>
-                        <% for message in @user.errors.full_messages %>
-                          <li><%= message %></li>
-                        <% end %>
-                      </ul>
-                    </div>
-                  <% end %>
-
-
-
-
-                  <div class="user-holder">
-                    <label class="user-text">Email</label>
-                    <%= f.text_field :email %>
-  <%#*<input type="text" name="#" value="" class="txt-field5">%>
-                  </div>
-                  <div class="user-holder">
-                    <label class="user-text">password</label>
-                    <%= f.password_field :password %>
-  <%#*<input type="password" name="#" value="" class="txt-field5">%>
-                  </div>
-                  <div class="user-holder">
-                    <label class="user-text">confirm password</label>
-  <%#*<input type="password" name="#" value="" class="txt-field5">%>
-                    <%= f.password_field :password_confirmation %>
-                  </div>
-                  <div class="submit-holder">
-  <%#*<input type="submit" name="#" value="" class="sign-btn">%>
-                    <div class="actions"><%= f.submit %></div>
-                  </div>
-                </div>
-                <ul class="feature-holder">
-                  <li> <a href="<%= auth_at_provider_path(:provider => :google) %>" class="google-icon"></a> </li>
-
-                  <li> <a href=" <%= auth_at_provider_path(:provider => :facebook) %>" class="facebook-icon"></a> </li>
-
-
-                  <li> <a href="<%= auth_at_provider_path(:provider => :twitter) %>" class="twitter-icon"></a> </li>
-
-
-
-                  <li> <a href=" <%= auth_at_provider_path(:provider => :github) %>" class="github-icon"></a> </li>
-                </ul>
-              <%#*</form>%>
+  <div style="width:600px !important;display:none;" class="light-box"></div>
+    <div class="b-top">&nbsp;</div>
+    <div class="b-center">
+      <div class="box-signup">
+        <%= form_for @user do |f| %>
+          <% if @user.errors.any? %>
+            <div class="error_messages" style="color:red !important;">
+              <h2>Form is invalid</h2>
+              <ul>
+                <% for message in @user.errors.full_messages %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
             </div>
-            <div class="b-btm">&nbsp;</div>
           <% end %>
-        </div>
+          <div class="user-holder">
+            <label class="user-text">Username</label>
+            <%= f.text_field :username %>
+<%#*<input type="text" name="#" value="" class="txt-field5">%>
+          </div>
+          <div class="user-holder">
+            <label class="user-text">Email</label>
+            <%= f.text_field :email %>
+<%#*<input type="text" name="#" value="" class="txt-field5">%>
+          </div>
+
+          <div class="user-holder">
+            <label class="user-text">password</label>
+            <%= f.password_field :password %>
+<%#*<input type="password" name="#" value="" class="txt-field5">%>
+          </div>
+          <div class="user-holder">
+            <label class="user-text">confirm password</label>
+<%#*<input type="password" name="#" value="" class="txt-field5">%>
+            <%= f.password_field :password_confirmation %>
+          </div>
+          <div class="submit-holder">
+<%#*<input type="submit" name="#" value="" class="sign-btn">%>
+            <div class="actions"><%= f.submit "SignUp", :class => 'sign-btn' %></div>
+          </div>              
+          <ul class="feature-holder">
+            <li> <a href="<%= auth_at_provider_path(:provider => :google) %>" class="google-icon"></a></li>
+
+            <li> <a href=" <%= auth_at_provider_path(:provider => :facebook) %>" class="facebook-icon"></a></li>
+
+
+            <li> <a href="<%= auth_at_provider_path(:provider => :twitter) %>" class="twitter-icon"></a></li>
+
+            <li> <a href=" <%= auth_at_provider_path(:provider => :github) %>" class="github-icon"></a></li>
+          </ul>
+              <%#*</form>%>
+          
+        <% end %>
+        
+      </div></div>
+      <div class="b-btm">&nbsp;</div>
+
 <%#*<div class="light-box">%>
 <%#*<div class="b-top">&nbsp;</div>%>
 <%#*<div class="b-center"> <a href="#" class="close-btn">close</a>%>
@@ -88,7 +86,7 @@
 <%#*</div>%>
 
 
-      </section>
+      
       <!--<footer id="footer"> <span>All <a href="#">codingstack.com</a> content and data are available under the Creative Commons Attribution 3.0 license</span> <span><a href="#">blog</a> | <a href="#">twitter</a> | <a href="#">buzz</a> | <a href="#">identi.ca</a> | <a href="#">code</a> | <a href="#">irc (web chat)</a> | <a href="#">feedback</a> | <a href="#">tos</a> | <a href="#">privacy</a></span> <span>Powered by <a href="#">codingstack.com</a> under the GNU Affero General Public License</span> </footer>-->
     <!--</div>-->
 

@@ -59,7 +59,7 @@
         <h2 class="a-y-question">Ask a question</h2>
         <%= form_for @askquestion, :url => askquestions_path do |f| %>
             <% if @askquestion.errors.any? %>
-                <div class="error_messages">
+                <div class="error_messages" style="color:red !important">
                   <h2>Form is invalid, prohibited this record from being saved</h2>
                   <ul>
                     <% for message in @askquestion.errors.full_messages %>
@@ -74,21 +74,14 @@
             <%= f.text_field :tag_names %>
             <!--, data: {load: @askquestion.tags.map(&:name).map{|lan| [lan, Tag.find_by_name(lan).askquestion_tags.count]} } %>-->
             <!--# #data: {load: @askquestion.tags}, data: {load: @tags.where(@askquestion.tags).askquestion_tags.join(",").count} %>-->
-            <label class="title-txt">Body</label>
+            <label class="title-txt">Description</label>
 
-            <div class="field" id="">
-              <%= f.hidden_field :description, id: "wmd-preview-input" %>
-              <div class="wmd-panel">
-                <div id="wmd-button-bar"></div>
-                <textarea class="wmd-input" id="wmd-input"></textarea>
-              </div>
-              <div id="wmd-preview" class="wmd-panel wmd-preview">
-              </div>
-            </div>
+              <%= f.text_area :description, id: "wmd-preview-input" %>
+            <br>
             <div class="create-holder"> <span class="btn-holder">
                    <button class="create-btn" name="Create Askquestion" value="Create Askquestion"></button>
-            <small>or</small>
-            <button class="create-btn cancel-btn" name="#" value=""></button>
+<!--             <small>or</small>
+            <button class="create-btn cancel-btn" name="#" value="" ></button> -->
             </span>
               <!--<span class="click-to-add">-->
 						<!--<label for="wiki">wikki</label>-->

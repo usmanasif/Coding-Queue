@@ -1,4 +1,4 @@
-<!--<link media="all" rel="stylesheet" type="text/css" href="css/style.css">-->
+<link media="all" rel="stylesheet" type="text/css" href="css/style.css">
 <!--<link rel="stylesheet" href="../demos.css"></link>-->
 <%= stylesheet_link_tag "prettify.css" %>
 <%#= stylesheet_link_tag "demo.css" %>
@@ -123,7 +123,7 @@
             <li class="green-bg"><span >answers:  <%= @question.answers.count %> </span></li>
             <li><span id="views_count">views: <%= @question.view_counter %></span></li>
           </ul>
-          <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+          <strong class="by-date"> <span class="u-name"><a href="#"><%= @question.user.username %></a> 245</span>
             <span>Asked<span class="ago-days"> <%= time_ago_in_words(@question.created_at) %> ago</span></span>
           </strong>
         </div>
@@ -169,12 +169,13 @@
             <p class="question-txt"> <%= raw(@question.title) %> </p>
           </div>
           <div class="post-txt">
-            <span class="post-heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+          <span class="post-heading"><%= @question.description%></span>
+            <!-- <span class="post-heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
 
             <div class="post-discription">
               <textarea class="post-info" cols="8" rows="8"></textarea>
               <span class="post-heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
-            </div>
+            </div> -->
             <div class="comment-holder">
               <div class="comment-copy">
           <!--Start --Comment-List -- Start-->
@@ -209,8 +210,12 @@
                         <span><%=  comment.description %> </span>
                       <% end %>
                       <span class="by-post-user">
-                            <a href="#" class="us-name"> <%= comment.user.email %></a>
-                            <a href="#" class="by-date-user">Jan3 '10 at 23:56 <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
+                            <a href="#" class="us-name"> <%= comment.user.username %></a>
+                            <a href="#" class="by-date-user" >about <%= time_ago_in_words(comment.created_at) %> ago</a> <% if current_user.present? && current_user.id == comment.user_id %> <!-- <a href='<%=askquestion_comment_path(@question.id,comment)%>' class="by-date-user" ><img style="padding-left:10px;"src="/assets/comment-close.png"></a>
+                            <%= button_to('Delete', askquestion_comment_path(@question.id,comment), :method => 'delete', :class => 'btn-delete')  %> -->
+                            <%= link_to image_tag(asset_path("comment-edit.png")), edit_askquestion_comment_path(@question.id,comment), method: :get, :class => 'btn-edit' %>
+                            <%= link_to image_tag(asset_path("comment-close.png")), askquestion_comment_path(@question.id,comment), method: :delete, :class => 'btn-delete', confirm: "Are you sure"  %>
+                            <%end%>
                       </span>
                     </div>
 
@@ -242,9 +247,7 @@
                         <!--<br />-->
                         <%= f.text_field :description %>
                       </div>
-                      <div class="comment-btn">
-                        <%= f.submit %>
-                      </div>
+                      <%= f.submit 'Create',:class => 'comment-btn'%>
                   <% end %>
                   <!----End --input comment--- End ----->
                   <!--<input type="text" name="#" value="" class="txt-field4">-->
@@ -276,7 +279,7 @@
               <ul class="counter-nav">
                 <li><span>Votes:<%= ans.votes.sum(:status) %> </span></li>
               </ul>
-              <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+              <strong class="by-date"> <span class="u-name"><a href="#"><%=ans.user.username%></a> 245</span>
                 <span>Asked<span class="ago-days"> <%= time_ago_in_words(ans.created_at) %> ago</span></span>
               </strong>
             </div>
@@ -346,7 +349,7 @@
 
                     <% if comment.commentable_id == ans.id && comment.commentable_type == "Answer"%>
 
-                      <div class="inner-c">
+                     <div class="inner-c">
                         <% logger.debug "TRY TRY " * 12 %>
                         <% logger.debug  " " * 5 %>
                         <% logger.debug comment.user_id %>
@@ -360,18 +363,21 @@
                         <% end %>
 
                         <span class="by-post-user">
-                            <a href="#" class="us-name"> <%= comment.user.email %></a>
-                            <a href="#" class="by-date-user">Jan3 '10 at 23:56 <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
+                            <a href="#" class="us-name"> <%= comment.user.username %></a>
+                            <a href="#" class="by-date-user">about <%= time_ago_in_words(comment.created_at) %> ago</a> <% if current_user.present? && current_user.id == comment.user_id %>
+                                    <%= link_to image_tag(asset_path("comment-edit.png")), edit_askquestion_comment_path(@question.id,comment), method: :get, :class => 'btn-edit' %>
+                            <%= link_to image_tag(asset_path("comment-close.png")), askquestion_comment_path(@question.id,comment), method: :delete, :class => 'btn-delete', confirm: "Are you sure"  %>
+                            <%end%>
                         </span>
                       </div>
 
                        <% end %>
                     <% end %>
 
-                    <div class="inner-c"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                   <!--  <div class="inner-c"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 											Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
                       <span class="by-post-user"> <a href="#" class="us-name">pyroxicated</a> <a href="#" class="by-date-user">Jan
-                        3 '10 at 23:56</a> <img src="/assets/comment-edit.png"> </span>
+                        3 '10 at 23:56</a> <img src="/assets/comment-edit.png"> </span> -->
                     </div>
                   </div>
                   <div class="create-comment">
@@ -418,7 +424,7 @@
                         <ul class="counter-nav">
                           <li><span>Votes:<%= x.votes.sum(:status) %> </span></li>
                         </ul>
-                        <strong class="by-date"> <span class="u-name"><a href="#">pyroxicated</a> 245</span>
+                        <strong class="by-date"> <span class="u-name"><a href="#"><%=x.user.username%></a> 245</span>
                           <span>Asked<span class="ago-days"> <%= time_ago_in_words(x.created_at) %> ago</span></span>
                         </strong>
                       </div>
@@ -497,8 +503,12 @@
                                 <% end %>
 
                                 <span class="by-post-user">
-                                    <a href="#" class="us-name"> <%= comment.user.email %></a>
-                                    <a href="#" class="by-date-user">Jan3 '10 at 23:56 <%= time_ago_in_words(comment.created_at) %></a> <img src="/assets/comment-edit.png">
+                                    <a href="#" class="us-name"> <%= comment.user.username %></a>
+                                    <a href="#" class="by-date-user">about <%= time_ago_in_words(comment.created_at) %> ago</a> 
+                                    <% if current_user.present? && current_user.id == comment.user_id %>
+                                    <%= link_to image_tag(asset_path("comment-edit.png")), edit_askquestion_comment_path(@question.id,comment), method: :get, :class => 'btn-edit' %>
+                            <%= link_to image_tag(asset_path("comment-close.png")), askquestion_comment_path(@question.id,comment), method: :delete, :class => 'btn-delete', confirm: "Are you sure"  %>
+                            <%end%>
                                 </span>
                               </div>
 
@@ -527,12 +537,12 @@
                                 <!--<br />-->
                                 <%= f.text_field :description %>
                               </div>
-                              <div class="comment-btn">
-                                <%= f.submit %>
-                              </div>
+                                <%= f.submit 'Create',:class => 'comment-btn'%>
+                           
+                                
                             <% end %>
 
-                            </div>
+                            
                           </div>
                         </div>
                       </div>
@@ -570,15 +580,14 @@
               <%= f.hidden_field :answer, id: "wmd-preview-input" %>
               <div class="wmd-panel">
                 <div id="wmd-button-bar"></div>
-                <textarea class="wmd-input" id="wmd-input"></textarea>
+                <!-- <textarea class="wmd-input" id="wmd-input"></textarea> -->
+                <%= f.text_area :answer, id: "wmd-preview-input" %>
               </div>
               <div id="wmd-preview" class="wmd-panel wmd-preview">
               </div>
             </div>
             <div class="create-holder"> <span class="btn-holder">
                    <button class="create-btn" name="Create Askquestion" value="Create Askquestion"></button>
-            <small>or</small>
-            <button class="create-btn cancel-btn" name="#" value=""></button>
             </span>
               <!--<span class="click-to-add">-->
               <!--<label for="wiki">wikki</label>-->
@@ -622,42 +631,13 @@
   </div>
   <div class="tags-title">
     <ul class="tags-nav">
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
-      <li><a href="#">javascript</a></li>
-      <li><a href="#">css</a></li>
-      <li><a href="#">php</a></li>
-      <li><a href="#">google</a></li>
+      <% @tags.each do |t|%>
+            <li><a href="<%=questions_tagged_path(t)%>"><%=t.name%></a></li>
+          <%end%>
     </ul>
   </div>
 </aside>
 </section>
 <!--<footer id="footer"> <span>All <a href="#">codingstack.com</a> content and data are available under the Creative Commons Attribution 3.0 license</span> <span><a href="#">blog</a> | <a href="#">twitter</a> | <a href="#">buzz</a> | <a href="#">identi.ca</a> | <a href="#">code</a> | <a href="#">irc (web chat)</a> | <a href="#">feedback</a> | <a href="#">tos</a> | <a href="#">privacy</a></span> <span>Powered by <a href="#">codingstack.com</a> under the GNU Affero General Public License</span> </footer>-->
 </div>
-<!--/////////////////////////////////////////////////////////////End Code for the answer page////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////End Code for the answer page////////////////////////////////////////////////////////////////////////////////////////////////////////////////

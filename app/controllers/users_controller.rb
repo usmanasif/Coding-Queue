@@ -14,11 +14,7 @@ class UsersController < ApplicationController
         format.json { render json: {success: true, user_id: current_user.id } }
       end
     else
-      return render :json => params
-      respond_to do |format|
-        format.html { render :new }
-        format.json { render json: {success: false} }
-      end
+      render :new
     end
   end
 

@@ -70,7 +70,7 @@ Rails.application.config.sorcery.configure do |config|
   # What providers are supported by this app, i.e. [:twitter, :facebook, :github, :google, :liveid] .
   # Default: `[]`
   #
-  config.external_providers = [:twitter, :facebook, :github,:google]
+  config.external_providers = [:twitter, :facebook, :github, :google, :livewire]
 
 
 
@@ -113,10 +113,10 @@ Rails.application.config.sorcery.configure do |config|
   # a valid domain even in development. To use a valid domain in development
   # simply add your domain in your /etc/hosts file in front of 127.0.0.1
   #
-  # config.liveid.key = ""
-  # config.liveid.secret = ""
-  # config.liveid.callback_url = "http://mydomain.com:3000/oauth/callback?provider=liveid"
-  # config.liveid.user_info_mapping = {:username => "name"}
+  config.livewire.key = "71a588130e0b4c6c736302a5accac5e7f2a8519868b7cf5b9a8de9f25a989888"
+  config.livewire.secret = "bb3712f2cd2e330ffc1daca638097f54f9b311154226b5a575b11bb553ad5d96"
+  config.livewire.callback_url = "http://localhost:3000/"
+  config.livewire.user_info_mapping = {:email => "fullname"}
 
 
   # --- user config ---

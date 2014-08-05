@@ -43,9 +43,9 @@ ActiveRecord::Schema.define(:version => 20121101093643) do
     t.string   "title"
     t.string   "description"
     t.string   "tag"
-    t.integer  "view_counter"
+    t.integer  "view_counter",   :default => 0
     t.integer  "votes"
-    t.integer  "answer_counter"
+    t.integer  "answer_counter", :default => 0
     t.integer  "user_id"
     t.boolean  "delta",          :default => true, :null => false
   end
@@ -68,16 +68,17 @@ ActiveRecord::Schema.define(:version => 20121101093643) do
   end
 
   create_table "tags", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
     t.string   "name"
-    t.integer  "counter"
+    t.integer  "counter",    :default => 0
   end
 
   create_table "users", :force => true do |t|
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
+    t.string   "username"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
     t.string   "remember_me_token"

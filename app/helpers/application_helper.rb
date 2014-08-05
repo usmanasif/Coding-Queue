@@ -11,10 +11,13 @@ module ApplicationHelper
 
       else
 
-      "<li><a class='fancybox' href='#inline2' title='login' id='fancybox'>login</a></ li>".html_safe
+      "<li><a class='fancybox' href='#{login_path}' title='login' id='fancybox'>login</a></ li>".html_safe
 
     end
     "<ul><li><a href='#'>Faq</a></li> #{status} </ul>".html_safe
   end
 
+  def is_active(action)       
+    params[:action] == action ? "active" : nil        
+  end
 end

@@ -1,0 +1,80 @@
+
+      <div class="apple_pagination">
+        <%= will_paginate @askquestions, :container => false %>
+      </div>
+
+      <% @askquestions.each do |question| %>
+      <% if question.answers.blank?%>
+          <div class="q-post-holder">
+            <div class="q-post">
+              <div class="q-top">
+                <div class="counter-holder">
+                  <ul class="counter-nav">
+                    <%# logger.debug "PPPPPPPPPPPPP * 8  %>
+
+                    <li><span class="vote_question"> Votes: <%= question.votes.sum(:status) %> </span></li>
+                    <li class="green-bg"><span>Answer: <%= question.answers.count %></span></li>
+                    <li><span>View: <%= question.view_counter %></span></li>
+                  </ul>
+                  <strong class="by-date"> <span class="u-name"><a href="#"><%= question.user.username %></a> 245</span>
+                    <span>Asked<span class="ago-days"> <%= time_ago_in_words(question.created_at) %> ago</span></span>
+                  </strong>
+                </div>
+                <div class="middle-holder">
+                  <div class="user-question">
+                    <span class="user-img"><img src="/assets/img-1.jpg" width="42" height="42" alt="image"/></span>
+
+                    <p class="question-txt ">
+                      <a href=<%=new_askquestion_answer_path(question.id) %>><%= raw(question.title) %></a>
+
+                    </p>
+                  </div>
+                  <div class="tags-holder"><span class="tag-name">tags:</span>
+                    <ul class="question-tags">
+
+                        <% question.tags.each do |a| %>
+                          <li><a href="<%=questions_tagged_path(a)%>"><%= a.name %></a></li>
+                          <% end %>
+                      <!--<li><a href="#">tag 2</a></li>-->
+                    </ul>
+                    <div class="about-question">
+
+                      <% logger.debug "-QUESTION-"*20 %>
+                      <%# logger.debug current_user.votes.where(votable_id:question.id ,Votable_type: "Askquestion").present?  %>
+                      <% logger.debug "first if statement" * 8 %>
+                      <% logger.debug current_user.present?  %>
+                      <% logger.debug  !question.votes.blank?   %>
+                      <%# logger.debug current_user.votes.present? %>
+                      <% logger.debug "f" * 8 %>
+                      <% logger.debug " " * 8%>
+                      <%# logger.debug current_user.votes.where(votable_id: question.id , Votable_type: "Askquestion").last.status %>
+                      <% logger.debug "=" * 15 %>
+                      <%# logger.debug current_user.votes.where(votable_id: question.id , Votable_type: "Askquestion").last.status if current_user.votes.where(votable_id: question.id , Votable_type: "Askquestion").last.present? %>
+                      <% logger.debug  "8" * 8  %>
+                      <% logger.debug " End Q End "*15 %>
+                    <% if current_user && current_user.votes.where(votable_id:question.id ,Votable_type: "Askquestion").present?   %>
+
+                          <% if current_user.votes.where(votable_id:question.id , Votable_type: "Askquestion").last.status == 1 %>
+                              <input type="hidden" name="question_id" class="question_id" value='<%= question.id %>' />
+                              <%= link_to  "VOTE DOWN",  vote_down_askquestion_path(question.id), :class => "unlike-down", :data => question.id %>
+
+                          <% elsif current_user.votes.where(votable_id: question.id , Votable_type: "Askquestion").last.status == -1   %>
+
+                              <%= link_to 'VOTE UP',   vote_up_askquestion_path(question.id), :class => "like-up", :data => question.id, :id => "like-ups-#{question.id}", :remote =>true  %>
+                              <input type="hidden" name="question_id" class ="question_id" value='<%= question.id %>' />
+                         <% end %>
+                    <% else %>
+                          <%= link_to 'VOTE UP',   vote_up_askquestion_path(question.id), :class => "like-up" , :data => question.id %>
+                          <input type="hidden" name="question_id" id="question_id" value='<%= question.id %>' />
+                          <%= link_to  "VOTE DOWN",  vote_down_askquestion_path(question.id), :class => "unlike-down" , :data => question.id%>
+                    <% end %>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="q-btm">&nbsp;</div>
+            </div>
+          </div>
+      <% end %>
+      <% end %>

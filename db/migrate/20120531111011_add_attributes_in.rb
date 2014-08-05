@@ -3,9 +3,9 @@ class AddAttributesIn < ActiveRecord::Migration
     add_column :askquestions ,:title, :string
     add_column :askquestions ,:description, :string
     add_column :askquestions ,:tag, :string
-    add_column :askquestions ,:view_counter, :integer
+    add_column :askquestions ,:view_counter, :integer, :default => 0
     add_column :askquestions ,:votes, :integer
-    add_column :askquestions ,:answer_counter, :integer
+    add_column :askquestions ,:answer_counter, :integer, :default => 0
     add_column :askquestions ,:user_id, :integer
 
   end

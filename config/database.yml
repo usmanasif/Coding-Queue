@@ -8,7 +8,7 @@ development:
   database: db/development.mysql2
   pool: 5
   timeout: 5000
-  password: lol
+  password: badar
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -18,7 +18,7 @@ test:
   database: db/test.sqlite3
   pool: 5
   timeout: 5000
-  password: lol
+  password: badar
 
 
 production:
@@ -26,4 +26,4 @@ production:
   database: db/production.mysql2
   pool: 5
   timeout: 5000
-  password: lol
+  password: badar

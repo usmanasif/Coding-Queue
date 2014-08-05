@@ -12,7 +12,6 @@ class Answer < ActiveRecord::Base
   after_save :set_askquestion_delta_flag
   after_destroy :set_askquestion_delta_flag
 
-  private
 
   def set_askquestion_delta_flag
     askquestion.delta = true

@@ -3,17 +3,21 @@
 <head>
   <title>Coding Stack</title>
   <%= stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag "style" %>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "jquery.tokeninput.js" %>
+  <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "jquery_ujs" %>
   <%#= stylesheet_link_tag "style.css" %>
   <%#= stylesheet_link_tag "jquery.fancybox" %>
   <%= csrf_meta_tag %>
   <!--<link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.0.6" media="screen"/>-->
   <script type="text/javascript">
+
       $(document).ready(function () {
           $('.fancybox').fancybox({
 //              'hideOnContentClick':false
           });
+          
 
           $("form.login-form-base").submit(function (e) {
               e.preventDefault();
@@ -97,11 +101,12 @@
     </div>
     <nav id="nav">
       <ul>
-        <li><a href="<%= askquestions_path %>" class="active">Questions</a></li>
+        <li><a href="<%= askquestions_path %>">Questions</a></li>
         <li><a href="#">Tags</a></li>
+        <li><%= link_to "Questions", askquestions_path %></li>
         <li><a href="#">Users</a></li>
         <li><a href="#">Badges</a></li>
-        <li><a href="#">Unanswered</a></li>
+        <li><a href="<%= unanswered_path %>">Unanswered</a></li>
         <li><a href="#">Pages</a></li>
       </ul>
       <ul class="ask-q">
@@ -124,8 +129,15 @@
           <!--
       <%# end %>-->
     </div>
-    <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% unless flash[:notice].blank? %> 
+      <div id="notification" class="alert alert-notice"><%= flash[:notice] %></div> 
+    <% end %>
+    <% unless flash[:error].blank? %> 
+      <div id="notification" class="alert alert-error"><%= flash[:error] %></div> 
+    <% end %>
+    <% unless flash[:message].blank? %> 
+      <div id="notification" class="alert alert-message"><%= flash[:message] %></div> 
+      <%cookies[:username] = current_user.email%>
     <% end %>
     <%= yield %>
   </div>

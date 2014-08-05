@@ -27,14 +27,15 @@ class Askquestion < ActiveRecord::Base
 
 
 
-  define_index do
-    indexes title, sortable: true
-    indexes description
-    indexes answers.answer, as: :answer
-    indexes tags.name, as: :tag
-    set_property :delta => true
 
-  end
+  # define_index do
+  #   indexes title, sortable: true
+  #   indexes description
+  #   indexes answers.answer, as: :answer
+  #   indexes tags.name, as: :tag
+  #   set_property :delta => true
+
+  # end
 
 
 
@@ -53,22 +54,22 @@ class Askquestion < ActiveRecord::Base
   #  puts "#{'$' * 100}"
   #end
   #
-  #def answer
-  #  #answers.collect{ |ans| ans.answer }
-  #  #tags.collect{|t| t.name}
-  #  #user.email
-  #
-  #  #Askquestion.first.tags.map(&:name).join(", ")
+  # def answer
+  #  answers.collect{ |ans| ans.answer }
+  #  tags.collect{|t| t.name}
   #  user.email
-  #end
+  
+  #  Askquestion.first.tags.map(&:name).join(", ")
+  #  user.email
+  # end
 
 
 
 
 
-  def tag_names=(tokens)
-    self.tag_ids = Tag.ids_from_tokens(tokens)
-  end
+  # def tag_names=(tokens)
+  #   self.tag_ids = Tag.ids_from_tokens(tokens)
+  # end
 
 
 
@@ -93,6 +94,10 @@ end
     if @tag_names
       self.tags = @tag_names.split(/\s+/).map do |name|
         Tag.find_or_create_by_name(name)
+      end
+      self.tags.each do |t|
+        t.counter+=1
+        t.save
       end
     end
   end

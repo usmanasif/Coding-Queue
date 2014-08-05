@@ -6,10 +6,12 @@ class AnswersController < ApplicationController
   def new
 
     @question = Askquestion.find(params[:askquestion_id])
+    @question.view_counter+=1
+    @question.save
     @answer = Answer.new
     @answer_of_the_question = Answer.find_all_by_askquestion_id(params[:askquestion_id])
     @votes_on_answer = Answer.find_all_by_askquestion_id(params[:askquestion_id])
-
+    @tags = Tag.all
     @answer_tick = @question.answers
     #@answer_votes = @question.answers.votes
     @comments = Comment.all
@@ -19,16 +21,25 @@ class AnswersController < ApplicationController
   def create
     #TODO create a before filter to check if the user is logged in.
 
-
     params[:answer][:user_id] = current_user.id if(params[:answer])
 
     params[:answer][:askquestion_id] = params[:askquestion_id] if(params[:askquestion_id])
 
     @answer = Answer.new(params[:answer])
     if @answer.save
-      flash[:notice] = "Successfully created question."
-      redirect_to root_path, :notice => "Answer  has been posted"
+      flash[:notice] = "Successfully answered the question."
+      redirect_to new_askquestion_answer_path, :notice => "Answer has been posted"
     else
+      flash[:error] = "Provide the answer."
+      @question = Askquestion.find(params[:askquestion_id])
+      @comments = Comment.all
+      @comment = Comment.new
+      @answer = Answer.new
+      @answer_of_the_question = Answer.find_all_by_askquestion_id(params[:askquestion_id])
+      @votes_on_answer = Answer.find_all_by_askquestion_id(params[:askquestion_id])
+      @tags = Tag.all
+      @answer_tick = @question.answers
+
       render :new
     end
 
@@ -50,7 +61,7 @@ class AnswersController < ApplicationController
     @vote.user = current_user
     @vote.status = 1
     if @vote.save
-      return render :json => @vote_up.votes.sum(:status)
+      return redirect_to new_askquestion_answer_path, :notice => "Voted Up!"
     else
       #@subjects = Subject.find(:all)
       render :action => 'new'
@@ -66,7 +77,7 @@ class AnswersController < ApplicationController
     @vote.status = -1
 
     if @vote.save
-      return render :json => @vote_down.votes.sum(:status)
+      return redirect_to new_askquestion_answer_path, :notice => "Voted Down!"
 
     else
       #@subjects = Subject.find(:all)
@@ -78,12 +89,20 @@ class AnswersController < ApplicationController
   def tick_status
 
     @tick_status = Answer.find(params[:id])
-    @tick_status.tick_status = 1
-
-    if @tick_status.update_attributes(params[:answer_id])
-      redirect_to new_askquestion_answer_path
+    if (@tick_status.tick_status == 1)
+      @tick_status.tick_status = nil
+      if @tick_status.update_attributes(params[:answer_id])
+      redirect_to new_askquestion_answer_path, :notice => "Answer DisApproved!"
     else
       render :action => 'new'
+    end
+    else
+      @tick_status.tick_status = 1
+      if @tick_status.update_attributes(params[:answer_id])
+      redirect_to new_askquestion_answer_path, :notice => "Answer Approved!"
+    else
+      render :action => 'new'
+    end
     end
 
   end
